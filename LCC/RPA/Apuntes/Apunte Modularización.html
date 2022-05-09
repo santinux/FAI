@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+
+<meta charset="utf-8">
+<meta name="generator" content="pandoc">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+
+<meta name="author" content="RPA- Dr.Luis Reynoso">
+
+
+<title>Apunte: Modularización</title>
+
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/jquery-3.js"></script><meta name="darkreader" content="6fac76e1de5445e8b781e3b264db4cd5"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1 {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Apunte%20Modularizaci%C3%B3n_archivos/bootstrap.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/bootstrap.js"></script>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/html5shiv.js"></script>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/respond.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/jquery-ui.js"></script>
+<link href="Apunte%20Modularizaci%C3%B3n_archivos/jquery.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/jquery.js"></script>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/tabsets.js"></script>
+<link href="Apunte%20Modularizaci%C3%B3n_archivos/default.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/highlight.js"></script>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/htmlwidgets.js"></script>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/viz.js"></script>
+<link href="Apunte%20Modularizaci%C3%B3n_archivos/styles.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Modularizaci%C3%B3n_archivos/grViz.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<style type="text/css">code{white-space: pre;}</style><style class="darkreader darkreader--sync" media="screen"></style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+
+<script type="text/javascript" src="Apunte%20Modularizaci%C3%B3n_archivos/MathJax.js"></script><style>@media print {#ghostery-tracker-tally {display:none !important}}</style><style>body {padding-top: 64.88333px; padding-bottom: 40px; }
+.section h1{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h2{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h3{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h4{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h5{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h6{ padding-top: 64.88333px; margin-top: -64.88333px; }
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style class="darkreader darkreader--sync" media="screen"></style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<ul id="tocify-header1" class="tocify-header list-group"><li class="tocify-item list-group-item active" data-unique="1_Introducción">1. Introducción</li></ul><ul id="tocify-header2" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="2_Parámetros_en_la_Modularización">2. Parámetros en la Modularización</li></ul><ul id="tocify-header3" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="3_Invocación_de_los_Módulos">3. Invocación de los Módulos</li></ul><ul id="tocify-header4" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="4_Devolver_un_resultado">4. Devolver un resultado</li></ul><ul id="tocify-header5" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="5_Mostrar_versus_Retornar_Valores">5. Mostrar versus Retornar Valores</li></ul><ul id="tocify-header6" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="6_Importancia_de_la_Modularización">6. Importancia de la Modularización</li></ul><ul id="tocify-header7" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="7_Conceptos_Importantes">7. Conceptos Importantes</li></ul><ul id="tocify-header8" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="8_Modularización_en_Java">8. Modularización en Java</li></ul><ul id="tocify-header9" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="81_Funciones_Matemáticas">8.1. Funciones Matemáticas</li></ul></div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://opendata.fi.uncoma.edu.ar/algoritmos/index.html">RPA22</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/index.html">Home</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteProblemas.html">Problemas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteEstrategias.html">Estrategias</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteAlgoritmos.html">Algoritmos</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteAlternativas.html">Alternativas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteRepetitivas.html">Repetitivas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteModularizaci%C3%B3n.html">Modularización</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteCadenas.html">Cadenas de Caracteres</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Apunte: Modularización</h1>
+<h4 class="author">RPA- Dr.Luis Reynoso</h4>
+<h4 class="date">08 abril, 2022</h4>
+
+</div>
+
+
+<div id="introducción" class="section level1">
+<div name="1_Introducción" data-unique="1_Introducción"></div><h1>1. Introducción</h1>
+<p>Modularizar es una estrategia de resolución de problemas y de 
+ingeniería de software que consiste en dividir el problema original en 
+un conjunto de subproblemas. Consiste en aplicar una estrategia 
+heurística fundamental: descomposición y recombinación. Esta heurística 
+consiste en poder descomponer un todo en sus partes y poder recombinar 
+las partes en un todo.</p>
+<p>En programación y en el diseño de algorítmos, un buen diseño 
+estructurado persigue elaborar algorítmos que cumplan la propiedad de 
+modularidad, esto es dado un problema que se pretende resolver mediante 
+la utilización de una computadora, se busca dividir dicho programa en 
+módulos independientes.</p>
+<p>El diseño estructurado incluye la descomposición, para lo cual se 
+requiere un adecuado análisis de dicho problema, siendo necesario 
+definir primeramente el problema. Merece la pena el esfuerzo de dividir 
+un problema grande en subproblemas más pequeños. Ahora la cuestión es 
+¿cómo realizar la descomposición?; una manera es realizando un estudio 
+descendente (top-down) que nos lleve desde la concepción del problema 
+(programa o algorítmo) global hasta identificar sus partes (módulos).</p>
+<p>Esta técnica se repite una y otra vez refinando el problema hasta 
+obtener subproblemas suficientemente pequeños, que puedan ser resueltos 
+por módulos que cumplan, en la medida de lo posible, las características
+ deseables en un módulo en el ámbito de la programación. En cada paso 
+del refinamiento, una o varias instrucciones del programa dado, se 
+descomponen en instrucciones más detalladas.</p>
+<p>¿Cuándo parar el refinamiento?. Un refinamiento excesivo podría dar 
+lugar a un número tan grande de módulos que haría poco práctica la 
+descomposición. Se tendrán en cuenta este criterio para dejar de 
+descomponer: Cuando el MODULO definido realice una única tarea, lo 
+suficientemente simple y entendible, y no existan subtareas que ´ 
+requieran descomposición.</p>
+<p>El uso apropiado de la modularización tiene importantes ventajas:</p>
+<ol style="list-style-type: decimal">
+<li>Cada módulo debe hacer una única cosa (y de manera genérica).</li>
+<li>Cada módulo oculta algo (encapsulamiento).</li>
+</ol>
+<p>El uso apropiado de la modularización tiene importantes ventajas:</p>
+<ol style="list-style-type: decimal">
+<li>Facilita el desarrollo del software, dado que los subproblemas con más fáciles de resolver</li>
+<li>Facilita la reutilización del software, dado que un módulo se puede usar en muchos programas.</li>
+<li>Facilita el mantenimiento. Se puede profundizar en las pruebas de cada módulo más de lo que se hace un programa mayor.</li>
+</ol>
+<p>Los módulos se pueden ver como cajas que tiene datos de entrada, que 
+realizan alguna acción y devuelven o no algún valor al respecto.</p>
+<p>Para entender claramente en que consiste la modularización, mostraremos un ejemplo introductorio.</p>
+</div>
+<div id="parámetros-en-la-modularización" class="section level1">
+<div name="2_Parámetros_en_la_Modularización" data-unique="2_Parámetros_en_la_Modularización"></div><h1>2. Parámetros en la Modularización</h1>
+<p>Si quisiéramos escribir un saludo, y este saludo fuera a utilizarse 
+varias veces podríamos definir un módulo al cual llamaremos saludo en el
+ cual se escriban las líneas necesarias, este módulo se podría utilizar 
+cada vez que queremos saludar. Debemos construir un módulo que haga una 
+única cosa en forma genérica (saluda) pero no nos interesa cómo realiza 
+ese saludo, si es formal o informal,</p>
+<p>Entonces nuestro módulo saludo() mostrará el texto ’Hola, buenos 
+días!’ y en la línea siguiente el texto ’cómo le va?’, ahora lo podemos 
+visualizar en el seudocódigo. La primer línea del seudocódigo nos indica
+ que este módulo realiza una acción pero no debemos esperar que devuelva
+ nada, esto se detalla en la parte RETORNA Ø.</p>
+<pre class="js"><code class="hljs javascript">ALGORITMO saludo() RETORNA ∅
+    (* escribe un saludo general *)
+    ESCRIBIR(”Hola, buenos dí<span class="hljs-keyword">as</span>!”)
+    ESCRIBIR(”cómo le va?”)
+FIN MODULO saludo</code></pre>
+<script type="text/javascript">
+ALGORITMO saludo() RETORNA ∅
+    (* escribe un saludo general *)
+    ESCRIBIR(”Hola, buenos días!”)
+    ESCRIBIR(”cómo le va?”)
+FIN MODULO saludo
+</script>
+<p>Supongamos que queremos saludar a Marcelo, el algorítmo del saludo sería:</p>
+<pre class="js"><code class="hljs javascript">MÓDULO saludo() RETORNA ∅
+    (* escribe un saludo general *)
+    ESCRIBIR(”Hola, buenos dí<span class="hljs-keyword">as</span>!”,”Marcelo”)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo </code></pre>
+<script type="text/javascript">
+MÓDULO saludo() RETORNA ∅
+    (* escribe un saludo general *)
+    ESCRIBIR(”Hola, buenos días!”,”Marcelo”)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo 
+</script>
+<p>Este algorítmo no cumple la condición de que sea genérico, Para eso 
+podríamos leer el nombre y así permitir que valga para todas las 
+personas (ejemplo Marcelo, María, Juan, Fernando,…). Podríamos 
+modificarlo de la siguiente manera:</p>
+<pre class="js"><code class="hljs javascript">MÓDULO saludo() RETORNA ∅
+    (* escribe un saludo de la persona ingresada *)
+    ESCRIBIR(”Ingrese el nombre de la persona”)
+    LEER(nombre)
+    ESCRIBIR(”Hola, buenos d´ı<span class="hljs-keyword">as</span>!”,nombre)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo</code></pre>
+<script type="text/javascript">
+MÓDULO saludo() RETORNA ∅
+    (* escribe un saludo de la persona ingresada *)
+    ESCRIBIR(”Ingrese el nombre de la persona”)
+    LEER(nombre)
+    ESCRIBIR(”Hola, buenos d´ıas!”,nombre)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo
+</script>
+<p>Este algorítmo es genérico, pero si se quiere saludar se requiere que
+ la persona que ejecute el algorítmo ingrese el nombre cada vez que se 
+utiliza, lo cual tampoco es muy recomendable, entonces una manera es 
+escribir un módulo que reciba como datos de entrada el nombre y luego 
+salude, el ingreso del nombre se podría hacer en otro lado. Esto es más 
+conveniente ya que por ahí se necesita que el nombre sea ingresado por 
+teclado. Veamos como cambia el encabezado del módulo teniendo en cuenta 
+que el nombre ya se conoce y por lo tanto se pasa como dato de entrada.</p>
+<pre class="js"><code class="hljs javascript">MÓDULO saludo(TEXTO nombre) RETORNA ∅
+    (* escribe un saludo de la persona ingresada como parámetro *)
+    ESCRIBIR(”Hola, buenos dí<span class="hljs-keyword">as</span>!”,nombre)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo </code></pre>
+<script type="text/javascript">
+MÓDULO saludo(TEXTO nombre) RETORNA ∅
+    (* escribe un saludo de la persona ingresada como parámetro *)
+    ESCRIBIR(”Hola, buenos días!”,nombre)
+    ESCRIBIR(”cómo le va?”)
+FIN MÓDULO saludo 
+</script>
+<p>Las palabras encerradas en los paréntesis del encabezado del módulo 
+se las llama parámetros. Los parámetros son variables (identificadores) 
+los reconoce el algorítmo, y los utiliza para lo que sea necesario. El 
+saludo visto, se podría utilizar para saludar a todas las personas con 
+su nombre. Si hubiera más de un parámetro éstos son colocados dentro de 
+los parentesis, separados por comas. Es importante definir el tipo del 
+identificador que viene como parámetro, de la misma manera que se 
+definen los tipos de cualquier identificador. De esta manera describimos
+ un módulo que recibe un nombre como parámetro y realiza el saludo con 
+el nombre. El saludo se podría utilizar para saludar a todas las 
+personas con su nombre. Ahora podemos especificar cómo se utiliza este 
+módulo, lo que se conoce como invocación de un módulo.</p>
+</div>
+<div id="invocación-de-los-módulos" class="section level1">
+<div name="3_Invocación_de_los_Módulos" data-unique="3_Invocación_de_los_Módulos"></div><h1>3. Invocación de los Módulos</h1>
+<p>Supongamos que queremos saludar a varias personas, podríamos utilizar
+ el mismo módulo con cada saludo, lo que significa que invocaríamos dos 
+veces al mismo módulo. Veamos el saludo de dos hermanos: Juan y Pedro. 
+Entonces estaríamos invocando dos veces al mismo módulo</p>
+<pre class="js"><code class="hljs javascript">
+MÓDULO saludo(TEXTO nombre) RETORNA ´ ∅
+    (* escribe un saludo de la persona ingresada como parametro *)
+    ESCRIBIR(”Hola, buenos dí<span class="hljs-keyword">as</span>!”,nombre)
+    ESCRIBIR(”¿Cómo le va?”)
+FIN MÓDULO saludo ´
+
+ALGORÍTMO saludosVarios() RETORNA ∅
+    (* saluda a dos hermanos *)
+    TEXTO nombre1, nombre2
+    ESCRIBIR(”Ingrese el nombre de la primera persona”)
+    LEER(nombre1)
+    ESCRIBIR(”Ingrese el nombre de la segunda persona”)
+    LEER(nombre2)
+    saludo(nombre1)
+    saludo(nombre2)
+FIN ALGORÍTMO saludosVarios</code></pre>
+<script type="text/javascript">
+
+MÓDULO saludo(TEXTO nombre) RETORNA ´ ∅
+    (* escribe un saludo de la persona ingresada como parametro *)
+    ESCRIBIR(”Hola, buenos días!”,nombre)
+    ESCRIBIR(”¿Cómo le va?”)
+FIN MÓDULO saludo ´
+
+ALGORÍTMO saludosVarios() RETORNA ∅
+    (* saluda a dos hermanos *)
+    TEXTO nombre1, nombre2
+    ESCRIBIR(”Ingrese el nombre de la primera persona”)
+    LEER(nombre1)
+    ESCRIBIR(”Ingrese el nombre de la segunda persona”)
+    LEER(nombre2)
+    saludo(nombre1)
+    saludo(nombre2)
+FIN ALGORÍTMO saludosVarios
+</script>
+<p>La modularización es útil porque nos ayuda a organizar ideas y además
+ permite repetir la misma secuencia de pasos las veces que sea 
+necesario, y si el módulo está definido con parámetros, se puede repetir
+ incluso con diferentes valores en sus argumentos todas las veces que 
+sea necesario en un programa. Esta es una traza del algorítmo llamador 
+saludosVarios, y luego de los llamados realizados</p>
+<table class="table table-condensed">
+<caption>saludosVarios()</caption>
+<thead>
+<tr class="header">
+<th align="center">nombre1</th>
+<th align="center">nombre2</th>
+<th align="center">salida por pantalla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Juan</td>
+<td align="center">Pedro</td>
+<td align="center">Ingrese el nombre de la primera persona</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">Hola, buenos días! Juan</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">¿Cómo le va?</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">Ingrese el nombre de la segunda persona</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">Hola, buenos días! Pedro</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">¿Cómo le va?</td>
+</tr>
+</tbody>
+</table>
+<p>Primera invocación a: saludo</p>
+<table style="width:18%;" class="table table-condensed">
+<colgroup>
+<col width="18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Juan</td>
+</tr>
+</tbody>
+</table>
+<p>Segunda invocación a: saludo</p>
+<table style="width:18%;" class="table table-condensed">
+<colgroup>
+<col width="18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>nombre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pedro</td>
+</tr>
+</tbody>
+</table>
+<p>El algorítmo saludo ejecuta alguna acción sin necesidad de retornar 
+nada, lo que se visualiza en el encabezado del algorítmo; sin embargo 
+muchas veces se necesita el retorno de un valor, como las funciones 
+matemáticas. A este tipo de módulo los denominamos módulos con resultado
+ o también funciones.</p>
+</div>
+<div id="devolver-un-resultado" class="section level1">
+<div name="4_Devolver_un_resultado" data-unique="4_Devolver_un_resultado"></div><h1>4. Devolver un resultado</h1>
+<p>Los módulos que vimos hasta ahora muestran mensajes, pero a veces 
+necesitamos que calculen un valor, necesitamos que los módulos se 
+comporten como las funciones matemáticas que conocemos, que se usan para
+ calcular resultados. Por ejemplo queremos poder calcular y = f (x) en 
+nuestros programa. Lo que significa que una función podría devolver un 
+valor para ser utilizado luego. Para ello introduciremos la instrucción 
+RETORNA expresion que indica cuál es el valor que tiene que retornar 
+nuestro módulo. Veamos el seudocódigo para elevar un número al cuadrado,
+ podemos ver que el módulo lo llamamos MODULO, que ´ su finalización 
+ocurre en la línea FIN MODULO… También vemos que el valor retornado de 
+ese módulo es el valor ´ que acompaña a la directiva RETORNA. Esto 
+quiere decir que este módulo siempre se debe invocar con un valor (la 
+variable deberá recibir un valor) y su devolución también será un nuevo 
+valor</p>
+<pre class="js"><code class="hljs javascript">MÓDULO cuadrado(REAL valor) RETORNA REAL ´
+    (* el módulo calcula el cuadrado de un valor recibido como par´ametro*)
+    REAL cuad
+    cuad ← valor * valor
+    RETORNA cuad
+FIN MÓDULO cuadrado </code></pre>
+<script type="text/javascript">
+MÓDULO cuadrado(REAL valor) RETORNA REAL ´
+    (* el módulo calcula el cuadrado de un valor recibido como par´ametro*)
+    REAL cuad
+    cuad ← valor * valor
+    RETORNA cuad
+FIN MÓDULO cuadrado 
+</script>
+<p>Contar con funciones es de gran utilidad, ya que nos permite ir 
+armando una biblioteca de instrucciones con problemas que vamos 
+resolviendo, y que se pueden reutilizar para resolver nuevos problemas. 
+Sin embargo, más útil que tener una biblioteca donde los resultados se 
+imprimen por pantalla, es retornar el valor calculado. De este modo 
+podremos crear una biblioteca de funciones para que las personas que 
+utilizan esas funciones pueda manipular los resultados a voluntad: los 
+impriman, los usen para realizar cálculos más complejos, etc.</p>
+<blockquote>
+<p>Buena Práctica: Es de buena programación proveer bibliotecas de funciones que puedan ser invocadas por los demás módulos.</p>
+</blockquote>
+</div>
+<div id="mostrar-versus-retornar-valores" class="section level1">
+<div name="5_Mostrar_versus_Retornar_Valores" data-unique="5_Mostrar_versus_Retornar_Valores"></div><h1>5. Mostrar versus Retornar Valores</h1>
+<p>A continuación se define una función muestraSegundos (horas, minutos,
+ segundos) con tres parámetros (horas, minutos y segundos) que imprime 
+por pantalla la transformaciónn a segundos de una medida de tiempo 
+expresada en horas, minutos y segundos:</p>
+<pre class="js"><code class="hljs javascript">MÓDULO enSegundos(ENTERO horas, minutos, segundos) RETORNA Ø ´
+    (* transforma en segundos una medida de tiempo expresada en horas, minuots y segundos *)
+    ENTERO segSal
+    segSal ← <span class="hljs-number">3600</span> * horas + <span class="hljs-number">60</span> * minutos + segundos
+    ESCRIBIR(”Son” + segSal + ” segundos”)
+FIN MÓDULO enSegundos
+</code></pre>
+<script type="text/javascript">
+MÓDULO enSegundos(ENTERO horas, minutos, segundos) RETORNA Ø ´
+    (* transforma en segundos una medida de tiempo expresada en horas, minuots y segundos *)
+    ENTERO segSal
+    segSal ← 3600 * horas + 60 * minutos + segundos
+    ESCRIBIR(”Son” + segSal + ” segundos”)
+FIN MÓDULO enSegundos
+
+</script>
+<p>Este algorítmo no es correcto, ya que en vez de utilizar 
+muestraSegundos como un módulo tipo función biblioteca, muestra una 
+salida con el resultado dentro de la función. Si se están realizando 
+cálculos matemáticos es muy posible que interese la solución pero no el 
+mensaje que aparece. Así mostramos cómo debe implementarse la función 
+mejorada y su invocación.</p>
+<pre class="js"><code class="hljs javascript">MÓDULO enSegundos(ENTERO horas, minutos, segundos) RETORNA ENTERO ´
+    (* transforma en segundos una medida de tiempo expresada en horas, minuots y segundos *)
+    ENTERO segSal
+    segSal ← <span class="hljs-number">3600</span> * horas + <span class="hljs-number">60</span> * minutos + segundos
+    RETORNA segSal
+FIN MÓDULO enSegundos </code></pre>
+<script type="text/javascript">
+MÓDULO enSegundos(ENTERO horas, minutos, segundos) RETORNA ENTERO ´
+    (* transforma en segundos una medida de tiempo expresada en horas, minuots y segundos *)
+    ENTERO segSal
+    segSal ← 3600 * horas + 60 * minutos + segundos
+    RETORNA segSal
+FIN MÓDULO enSegundos 
+</script>
+<p>Ahora cuando invocamos al algorítmo enSegundos lo deberemos hacer con
+ valores en los parametros y suponiendo que devuelve la cantidad de 
+segundos. Si el objetivo es obtener la diferencia entre dos horarios de 
+un evento podríamos hacer el algorítmo general duracionEvento que llama 
+al módulo enSegundos en dos oportunidades.</p>
+<pre class="js"><code class="hljs javascript">ALGORÍTMO duracionEvento () RETORNA ∅
+    (* ingresa los horarios de inicio y fin y calcula la duraci´on del evento *)
+    ENTERO segInicio, segFin, hr, min, seg
+    ESCRIBIR(”Ingrese hora, minuto y segundo de la hora de inicio ”)
+    LEER(hr)
+    LEER(min)
+    LEER(seg)
+    segInicio ← enSegundos (hr, min, seg)
+    ESCRIBIR(”Ingrese hora, minuto y segundo de la hora de finalizaci´on ”)
+    LEER(hr)
+    LEER(min)
+    LEER(seg)
+    segFin ← enSegundos (hr, min, seg)
+    ESCRIBIR(”La duración del evento fue de ”, segFin-segInicio, ” segundos”)
+FIN ALGORÍTMO duracionEvento</code></pre>
+<script type="text/javascript">
+ALGORÍTMO duracionEvento () RETORNA ∅
+    (* ingresa los horarios de inicio y fin y calcula la duraci´on del evento *)
+    ENTERO segInicio, segFin, hr, min, seg
+    ESCRIBIR(”Ingrese hora, minuto y segundo de la hora de inicio ”)
+    LEER(hr)
+    LEER(min)
+    LEER(seg)
+    segInicio ← enSegundos (hr, min, seg)
+    ESCRIBIR(”Ingrese hora, minuto y segundo de la hora de finalizaci´on ”)
+    LEER(hr)
+    LEER(min)
+    LEER(seg)
+    segFin ← enSegundos (hr, min, seg)
+    ESCRIBIR(”La duración del evento fue de ”, segFin-segInicio, ” segundos”)
+FIN ALGORÍTMO duracionEvento
+</script>
+<p>Nótese que la llamada al algorítmo enSegundos(, , ) retorna un valor 
+entero que será asignado a la variable segInicio en la primer llamada y a
+ la variable segFin en la segunda llamada. Otro detalle es que en el 
+algorítmo duracionEvento las variables las llamamos hs, mins, y segs, en
+ cambio en la definición del módulo enSegundos los nombres de las 
+variables de entrada son horas, minutos y segundos. Las invocaciones a 
+un módulo pueden ser parte de una expresión. Estas pueden ser parte de 
+una expresión siempre que su valor retornado pueda ser utilizado 
+convenientemente con otros operandos y operadores. En el caso que 
+utilicemos varias funciones, las agruparemos en lo que denominamos 
+librerias, las cuales estarán compuestas generalmente por varias 
+funciones, algunas retornando valores y otras no.</p>
+<p>Las trazas de estos algorítmos deben cumplir lo siguiente.</p>
+<ol style="list-style-type: decimal">
+<li>Se deben crear tantas tablas de trazas como módulos sean invocados</li>
+<li>Cada tabla ademas de las variables propias del método, incluirá parámetros y el valor retornado</li>
+<li>El método invocador, o main, incluirá además una columna etiquetada como ’Salida por Pantalla’</li>
+<li>Si una misma función es invocada más de una vez deberemos crear nuevas instancias de la misma tabla de la función</li>
+</ol>
+<div id="htmlwidget-affbd5487c7ccc3e4d6d" style="width:672px;height:200px;" class="grViz html-widget html-widget-static-bound"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: a_nice_graph Pages: 1 -->
+<svg viewBox="0.00 0.00 224.34 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: 100%;">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>a_nice_graph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 220.3353,-112 220.3353,4 -4,4" style="--darkreader-inline-stroke: transparent; --darkreader-inline-fill: #181a1b;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+<!-- a -->
+<g id="node1" class="node">
+<title>a</title>
+<ellipse fill="none" stroke="#000000" cx="109.2702" cy="-90" rx="101.9154" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="109.2702" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Tipos de Parámetros</text>
+</g>
+<!-- b -->
+<g id="node2" class="node">
+<title>b</title>
+<ellipse fill="none" stroke="#000000" cx="51.2702" cy="-18" rx="51.0415" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="51.2702" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Formales</text>
+</g>
+<!-- a&#45;&gt;b -->
+<g id="edge1" class="edge">
+<title>a-&gt;b</title>
+<path fill="none" stroke="#000000" d="M94.6344,-71.8314C87.6783,-63.1962 79.2471,-52.7299 71.6753,-43.3304" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="74.3001,-41.0096 65.3012,-35.4177 68.8489,-45.4009 74.3001,-41.0096" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+<!-- c -->
+<g id="node3" class="node">
+<title>c</title>
+<ellipse fill="none" stroke="#000000" cx="168.2702" cy="-18" rx="48.1303" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="168.2702" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Actuales</text>
+</g>
+<!-- a&#45;&gt;c -->
+<g id="edge2" class="edge">
+<title>a-&gt;c</title>
+<path fill="none" stroke="#000000" d="M124.1584,-71.8314C131.2344,-63.1962 139.811,-52.7299 147.5134,-43.3304" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="150.3663,-45.3709 153.9974,-35.4177 144.9519,-40.9341 150.3663,-45.3709" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+</g>
+</svg>
+</div>
+<script type="application/json" data-for="htmlwidget-affbd5487c7ccc3e4d6d">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"Tipos de Parámetros\"]\nb [label = \"Formales\"]\nc [label = \"Actuales\"]\n\n# edge definitions with the node IDs\na -> {b c}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>Es importante notar que cuando invocamos a un módulo no es necesario 
+utilizar una variable con el mismo nombre del parámetro de definición 
+del módulo. Si es necesario que los valores sean de tipos compatible. La
+ variable que se utiliza en la invocación como parámetro (hs, mins y 
+segs) se denomina parámetro actual. En cambio la variable que se utiliza
+ como parte de la de definición del módulo (horas, minuots y segundos) 
+se denomina parámetro formal. No es necesario que el parámetro actual 
+tenga el mismo nombre que el parámetro formal, simplemente que se 
+requiere que sean de tipos compatibles. La cantidad de parámetros puede 
+ser mayor a uno, con lo cual, al invocar al módulo debemos pasar la 
+misma cantidad de parámetros en el orden esperado, y los tipos de los 
+parámetros deben coincidir.</p>
+<div id="htmlwidget-af8c8944715b3f3fb360" style="width:672px;height:200px;" class="grViz html-widget html-widget-static-bound"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: a_nice_graph Pages: 1 -->
+<svg viewBox="0.00 0.00 738.12 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: 100%;">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>a_nice_graph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 734.1194,-112 734.1194,4 -4,4" style="--darkreader-inline-stroke: transparent; --darkreader-inline-fill: #181a1b;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+<!-- a -->
+<g id="node1" class="node">
+<title>a</title>
+<ellipse fill="none" stroke="#000000" cx="370.7395" cy="-90" rx="134.9784" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="370.7395" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Verificar en cada invocación</text>
+</g>
+<!-- b -->
+<g id="node2" class="node">
+<title>b</title>
+<ellipse fill="none" stroke="#000000" cx="116.7395" cy="-18" rx="116.9795" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="116.7395" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Cantidad de Parámetros</text>
+</g>
+<!-- a&#45;&gt;b -->
+<g id="edge1" class="edge">
+<title>a-&gt;b</title>
+<path fill="none" stroke="#000000" d="M313.103,-73.6621C274.295,-62.6614 223.0221,-48.1273 182.6011,-36.6694" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="183.4126,-33.2616 172.8371,-33.9017 181.5035,-39.9963 183.4126,-33.2616" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+<!-- c -->
+<g id="node3" class="node">
+<title>c</title>
+<ellipse fill="none" stroke="#000000" cx="370.7395" cy="-18" rx="118.7668" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="370.7395" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Orden de los parámetros</text>
+</g>
+<!-- a&#45;&gt;c -->
+<g id="edge2" class="edge">
+<title>a-&gt;c</title>
+<path fill="none" stroke="#000000" d="M370.7395,-71.8314C370.7395,-64.131 370.7395,-54.9743 370.7395,-46.4166" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="374.2396,-46.4132 370.7395,-36.4133 367.2396,-46.4133 374.2396,-46.4132" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+<!-- d -->
+<g id="node4" class="node">
+<title>d</title>
+<ellipse fill="none" stroke="#000000" cx="618.7395" cy="-18" rx="111.2599" ry="18" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></ellipse>
+<text text-anchor="middle" x="618.7395" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Compatibilidad de tipos</text>
+</g>
+<!-- a&#45;&gt;d -->
+<g id="edge3" class="edge">
+<title>a-&gt;d</title>
+<path fill="none" stroke="#000000" d="M427.3248,-73.572C465.2803,-62.5527 515.343,-48.0183 554.7502,-36.5775" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="555.898,-39.8889 564.5256,-33.7395 553.9463,-33.1665 555.898,-39.8889" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+</g>
+</svg>
+</div>
+<script type="application/json" data-for="htmlwidget-af8c8944715b3f3fb360">{"x":{"diagram":"\ndigraph a_nice_graph {\n\n# node definitions with substituted label text\nnode [fontname = Helvetica]\na [label = \"Verificar en cada invocación\"]\nb [label = \"Cantidad de Parámetros\"]\nc [label = \"Orden de los parámetros\"]\nd [label = \"Compatibilidad de tipos\"]\n\n# edge definitions with the node IDs\na -> {b c d}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>Cuando la cantidad es superior a uno, se separan los mismos 
+utilizando comas. Los algorítmos que creemos pueden utilizar 
+modularización y tienen un solo punto de acceso. El punto de acceso es 
+el algorítmo principal.</p>
+</div>
+<div id="importancia-de-la-modularización" class="section level1">
+<div name="6_Importancia_de_la_Modularización" data-unique="6_Importancia_de_la_Modularización"></div><h1>6. Importancia de la Modularización</h1>
+<p>Ahora que hemos visto distintos conceptos sobre la modularización podemos decir que modular favorece la:</p>
+<ol style="list-style-type: decimal">
+<li>Construcción de algorítmos y programas * En vez de construir un 
+programa muy grande mejor escribir varios programas pequeños. * Permite 
+que los equipos de programadores trabajen en módulos independientes.</li>
+<li>Depuración de algorítmos y programas
+<ul>
+<li>Depurar un programa muy grande es mucho más difícil que depurar varios programas pequeños</li>
+<li>La modularización aisla los errores.</li>
+</ul></li>
+<li>Lectura de algorítmos y programas
+<ul>
+<li>Aumenta la legibilidad y comprensión de un programa.</li>
+<li>Un módulo debe ser inteligible a partir de su nombre, los 
+comentarios escritos en su cabecera y los nombres de los módulos que los
+ llaman.</li>
+</ul></li>
+<li>Modicación de algorítmos y programas
+<ul>
+<li>Un pequeño cambio en los requerimientos de un programa debería implicar sólo un pequeño cambio en pocos módulos</li>
+<li>La modularización aisla las modificaciones.</li>
+</ul></li>
+<li>Eliminación de redundancia de código
+<ul>
+<li>Localizar operaciones que ocurren en diferentes lugares de un programa</li>
+<li>El código de una operación aparecerá una sola vez</li>
+</ul></li>
+</ol>
+</div>
+<div id="conceptos-importantes" class="section level1">
+<div name="7_Conceptos_Importantes" data-unique="7_Conceptos_Importantes"></div><h1>7. Conceptos Importantes</h1>
+<p>Un módulo puede tener ninguno, uno o más parámetros. En el caso de 
+tener más de uno, se separan por comas tanto en la declaración del 
+módulo como en la invocación. Es altamente recomendable documentar cada 
+módulo que se escribe, para poder saber qué parámetros recibe, qué 
+devuelve y qué hace sin necesidad de leer el código. Los módulos pueden 
+imprimir mensajes para comunicarlos al usuario, y/o devolver valores. 
+Cuando una función realice un cálculo o una operación con sus 
+parámetros, es recomendable que devuelva el resultado en lugar de 
+calcularlo e imprimirlo, permitiendo realizar otras operaciones con ese 
+resultado. No es posible acceder a las variables definidas dentro de un 
+módulo desde el algorítmo principal, si se quiere utilizar algún valor 
+calculado en la función, será necesario devolverlo. Si un módulo retorna
+ algún valor, la ultima primitiva del módulo debe mostrar el valor 
+retornado.</p>
+</div>
+<div id="modularización-en-java" class="section level1">
+<div name="8_Modularización_en_Java" data-unique="8_Modularización_en_Java"></div><h1>8. Modularización en Java</h1>
+<p>Hay distintas maneras de definir métodos en Java. Al principio 
+utilizaremos métodos estáticos (static) para implementar subrutinas. 
+Parámetros de entrada: todos los parámetros de tipo primitivo entran por
+ valor (no cambian). Salida de un método: se puede devolver un sólo 
+valor (de tipo primitivo o clase) o ninguno (void). Ejemplo: Definir un 
+algorítmo para que dada una temperatura en grados Fahrenheit retorne la 
+temperatura en grados Celsius. Modularizar de la siguiente forma: * 
+Definir un módulo que reciba como parámetro una temperatura Fahrenheit y
+ retorne la temperatura convertida a Celsius. * El algorítmo prinicipal 
+solicitará la temperatura en grados Fahrenheit, y mostrará la conversion
+ a Celsius invocando al módulo anterior.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;.">
+<div>
+<pre class="js"><code class="hljs javascript">MÓDULO pasarFahrCel (int grados) RETORNA REAL ´
+  (* recibe grados Fahrenheit y retorna Celsius *)
+  REAL celsius
+  celsius ← <span class="hljs-number">5</span> * (grados<span class="hljs-number">-32</span>)/<span class="hljs-number">9</span>
+  RETORNA celsius
+FIN MÓDULO pasarFahrCel ´
+
+ALGORÍTMO conversion() RETORNA ∅
+  (* conversor de temperaturas *)
+  ENTERO gradosFahrenheit
+  REAL gradosCelsius
+  ESCRIBIR (”Ingrese la temperatura en grados fahrenheit”)
+  LEER(gradosFahrenheit )
+  gradosCelsius = pasarFahrCel(gradosFahrenheit)
+  ESCRIBIR(gradosFahrenheit + ”grados Fahrenheit = ” + 
+      gradosCelsius+ ” grados Celsius”)
+FIN ALGORÍTMO conversion
+</code></pre>
+<script type="text/javascript">
+MÓDULO pasarFahrCel (int grados) RETORNA REAL ´
+  (* recibe grados Fahrenheit y retorna Celsius *)
+  REAL celsius
+  celsius ← 5 * (grados-32)/9
+  RETORNA celsius
+FIN MÓDULO pasarFahrCel ´
+
+ALGORÍTMO conversion() RETORNA ∅
+  (* conversor de temperaturas *)
+  ENTERO gradosFahrenheit
+  REAL gradosCelsius
+  ESCRIBIR (”Ingrese la temperatura en grados fahrenheit”)
+  LEER(gradosFahrenheit )
+  gradosCelsius = pasarFahrCel(gradosFahrenheit)
+  ESCRIBIR(gradosFahrenheit + ”grados Fahrenheit = ” + 
+      gradosCelsius+ ” grados Celsius”)
+FIN ALGORÍTMO conversion
+
+</script>
+</div>
+<div>
+<pre class="js"><code class="hljs javascript">
+<span class="hljs-keyword">import</span> java.util.Scanner;
+public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">farACelsius</span>
+</span>{
+<span class="hljs-comment">// Parte principal de programa</span>
+public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main( <span class="hljs-built_in">String</span>[] args )
+{<span class="hljs-comment">//...</span>
+  int gradosFahrenheit;
+  double gradosCelsius;
+  System.out.println(<span class="hljs-string">"Ingrese la temperatura en grados fahrenheit"</span>);
+  gradosFahrenheit = TecladoIn.readLineInt();
+  gradosCelsius = pasarFahrCel(gradosFahrenheit);
+  System.out.println(gradosFahrenheit + <span class="hljs-string">"grados Fahrenheit ="</span> +
+        gradosCelsius + <span class="hljs-string">"grados Celsius"</span>);
+}
+public <span class="hljs-keyword">static</span> double pasarFahrCel(int grados)
+{
+  <span class="hljs-comment">//...</span>
+  double celsius = <span class="hljs-number">5</span> * (grados<span class="hljs-number">-32</span>)/<span class="hljs-number">9</span>;
+  <span class="hljs-keyword">return</span> celsius;
+}
+}
+</code></pre>
+<script type="text/javascript">
+
+import java.util.Scanner;
+public class farACelsius
+{
+// Parte principal de programa
+public static void main( String[] args )
+{//...
+  int gradosFahrenheit;
+  double gradosCelsius;
+  System.out.println("Ingrese la temperatura en grados fahrenheit");
+  gradosFahrenheit = TecladoIn.readLineInt();
+  gradosCelsius = pasarFahrCel(gradosFahrenheit);
+  System.out.println(gradosFahrenheit + "grados Fahrenheit =" +
+        gradosCelsius + "grados Celsius");
+}
+public static double pasarFahrCel(int grados)
+{
+  //...
+  double celsius = 5 * (grados-32)/9;
+  return celsius;
+}
+}
+
+
+</script>
+</div>
+</div>
+</div>
+<div id="funciones-matemáticas" class="section level1">
+<div name="81_Funciones_Matemáticas" data-unique="81_Funciones_Matemáticas"></div><h1>8.1. Funciones Matemáticas</h1>
+<p>Java ofrece un gran número de funciones matemáticas básicas. La 
+siguiente tabla muestra algunas de ellas: Por ejemplo para calcular el 
+valor absoluto de un número la llamada a la función abs será:</p>
+<pre class="js"><code class="hljs javascript">int x = <span class="hljs-built_in">Math</span>.abs( −<span class="hljs-number">15</span>);
+System.out.println(<span class="hljs-string">"el valor absoluto de -15 es: "</span> + x);</code></pre>
+<script type="text/javascript">
+int x = Math.abs( −15);
+System.out.println("el valor absoluto de -15 es: " + x);
+</script>
+<p>Lo cual mostrará en pantalla el siguiente mensaje:</p>
+<pre class="js"><code class="hljs javascript">el valor absoluto de <span class="hljs-number">-15</span> es: <span class="hljs-number">15.</span></code></pre>
+<script type="text/javascript">
+el valor absoluto de -15 es: 15.
+</script>
+<p>Por ejemplo para calcular la potencia de un número elevado a otro, ambos leídos por teclado, el código será: double x, y;</p>
+<p>Lo cual dará, para una entrada donde x = 2 e y = 8, el siguiente mensaje en pantalla:</p>
+<pre class="js"><code class="hljs javascript">La potencia de <span class="hljs-number">2.0</span> elevado <span class="hljs-number">8.0</span> es <span class="hljs-number">256.0</span></code></pre>
+<script type="text/javascript">
+La potencia de 2.0 elevado 8.0 es 256.0
+</script>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+<div id="ghostery-tracker-tally" class="ghostery-bottom ghostery-right ghostery-none ghostery-collapsed"><div id="ghostery-box"><div id="ghostery-count" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); --darkreader-inline-bgcolor: rgba(0, 0, 0, 0); --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-bgimage="">0</div><div id="ghostery-pb-icons-container"><span id="ghostery-breaking-tracker" class="ghostery-pb-tracker" title="Rastreadores de páginas rotas" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmJyZWFraW5ncGFnZTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxNi4wMDAwMDAsIC00NTMuMDAwMDAwKSIgaWQ9ImJhbSEtYnJlYWtpbmctdGhlLXBhZ2UtY29weS0yIiBmaWxsPSIjRkNCQTMzIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxNi4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjE5NTY1MjE3NCBDNC4xNDQzNjAyNSwwLjE5NTY1MjE3NCAwLjE5NTY1MjE3NCw0LjE0NDM2MDI1IDAuMTk1NjUyMTc0LDkgQzAuMTk1NjUyMTc0LDEzLjg1NTYzOTggNC4xNDQzNjAyNSwxNy44MDQzNDc4IDksMTcuODA0MzQ3OCBDMTMuODU1NjM5OCwxNy44MDQzNDc4IDE3LjgwNDM0NzgsMTMuODU1NjM5OCAxNy44MDQzNDc4LDkgQzE3LjgwNDM0NzgsNC4xNDQzNjAyNSAxMy44NTU2Mzk4LDAuMTk1NjUyMTc0IDksMC4xOTU2NTIxNzQgWiBNMTEuNDg1NTg5OSwxMy40MTA0NDQxIEwxMS4wNzcwNzk4LDEzLjAyMDY3NjggTDEyLjEwMDQ3MTEsMTIuMjE2OTU3OSBMMTEuMDQ2MjQ1MSwxMi4yMTY5NTc5IEwxMS4yMzQ0NzgxLDEwLjg3MDcwODcgTDkuODAzMTgxNDIsMTEuNzk1NzUxMiBMOS40MDMzMzczNCw5LjM0NTA5MzkyIEw4LjY5NDc0MjY5LDExLjA4NjU1MTkgTDcuMzI1NzIwMDksMTAuMTcwOTgxNSBMNy43NTI1Njk3NywxMS45Mjk1NyBMNi41NTQyNDY3MywxMi4zMTE0Nzc1IEw3Ljg4MjM1Nzg3LDEzLjQxMDQ0NDEgTDExLjQ4NTU4OTksMTMuNDEwNDQ0MSBaIE02LjcxNTY3NTcyLDEzLjQxMDQ0NDEgTDUuMDI4NjMxOTcsMTIuMDA2NzU3NiBMNi44Njg0Mzg3MywxMS40MzE5ODE4IEw2LjE2Mzg3NDc3LDguNDg4NTczMDkgTDguMzQ5MzEyODgsOS45NTk5NzUxMiBMOS43MDQwMjY1NCw2LjYxMjQ5MDE1IEwxMC4zNTAzNDcxLDEwLjU1NjcxODIgTDEyLjE5NDk5MDcsOS4zNzY1MzMyOCBMMTEuODk4OTM2OCwxMS40NzY5MjM5IEwxNC4yNjI5MzQzLDExLjQ3NjkyMzkgTDEyLjIxMjkyNzIsMTMuMDc4OTIwMiBMMTIuNTY3MjI0NSwxMy40MTA0NDQxIEwxNS4zMzEyNjc3LDEzLjQxMDQ0NDEgTDE0LjQ3Mzk0MDcsMTIuNTk4NjYzOSBMMTcuMjA3MzUwNiwxMC40NjY4MzM5IEwxMy4wNjA3ODIxLDEwLjQ2NjgzMzkgTDEzLjQ5NjI5NzcsNy4zNDg2OTUgTDExLjA5OTg1MzIsOC44Nzg5NDUwNSBMMTAuMTIxMjAyNiwyLjg5Mjc3MTMgTDcuODc3NzIyNTgsOC40MjU0OTI4NSBMNC41NzA1NDQ0Nyw2LjIwMzk4MDEgTDUuNjY1NDgwNDEsMTAuNzUwMzkyNyBMMi45NTEwMTQ3MiwxMS41OTgyNDc2IEw1LjEzNjQ1MjgzLDEzLjQxMDQ0NDEgTDYuNzE1Njc1NzIsMTMuNDEwNDQ0MSBaIiBpZD0iYnJlYWtpbmdwYWdlIj48L3BhdGg+DQogICAgICAgICAgICA8L2c+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span><span id="ghostery-slow-tracker" class="ghostery-pb-tracker" title="Rastreadores lentos" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxN3B4IiBoZWlnaHQ9IjE3cHgiIHZpZXdCb3g9IjAgMCAxNyAxNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPnNsb3d0cmFja2VyczwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM5NS4wMDAwMDAsIC00NTQuMDAwMDAwKSIgaWQ9InNsb3d0cmFja2VycyIgZmlsbD0iI0ZDQkEzMyI+DQogICAgICAgICAgICA8cGF0aCBkPSJNNDAzLjUsNDU0IEMzOTguODEyMjEsNDU0IDM5NSw0NTcuODEyMjEgMzk1LDQ2Mi41IEMzOTUsNDY3LjE4Nzc5IDM5OC44MTIyMSw0NzEgNDAzLjUsNDcxIEM0MDguMTg3NzksNDcxIDQxMiw0NjcuMTg3NzkgNDEyLDQ2Mi41IEM0MTIsNDU3LjgxMjIxIDQwOC4xODc3OSw0NTQgNDAzLjUsNDU0IFogTTQwOS42MDk1ODQsNDY1LjE3ODY1NCBDNDA5LjUzMDI1OSw0NjUuMTU0MDkgNDA4LjY3NzI4Myw0NjQuNzQ2NDIgNDA3LjU2MTA5MSw0NjQuMzYyNjM3IEM0MDguNDg0Mzc4LDQ2My43NDU2MSA0MDkuMDk0NDE4LDQ2Mi42OTM2NDUgNDA5LjA5NDQxOCw0NjEuNTAxNzMzIEM0MDkuMDk0NDE4LDQ1OS42MDU1ODEgNDA3LjU1MTQwMSw0NTguMDYyMzM4IDQwNS42NTUyNDksNDU4LjA2MjMzOCBDNDAzLjc1OTA5Nyw0NTguMDYyMzM4IDQwMi4yMTU4NTQsNDU5LjYwNTU4MSA0MDIuMjE1ODU0LDQ2MS41MDE3MzMgQzQwMi4yMTU4NTQsNDYyLjA0OTM1IDQwMi4zNDUyMDgsNDYyLjU2Njc2OSA0MDIuNTczMjY5LDQ2My4wMjY0OTcgQzQwMi43ODgwMzQsNDYzLjA2ODYzOCA0MDMuMzQ0NDQsNDYzLjE3NTIzMiA0MDQuMjIzNzgyLDQ2My4zMjM5NjggQzQwNS4yMDQ1MzUsNDYzLjQ5MDI4MSA0MDUuODUyNDM2LDQ2My4zNTY0MTkgNDA2LjM5MTAzOSw0NjIuODc2NjM0IEM0MDYuNzI4MTcyLDQ2Mi41NzY0NTkgNDA2LjkyODA2NCw0NjIuMTYzNjA2IDQwNi45NTM1MjksNDYxLjcxMzc5NCBDNDA2Ljk4MDEyMSw0NjEuMjYzOTgxIDQwNi44Mjk1ODMsNDYwLjgyOTk0NCA0MDYuNTI5NDA4LDQ2MC40OTM3MTIgQzQwNi4wNDY5MTksNDU5Ljk1MjQwNSA0MDUuMjE1MTI3LDQ1OS45MDM5NTMgNDA0LjY3MjY5Myw0NjAuMzg1NTQxIEM0MDQuMjM5NTU3LDQ2MC43NzExMjYgNDA0LjE4NTAyMSw0NjEuNDQ0NDkyIDQwNC41NTIxMjcsNDYxLjg1NzM0NiBDNDA0Ljg0MDEzMyw0NjIuMTgwNTA3IDQwNS4zNjk5NDcsNDYyLjIxNzQ2NiA0MDUuNjg2Nzk5LDQ2MS45MzU3NyBDNDA1LjgwMzk4NCw0NjEuODMxODggNDA1Ljg3MzM5NCw0NjEuNjkyODM1IDQwNS44ODA2MDYsNDYxLjU0NDc3NiBDNDA1Ljg4NjY5LDQ2MS40MjQyMSA0MDUuODUwNjMzLDQ2MS4zMTA2MyA0MDUuNzgwOTk4LDQ2MS4yMzQwMDkgQzQwNS43MTg1NzQsNDYxLjE2NTUgNDA1LjYxOTE5Miw0NjEuMTI3NjQxIDQwNS41MTY4OCw0NjEuMTI4NTQyIEM0MDUuNDI5ODkyLDQ2MS4xMzEwMjEgNDA1LjMxNzIxNCw0NjEuMTY1NSA0MDUuMjQ0MTk4LDQ2MS4yMzc2MTUgQzQwNS4yMjYzOTUsNDYxLjI1NDI5MSA0MDUuMjA0NTM1LDQ2MS4yNjQ4ODMgNDA1LjE3OTc0Niw0NjEuMjY0ODgzIEM0MDUuMTI2MTExLDQ2MS4yNjQ4ODMgNDA1LjA4MzA2OCw0NjEuMjE2NDMxIDQwNS4wODMwNjgsNDYxLjE1NzYxMyBDNDA1LjA4MzA2OCw0NjEuMTIxMzMxIDQwNS4wOTc5NDEsNDYxLjA5NDk2NCA0MDUuMTE2NDIxLDQ2MS4wNjk0OTggQzQwNS4yMjYzOTUsNDYwLjkxODk2IDQwNS4zODE0NCw0NjAuODMxNzQ3IDQwNS41MzUzNTksNDYwLjgxODY3NiBDNDA1Ljc0NDAzOSw0NjAuODAxMDk5IDQwNS45MTMwNTcsNDYwLjg2MDgxOCA0MDYuMDQ2OTE5LDQ2MS4wMDc3NTEgQzQwNi4xNzk4NzksNDYxLjE1NDAwNyA0MDYuMjQ5Mjg5LDQ2MS4zNDg0OSA0MDYuMjM3MTIsNDYxLjU2MzI1NSBDNDA2LjIyMzgyNCw0NjEuODA2MTkgNDA2LjExMjk0OCw0NjIuMDMyNDQ4IDQwNS45MjM2NDksNDYyLjIwMDU2NCBDNDA1LjQ1NzE2LDQ2Mi42MTYxMjIgNDA0LjcwNzE3Myw0NjIuNTY2MDkzIDQwNC4yODU1Myw0NjIuMDkzMjk0IEM0MDMuNzg5NzQ1LDQ2MS41MzU5ODcgNDAzLjg1ODQ3OSw0NjAuNjMyMDgxIDQwNC40MzUxNjcsNDYwLjExNzgxNyBDNDA1LjEyMzQwNyw0NTkuNTA1Mjk3IDQwNi4xODI1ODQsNDU5LjU2NjgyIDQwNi43OTQyMDIsNDYwLjI1NTI4NCBDNDA3LjE1NzAyNiw0NjAuNjYyNzMgNDA3LjM0MDAxNiw0NjEuMTg4MjYyIDQwNy4zMDg0NjYsNDYxLjczMzE3NCBDNDA3LjI3NjY5MSw0NjIuMjc4OTg4IDQwNy4wMzQ2NTgsNDYyLjc3OTA1NSA0MDYuNjI2OTg3LDQ2My4xNDE2NTQgQzQwNi4xNjgzODYsNDYzLjU1MDIyNiA0MDUuNjMyMjYyLDQ2My43NDY1MTIgNDA0Ljk0NjUwMiw0NjMuNzQ2NTEyIEM0MDQuNzA1MzcsNDYzLjc0NjUxMiA0MDQuNDQ0ODU3LDQ2My43MjE3MjIgNDA0LjE2MzE2Miw0NjMuNjc0Mzk3IEM0MDMuMTkyMDk5LDQ2My41MDk2NjIgNDAyLjE1NTAwNyw0NjMuMzI0ODY5IDQwMi4wMTU5NjIsNDYzLjMwNTQ4OCBDNDAxLjMxNzEzMSw0NjMuMjEyMTkxIDQwMC43MzYxNjEsNDYyLjczNzU4OSA0MDAuNzE3NjgyLDQ2Mi4wMzk2NTkgTDQwMC44OTQ1ODcsNDU4Ljk4NzY1MyBDNDAwLjg5NDU4Nyw0NTguNzkxMzY3IDQwMC43MzUyNiw0NTguNjMxMTM4IDQwMC41MzgwNzIsNDU4LjYzMTEzOCBDNDAwLjM0MDg4NSw0NTguNjMxMTM4IDQwMC4xODE1NTgsNDU4Ljc5MDQ2NSA0MDAuMTgxNTU4LDQ1OC45ODc2NTMgQzQwMC4xODE1NTgsNDU4Ljk4NzY1MyA0MDAuMjg1NDQ3LDQ2MC44NDE0MzcgNDAwLjI5NzYxNyw0NjEuMDc1NTgzIEM0MDAuMzIwNjAzLDQ2MS41MjAyMTIgMzk5LjkxMTEzLDQ2MS44NzY3MjYgMzk5LjQ2MDQxNiw0NjEuODc2NzI2IEMzOTguOTk4NDM1LDQ2MS44NzY3MjYgMzk4LjU4NzE1OSw0NjEuNTAwODMxIDM5OC42MjM0NDEsNDYxLjAzOTUyNiBDMzk4LjY0MzQ5OCw0NjAuNzg0MTk3IDM5OC42NjQ2ODIsNDYwLjUyMDA3OSAzOTguNjg1ODY1LDQ2MC4yNzI4NjIgTDM5OC43NTk3ODIsNDU5LjAwOTUxMiBDMzk4Ljc1OTc4Miw0NTguODEzMjI2IDM5OC42MDA0NTUsNDU4LjY1Mjk5OCAzOTguNDAzMjY4LDQ1OC42NTI5OTggQzM5OC4yMDYwOCw0NTguNjUyOTk4IDM5OC4wNDY3NTMsNDU4LjgxMjMyNSAzOTguMDQ2NzUzLDQ1OS4wMDk1MTIgTDM5OC4yMjAyNzgsNDYxLjk5OTk5NyBMMzk4LjIyMDI3OCw0NjIuMDA1MTggQzM5OC4yMjAyNzgsNDY0LjA5NzYxNyAzOTkuNDE3MzczLDQ2NS44MDI4OTIgNDAxLjUxMDcxMiw0NjUuODAxMDg5IEM0MDMuNjIyNTMxLDQ2NS43OTgzODUgNDA5LjYwODY4Myw0NjUuODAxMDg5IDQwOS42MDg2ODMsNDY1LjgwMTA4OSBDNDA5Ljc4MTA4MSw0NjUuODAxMDg5IDQwOS45MjAzNTEsNDY1LjY2MTE0MyA0MDkuOTIwMzUxLDQ2NS40ODk0MjEgQzQwOS45MjAzNTEsNDY1LjMxNzAyMyA0MDkuNzczMTkzLDQ2NS4yMzA3MTEgNDA5LjYwOTU4NCw0NjUuMTc4NjU0IFoiPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span><span id="ghostery-non-secure-tracker" class="ghostery-pb-tracker" title="Rastreadores no seguros" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPndhcm5pbmc8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxkZWZzPjwvZGVmcz4NCiAgICA8ZyBpZD0iUHVycGxlLUJveCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzMuMDAwMDAwLCAtNDUzLjAwMDAwMCkiIGlkPSJ3YXJuaW5nIiBmaWxsPSIjRkVCMDMyIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3My4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjYzMDQzNDc4MyBDNC4zODQxNDQ5MywwLjYzMDQzNDc4MyAwLjYzMDQzNDc4Myw0LjM4NDE0NDkzIDAuNjMwNDM0NzgzLDkgQzAuNjMwNDM0NzgzLDEzLjYxNTg1NTEgNC4zODQxNDQ5MywxNy4zNjk1NjUyIDksMTcuMzY5NTY1MiBDMTMuNjE1ODU1MSwxNy4zNjk1NjUyIDE3LjM2OTU2NTIsMTMuNjE1ODU1MSAxNy4zNjk1NjUyLDkgQzE3LjM2OTU2NTIsNC4zODQxNDQ5MyAxMy42MTU4NTUxLDAuNjMwNDM0NzgzIDksMC42MzA0MzQ3ODMgWiBNNC42NDI5MjgxMSwxMS43ODk4NTUxIEM1LjI1MDQxMTY1LDExLjc4OTg1NTEgNS43NTY5NTIzNCwxMS4zNjA3NTY3IDUuODc4NzE2OTMsMTAuODgxMzY5NSBDNi4wMDA0ODE1MiwxMS4zNjEyNDM3IDYuNTA3MDIyMjIsMTEuNzIzNzM2OSA3LjExNDM4NCwxMS43MjM3MzY5IEM3LjcyNDE4MTA2LDExLjcyMzczNjkgOC4yMzI2Njk5OSwxMS4zNjUwMTg0IDguMzUxNTEyMjMsMTAuODgyNzA4OSBDOC40NzA5NjMzLDExLjM2NTAxODQgOC45Nzk0NTIyMywxMS43MzY1MjIyIDkuNTg4NzYyMjQsMTEuNzM2NTIyMiBDMTAuMTk0NjYyOCwxMS43MzY1MjIyIDEwLjcwMTIwMzUsMTEuMzk0OTcyNSAxMC44MjM0NTUyLDEwLjkxNjU1OTQgQzEwLjk0NTcwNjgsMTEuMzk0OTcyNSAxMS40NTIyNDc1LDExLjc4OTM2OCAxMi4wNTgyNjk5LDExLjc4OTM2OCBDMTIuMzUzNjcwOCwxMS43ODkzNjggMTIuNjI0NzE4OCwxMS42OTkzODQgMTIuODM5NzU1LDExLjU1OTU5ODIgQzExLjAwOTUxMTUsOC43MTgwOTk3NSAxMi4xNDUzMzE2LDQuMTM3NjgxMTYgMTIuMTQ1MzMxNiw0LjEzNzY4MTE2IEM2Ljk0NjQ3MDYzLDUuMjMxNjE0MjQgNC42NjU4MTk4NSwxMC4xMDAzNzE0IDQuMDU3OTcxMDEsMTEuNjY2MTQyMiBDNC4yMzI5NDY3MywxMS43NDMyMTkyIDQuNDMxNzg4MzEsMTEuNzg5ODU1MSA0LjY0MjkyODExLDExLjc4OTg1NTEgWiIgaWQ9Indhcm5pbmd0cmFja2VycyI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span></div><div id="ghostery-title">Buscando</div><div id="ghostery-minimize"><span id="ghostery-minimize-icon"></span></div><span id="ghostery-close" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxNXB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxNSAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNy4yICgyODI3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmNvbGxhcHNlIGNvcHkgMjwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgaWQ9ImNvbGxhcHNlLWNvcHktMiI+DQogICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsLTMxNSIgZmlsbC1vcGFjaXR5PSIwLjI3MDE1Mzk4NiIgZmlsbD0iI0Q4RDhEOCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNy41Ij48L2NpcmNsZT4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjM2LDQuMzYgTDEwLjU3NDU2MzQsMTAuNTc0NTYzNCIgaWQ9IkxpbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9wYXRoPg0KICAgICAgICAgICAgPHBhdGggZD0iTTQuMzYsNC4zNiBMMTAuNTc0NTYzNCwxMC41NzQ1NjM0IiBpZD0iTGluZS1Db3B5IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuNjAwMDAwLCA3LjYwMDAwMCkgc2NhbGUoLTEsIDEpIHRyYW5zbGF0ZSgtNy42MDAwMDAsIC03LjYwMDAwMCkgIj48L3BhdGg+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span></div><div id="ghostery-pb-background"><div id="ghostery-trackerList"></div></div></div></body></html>

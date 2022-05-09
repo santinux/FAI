@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html {
+    color-scheme: dark !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #404400 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+
+<meta charset="utf-8">
+<meta name="generator" content="pandoc">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+
+<meta name="author" content="RPA- Dr.Luis Reynoso">
+
+
+<title>Apunte: Algoritmos</title>
+
+<script src="Apunte%20Algoritmos_archivos/jquery-3.js"></script><meta name="darkreader" content="7e2b2140ce68470fbd37af235cba5eb2"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1 {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Apunte%20Algoritmos_archivos/bootstrap.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/bootstrap.js"></script>
+<script src="Apunte%20Algoritmos_archivos/html5shiv.js"></script>
+<script src="Apunte%20Algoritmos_archivos/respond.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/jquery-ui.js"></script>
+<link href="Apunte%20Algoritmos_archivos/jquery.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/jquery.js"></script>
+<script src="Apunte%20Algoritmos_archivos/tabsets.js"></script>
+<link href="Apunte%20Algoritmos_archivos/default.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/highlight.js"></script>
+<script src="Apunte%20Algoritmos_archivos/htmlwidgets.js"></script>
+<script src="Apunte%20Algoritmos_archivos/viz.js"></script>
+<link href="Apunte%20Algoritmos_archivos/styles.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/grViz.js"></script>
+<script src="Apunte%20Algoritmos_archivos/d3.js"></script>
+<script src="Apunte%20Algoritmos_archivos/dagre-d3.js"></script>
+<link href="Apunte%20Algoritmos_archivos/mermaid.css" rel="stylesheet"><style class="darkreader darkreader--sync" media="screen"></style>
+<script src="Apunte%20Algoritmos_archivos/mermaid.js"></script>
+<script src="Apunte%20Algoritmos_archivos/chromatography.js"></script>
+<script src="Apunte%20Algoritmos_archivos/DiagrammeR.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<style type="text/css">code{white-space: pre;}</style><style class="darkreader darkreader--sync" media="screen"></style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+
+<script type="text/javascript" src="Apunte%20Algoritmos_archivos/MathJax.js"></script><style>@media print {#ghostery-tracker-tally {display:none !important}}</style><style>body {padding-top: 64.88333px; padding-bottom: 40px; }
+.section h1{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h2{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h3{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h4{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h5{ padding-top: 64.88333px; margin-top: -64.88333px; }
+.section h6{ padding-top: 64.88333px; margin-top: -64.88333px; }
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style class="darkreader darkreader--sync" media="screen"></style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.2') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.2') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.2') format('woff'), url('https://mathjax.rstudio.com/latest/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.2') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style class="darkreader darkreader--sync" media="screen"></style></head>
+
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<ul id="tocify-header1" class="tocify-header list-group"><li class="tocify-item list-group-item active" data-unique="1_Introducción">1. Introducción</li></ul><ul id="tocify-header2" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="2_Problemas">2. Problemas</li></ul><ul id="tocify-header3" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="3_Abstracciones_y_Modelos">3. Abstracciones y Modelos</li></ul><ul id="tocify-header4" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="4_Algoritmos">4. Algoritmos</li></ul><ul id="tocify-header5" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="5_Construcción_de_Programas">5. Construcción de Programas</li></ul><ul id="tocify-header6" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="6_Diseño_de_Algoritmos">6. Diseño de Algoritmos</li><ul class="tocify-subheader list-group" data-tag="2"><li class="tocify-item list-group-item" data-unique="61_Asignación">6.1 Asignación</li><li class="tocify-item list-group-item" data-unique="62_Instrucciones_de_Entrada_y_Salida">6.2. Instrucciones de Entrada y Salida</li><li class="tocify-item list-group-item" data-unique="63_Traza">6.3. Traza</li></ul></ul><ul id="tocify-header7" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="7_Implementación_Java">7. Implementación Java</li><ul class="tocify-subheader list-group" data-tag="2"><li class="tocify-item list-group-item" data-unique="71_Introducción">7.1. Introducción</li><li class="tocify-item list-group-item" data-unique="72_Variable_y_Constantes">7.2. Variable y Constantes</li><li class="tocify-item list-group-item" data-unique="73_Tipos_de_Dato">7.3. Tipos de Dato</li><li class="tocify-item list-group-item" data-unique="74_Operadores_y_Operandos">7.4. Operadores y Operandos</li><li class="tocify-item list-group-item" data-unique="75_Expresiones">7.5. Expresiones</li><li class="tocify-item list-group-item" data-unique="76_Asignación">7.6. Asignación</li><li class="tocify-item list-group-item" data-unique="77_Sintaxis">7.7. Sintaxis</li><ul class="tocify-subheader list-group" data-tag="3"><li class="tocify-item list-group-item" data-unique="Declaración_de_variables">Declaración de variables</li><li class="tocify-item list-group-item" data-unique="Asignación_de_variables">Asignación de variables</li><li class="tocify-item list-group-item" data-unique="Declaración_y_asignación_de_variables">Declaración y asignación de variables</li></ul><li class="tocify-item list-group-item" data-unique="78_Entrada_Salida">7.8. Entrada Salida</li><li class="tocify-item list-group-item" data-unique="79_Estructura_Básica_de_un_Programa">7.9. Estructura Básica de un Programa</li></ul></ul><ul id="tocify-header8" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="8_Videos_de_clases">8. Videos de clases</li></ul></div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://opendata.fi.uncoma.edu.ar/algoritmos/index.html">RPA22</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/index.html">Home</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteProblemas.html">Problemas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteEstrategias.html">Estrategias</a>
+</li>
+<li class="active">
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteAlgoritmos.html">Algoritmos</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteAlternativas.html">Alternativas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteRepetitivas.html">Repetitivas</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteModularizaci%C3%B3n.html">Modularización</a>
+</li>
+<li>
+  <a href="https://opendata.fi.uncoma.edu.ar/algoritmos/ApunteCadenas.html">Cadenas de Caracteres</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Apunte: Algoritmos</h1>
+<h4 class="author">RPA- Dr.Luis Reynoso</h4>
+<h4 class="date">08 abril, 2022</h4>
+
+</div>
+
+
+<div id="introducción" class="section level1">
+<div name="1_Introducción" data-unique="1_Introducción"></div><h1>1. Introducción</h1>
+<p>En este apunte se describe una introducción a la resolución de 
+problemas destacando la importancia de abstracciones y modelos. El 
+apunte tambien define el concepto de algoritmo detallando como los 
+algoritmos nos ayudan en la resolución de problemas por computadora. Así
+ mismo pone énfasis en la tarea de diseño de un algoritmo. Se presentan 
+conceptos teóricos y ejemplos, y al finalizar el apunte se incluyen una 
+serie de ejercicios.</p>
+</div>
+<div id="problemas" class="section level1">
+<div name="2_Problemas" data-unique="2_Problemas"></div><h1>2. Problemas</h1>
+<p>Definimos <strong>problema</strong> como una discrepancia entre un 
+estado actual y un estado deseado. Resolver un problema consiste 
+entonces en encontrar una secuencia de pasos que nos permitan pasar de 
+un estado a otro. La resolución de un problema no afecta a un problema 
+particular sino a una <strong>clase de problemas</strong>. Cuando hablamos de resolución de problemas estamos refiriéndonos en realidad a un conjunto de problemas.</p>
+<p>Para hallar soluciones a problemas se requiere habilidad, conocimiento y experiencia.</p>
+<p>Un problema puede ser simple o complejo según quien tenga que hallar 
+su solución. Las personas tienen distintas capacidades para hallar 
+soluciones para diferentes <strong>clases de problemas</strong>.</p>
+<p>Aunque a veces es posible hallar la solución de un problema 
+aparentemente difícil de una forma puramente intuitiva ya que podemos 
+tener raptos de inspiración, en general resulta conveniente entrenarnos 
+en el uso de algunas estrategias y t ácticas que nos orienten en la 
+búsqueda de soluciones de problemas.</p>
+<p>Estas tácticas y estrategias no necesariamente nos conducirán a la 
+solución, pero es probable que nos ayuden en menor o mayor medida.</p>
+<p>La búsqueda de la solución de un problema es una tarea difícil de 
+sistematizar. Cada problema puede presentarse en forma aparentemente 
+aislada y frecuentemente no sabemos cómo encararlo.</p>
+<p>Sin embargo existen algunas pautas útiles que, de ser seguidas, 
+pueden ayudarnos para enfrentar el problema: por ejemplo seguir los 
+pasos de polya, utilizar una plantilla, es fundamental encontrar una 
+buena representación para el problema, emplear estrategias. La 
+representación constituirá un <strong>modelo</strong> del problema que deseamos resolver.</p>
+<p>Hallar una solución para un problema específico puede brindarnos 
+pautas para resolver la clase de problemas a la cual pertenece el 
+problema particular.</p>
+<p>Si podemos resolver una clase de problemas, estamos en condiciones de
+ hallar una solución para una instancia específica, de acuerdo a esta 
+resolución.</p>
+</div>
+<div id="abstracciones-y-modelos" class="section level1">
+<div name="3_Abstracciones_y_Modelos" data-unique="3_Abstracciones_y_Modelos"></div><h1>3. Abstracciones y Modelos</h1>
+<p>El corazón de la tarea de resolver problemas reside en ser capaces de
+ manejar la complejidad inherente a ellos. La economía nacional, el 
+movimiento de las moléculas en un objeto físico simple, son problemas 
+muy complejos y por lo tanto difíciles de resolver. Para disminuir la 
+complejidad de los problemas se utiliza una técnica muy poderosa: la <strong>abstracción</strong>.</p>
+<p>El proceso de abstracción permite la construcción de <strong>modelos</strong>. Un modelo describe las propiedades fundamentales de un sistema, descartando los detalles irrelevantes.</p>
+<p>Las leyes del movimiento de Newton son un modelo de la realidad 
+física. Este modelo abstrae la enorme complejidad del movimiento de las 
+partículas de los objetos y describe las propiedades globales del 
+comportamiento integrado.</p>
+<p>Para muchos propósitos los movimientos detallados de las moléculas en
+ un objeto son irrelevantes, ya que consideramos los movimientos de las 
+moléculas en su conjunto. Por ejemplo, nosotros hablamos de la velocidad
+ de un objeto (que es la velocidad promedio de todas sus moléculas), de 
+su temperatura (que es una medida de la energía cinética del movimiento 
+molecular). En estos casos estamos <strong>abstrayendo</strong> de los detalles irrelevantes para el problema que tenemos entre manos.</p>
+<p>Para algunos propósitos estas abstracciones pueden resultar 
+inadecuadas. Cuando intentamos entender las reacciones químicas, por 
+ejemplo, debemos considerar un modelo mas detallado que describa la 
+estructura atómica de los materiales.</p>
+<p>Cada modelo contiene el detalle necesario para explicar el fenómeno 
+bajo estudio. Para analizar el movimiento o la temperatura de un objeto 
+podemos ignorar completamente su estructura molecular.</p>
+<p>Notemos que en cada caso hemos definido un modelo adecuado para 
+representar el fenómeno a estudiar. Estos modelos son distintos aún 
+cuando la realidad es una sola y brindan una visión destacada del 
+aspecto que se desea resaltar.</p>
+<p>Por ejemplo, consideremos la construcción de un edificio de 
+departamentos. Existirán varios modelos de acuerdo a diferentes puntos 
+de vista, aunque est á claro que el edificio es uno solo. Para el 
+ingeniero civil, una carta de la estructura general ser á suficiente 
+representación, mientras que el arquitecto requerirá una serie de planos
+ de los diferentes tipos de planta. Por otro lado, para la inmobiliaria 
+encargada de la venta, probablemente será necesaria una maqueta con las 
+distintas plantas y algunos otros detalles que permitan al comprador 
+tener una visión global y dinámica del conjunto edilicio.</p>
+<p>En la ciencia, la complejidad de la realidad puede ser entendida 
+comprendiendo una cantidad de modelos -abstracciones- que la describen 
+desde distintos puntos de vista.</p>
+<p>Es necesario no ahondar demasiado en el proceso de abstracción a riesgo de caer en un <strong>modelo mentiroso</strong>,
+ es decir, en nuestro afán por comprender fácilmente la realidad, 
+tratamos de simplificarla a tal extremo que desechamos propiedades 
+fundamentales. Por ejemplo, cuando se estudia la estructura de un átomo,
+ se cae siempre en un gráfico que sitúa al núcleo en el centro rodeado 
+por electrones que giran en órbitas perfectas. Hoy sabemos que este 
+modelo es completamente irreal, pues los electrones intercambian 
+constantemente energía saltando de órbita en órbita.</p>
+<p>Los modelos cambian para darnos mejores aproximaciones de cómo se 
+comporta el mundo real. Nuestros modelos aproximan una realidad física 
+pero los modelos en sí nunca son <strong>verdad</strong>, siempre están sujetos al cambio al incorporar nuevo conocimiento.</p>
+<p>El nivel de detalle requerido en un modelo depende de lo que pensemos
+ hacer con él. Un modelo adecuado para tener un primer contacto con una 
+cierta área de conocimiento, puede ser totalmente inadecuado o 
+insuficiente si vamos a profundizar el estudio de problemas dentro de 
+esa área. Es más, cierto modelo de la realidad puede ser adecuado para 
+resolver algunos problemas y no para otros.</p>
+<p>Es importante preservar siempre la calidad del modelo, es decir, 
+respetar la realidad que se trata de representar. Así podemos hacer una 
+serie de suposiciones iniciales y limitar nuestro modelo. Luego se podrá
+ trabajar sobre el modelo y ver si la realidad se adapta al 
+comportamiento previsto. Si así fuera, hemos hallado un buen <strong>modelo</strong> que podrá servir de base para realizar estudios m ás profundos.</p>
+</div>
+<div id="algoritmos" class="section level1">
+<div name="4_Algoritmos" data-unique="4_Algoritmos"></div><h1>4. Algoritmos</h1>
+<p>Queremos encontrar métodos generales capaces de resolver una **clase de problemas por eso diseñaremos algoritmos.</p>
+<p>Podés ver un video resúmen sobre algoritmos en el siguiente enlace:</p>
+<iframe src="Apunte%20Algoritmos_archivos/JgI3DWRqEZc.html" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="956" height="538" frameborder="0">
+</iframe>
+<blockquote>
+<p>📝 <strong><em>ALGORITMO:</em></strong> Un algoritmo  es un <strong>modelo</strong>
+ de la resolución de un problema, o mejor aún, de una clase de 
+problemas. Un conjunto de directivas precisas que indicarán exactamente 
+cómo se obtendrán los resultados deseados.</p>
+</blockquote>
+<p>Informalmente un algoritmo es un método para resolver un problema, o 
+un conjunto de directivas o una fórmula que indicará exactamente cómo se
+ obtendrán los resultados deseados. De acuerdo a esta definición, todos 
+trabajamos continuamente con algoritmos, sólo que no somos tan formales 
+como para llamarlos así.</p>
+<p>El conjunto de instrucciones dadas para armar un triciclo a partir de
+ sus componentes, el procedimiento para registrarse en un colegio, una 
+receta para preparar una torta, son ejemplos válidos de algoritmos. 
+Describamos un algoritmo que llamaremos <strong>shampoo</strong></p>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>Mojar el cabello.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal" start="2">
+<li>Aplicar shampoo.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal" start="3">
+<li>Masajear.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal" start="4">
+<li>Enjuagar.</li>
+</ol></li>
+<li><ol style="list-style-type: decimal" start="5">
+<li>Repetir.</li>
+</ol></li>
+</ul>
+<p>Existen dos puntos de vista desde los cuales debe ser considerado un algoritmo:</p>
+<ul>
+<li><p>Por un lado esta la <strong>especificación</strong> del 
+algoritmo. La especificación comprende precisamente al conjunto de 
+acciones que permiten resolver una clase de problemas. Desde este punto 
+de vista un algoritmo se puede pensar como una entidad <strong>estática</strong>.</p></li>
+<li><p>Por otro lado debemos considerar la <strong>ejecución</strong> 
+del algoritmo. Cuando alguien lleva a cabo las directivas indicadas por 
+el algoritmo, hablamos de ejecución. Durante la ejecución estamos 
+hallando la solución de un problema específico o de una instancia de la 
+clase de problemas. La ejecución es un proceso <strong>dinámico</strong></p></li>
+</ul>
+<div id="htmlwidget-c965210c23c2853ddbe3" style="width:672px;height:100px;" class="grViz html-widget html-widget-static-bound"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: %0 Pages: 1 -->
+<svg viewBox="0.00 0.00 237.44 116.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: 100%;">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>%0</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 233.4398,-112 233.4398,4 -4,4" style="--darkreader-inline-stroke: transparent; --darkreader-inline-fill: #181a1b;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+<!-- rec1 -->
+<g id="node1" class="node">
+<title>rec1</title>
+<polygon fill="none" stroke="#000000" points="229.6601,-108 -.2203,-108 -.2203,-72 229.6601,-72 229.6601,-108" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></polygon>
+<text text-anchor="middle" x="114.7199" y="-85.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Paso 1. Especificación del Algoritmo</text>
+</g>
+<!-- rec2 -->
+<g id="node2" class="node">
+<title>rec2</title>
+<polygon fill="none" stroke="#000000" points="216.2347,-36 13.2051,-36 13.2051,0 216.2347,0 216.2347,-36" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></polygon>
+<text text-anchor="middle" x="114.7199" y="-13.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill="">Paso 2. Ejecución del Algoritmo</text>
+</g>
+<!-- rec1&#45;&gt;rec2 -->
+<g id="edge1" class="edge">
+<title>rec1-&gt;rec2</title>
+<path fill="none" stroke="#000000" d="M114.7199,-71.8314C114.7199,-64.131 114.7199,-54.9743 114.7199,-46.4166" style="--darkreader-inline-stroke: #e8e6e3;" data-darkreader-inline-stroke=""></path>
+<polygon fill="#000000" stroke="#000000" points="118.22,-46.4132 114.7199,-36.4133 111.22,-46.4133 118.22,-46.4132" style="--darkreader-inline-stroke: #e8e6e3; --darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-stroke="" data-darkreader-inline-fill=""></polygon>
+</g>
+</g>
+</svg>
+</div>
+<script type="application/json" data-for="htmlwidget-c965210c23c2853ddbe3">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TD]\n    node [shape = rectangle]        \n  rec1 [label = \"Paso 1. Especificación del Algoritmo\"]\n  rec2 [label = \"Paso 2. Ejecución del Algoritmo\"]\n  # edge definitions with the node IDs\n  rec1 -> rec2 \n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>En adelante, cuando hablemos de algoritmos, nos estaremos refiriendo a
+ la especificación y cuando nos refiramos a la dinámica de un algoritmo,
+ diremos ejecución de algoritmos.</p>
+<p>Formalmente, definiremos entonces el concepto de <strong>algoritmo</strong> como:</p>
+<blockquote>
+<p>📝 <strong><em>ALGORITMO:</em></strong> Un algoritmo es una secuencia finita de operaciones precisas (i.e.&nbsp;no ambigüas) para resolver un clase de problemas.</p>
+</blockquote>
+<p>Por <strong>secuencia de operaciones</strong>, entendemos que para 
+cada paso del algoritmo, el siguiente está definido sin ambigüedad. Esto
+ es, luego de completar un paso debemos saber siempre cuál será 
+ejecutado a continuación. El orden de ejecución puede indicarse en la 
+especificación, numerando los pasos con enteros positivos. 
+Alternativamente el orden puede asumirse por la posición de las 
+operaciones. Sin embargo, en muchas ocasiones podemos desear interrumpir
+ esta secuencia.</p>
+<p>En nuestro ejemplo el paso 5 presenta ambigüedades, al no indicar qué
+ pasos deben ser repetidos. Sin embargo, para cualquier persona es obvio
+ que no debe volver a mojar el cabello y no tendría sentido enjuagar 
+nuevamente si no colocamos shampoo otra vez.</p>
+<p>Inherente al concepto de secuencia de operaciones, subyace la idea de <strong>principio</strong> y <strong>fin</strong>. Todo algoritmo debe tener un punto inicial y por lo menos uno final.</p>
+<p>Las <strong>propiedades</strong> de un algoritmo incluyen:</p>
+<ul>
+<li>El algoritmo recibe una <strong>Entrada</strong> y genera una <strong>Salida</strong>.</li>
+<li><strong>Precisión</strong>: Cada paso esta precisamente explicitado.</li>
+<li><strong>Determinismo</strong>: A igual entrada, igual salida. Esto es válido incluso para cada paso.</li>
+<li><strong>Correctitud</strong>: Un algoritmo es correcto, si cumple con los tres puntos siguientes:
+<ul>
+<li>El algoritmo resuelve el problema para el cual fue diseñado: <strong>eficaz</strong>.
+ La Eficacia es la «capacidad de lograr el efecto que se desea o se 
+espera». La eficacia significa conseguir las metas establecidas (qué se 
+hace);</li>
+<li>Para cada <strong>entrada</strong>, el algoritmo produce la <strong>salida</strong> deseada.
+<ul>
+<li>El algoritmo termina en un tiempo finito: <strong>finitud</strong>. En otras materias se los estudiará desde el punto de vista de su <strong>tiempo de ejecución, eficiencia y complejidad</strong>.
+ La eficiencia es la capacidad de conseguir las metas de la mejor manera
+ posible (cómo se hace); y la efectividad es la mezcla perfecta de 
+eficacia y eficiencia (conseguir las metas con unos recursos mínimos).</li>
+</ul></li>
+</ul></li>
+<li><strong>Generalización</strong>: Un algoritmo es aplicable a un conjunto de entradas.</li>
+</ul>
+<p>Las operaciones que componen un algoritmo son llamadas <strong>primitivas</strong>,
+ y deben ser entendibles para la persona o máquina que las ejecutará. 
+Por lo tanto el conjunto de primitivas posibles para escribir un 
+algoritmo depende de quién o qué lo ejecutará.</p>
+<pre class="js"><code class="hljs javascript">Por ejemplo, la siguiente receta es un método posible para preparar una tarta de manzanas:
+<span class="hljs-number">1.</span> Prepare la masa.
+<span class="hljs-number">2.</span> Prepare el dulce de manzanas.
+<span class="hljs-number">3.</span> Rellene la masa con el dulce.
+<span class="hljs-number">4.</span> Coloque la tarta en horno moderado por <span class="hljs-number">30</span> minutos.</code></pre>
+<script type="text/javascript">
+Por ejemplo, la siguiente receta es un método posible para preparar una tarta de manzanas:
+1. Prepare la masa.
+2. Prepare el dulce de manzanas.
+3. Rellene la masa con el dulce.
+4. Coloque la tarta en horno moderado por 30 minutos.
+</script>
+<p>Para una persona familiarizada con la cocina esta receta puede ser 
+aceptable. Sin embargo los pasos 1 y 2 presentarán ambigüedades para 
+alguien sin experiencia en la cocina y deberán ser desarrollados con más
+ detalle.</p>
+<p>Para que un algoritmo pueda ser interpretado y ejecutado debe estar 
+expresado entonces en función de acciones comprensibles. La clave está 
+pues en definir el conjunto de acciones en términos de las cuales va a 
+poder ser expresado el algoritmo.</p>
+<p>Uno de los puntos fundamentales para decidir si un algoritmo es 
+válido, es pues el hecho de que las acciones que lo componen sean <strong>primitivas</strong>.</p>
+<p>Ahora bien, ¿cuándo un algoritmo puede ser interpretado y ejecutado por una computadora?</p>
+</div>
+<div id="construcción-de-programas" class="section level1">
+<div name="5_Construcción_de_Programas" data-unique="5_Construcción_de_Programas"></div><h1>5. Construcción de Programas</h1>
+<p>Hemos dicho que estamos en presencia de un problema cuando existe una
+ discrepancia entre la situación actual y la situación deseada.</p>
+<p>La resolución de un problema consiste en hallar un algoritmo o un 
+método que nos permita pasar de la situación actual a la deseada. Este 
+método permite en realidad resolver una clase de problemas, mas que un 
+problema particular.</p>
+<p>Existen clases de problemas, para los cuales es muy difícil hallar un
+ método de resolución. Tomemos por ejemplo, un detective cuyo problema 
+es hallar el asesino de un crimen. El detective por supuesto se basará 
+en sus experiencias anteriores y seguramente considerará algunos casos 
+similares ya resueltos. Es más, es posible que los primeros pasos sean 
+siempre los mismos: averiguar cómo, cuándo y dónde se produjo el crimen,
+ quiénes fueron los últimos que vieron a la víctima con vida… De acuerdo
+ a las respuestas el caso tomará rumbos diferentes. Resulta muy difícil 
+encontrar un algoritmo para resolver crímenes. En el mejor de los casos 
+el detective podrá hallar la solución para cada caso particular.</p>
+<p>Existen otras clases de problemas, sin embargo, para los que una vez hallada una solución para una <strong>instancia</strong> especifica, es fácil inferir un método de resolución para toda la clase de problemas.</p>
+<p>Supongamos que nos enfrentamos al problema de buscar en una guía 
+telefónica el número de teléfono de Pérez Juan. Para realizar esta tarea
+ tenemos que partir de dos supuestos: sabemos leer y contamos con una 
+guía.</p>
+<p>A partir de estos dos hechos podemos hallar una solución al problema de una forma muy rudimentaria y tediosa:</p>
+<p>Podemos comparar el primer nombre con Pérez Juan, si coinciden (saber
+ leer implica poder decidir si dos nombres son iguales) hemos hallado la
+ solución. Si no, consideramos el segundo nombre y así siguiendo hasta 
+encontrar a Pérez Juan o hasta que se agotó la guía (la persona no 
+figura).</p>
+<p>Este método es muy **ineficiente porque partimos de premisas muy 
+simples. Si disponemos de más información el problema se simplifica.</p>
+<p>Si sabemos que la guía esta ordenada alfabéticamente y conocemos el alfabeto, nuestro algoritmo podría ser <strong>descartar por mitades</strong>:</p>
+<p>Podemos abrir la guía por la mitad, aproximadamente, y comparar Pérez
+ Juan con un nombre cualquiera. Pueden darse tres circunstancias:</p>
+
+<p>El proceso se repite nuevamente hasta hallar a Pérez Juan o agotar la guía.</p>
+<p>Si tenemos conocimiento de la distribución de los apellidos en la 
+guía, podríamos descartar una parte de la misma de distinta manera:</p>
+<p>Podemos abrir la guía considerando la posición de P en el alfabeto y 
+luego buscar secuencialmente por hojas y luego, una vez quehemos 
+localizado la página, avanzar por nombre.</p>
+<p>En ningún idioma existe la misma cantidad de apellidos para cada 
+letra. En castellano, si buscamos un apellido que comienza con P, 
+descartaremos bastante más que las primeras 17/27 partes de la guía, aún
+ cuando la posición de P en el alfabeto es 17, provisto que buena parte 
+de los nombres comienzan con las primeras letras del alfabeto. Diferente
+ situación se hubiera presentado en otro idioma.</p>
+<p>Cada método ha sido una mejora respecto al anterior, pero requiere más Información, <strong>supone que sabemos hacer más cosas</strong>. En cada caso, además, hacemos uso de mayores conocimientos y de operaciones más complejas.</p>
+<p>Cualquiera de los algoritmos sirve no sólo para intentar localizar a 
+Pérez Juan en la guía, sino a cualquier persona. No sólo podemos hallar 
+la solución de un problema, sino resolver toda una clase de problemas. 
+Es más, el mismo método podría ser utilizado para hallar solución a 
+problemas similares, como por ejemplo buscar una palabra en el 
+diccionario.</p>
+<p>De hecho, la confección de una guía presupone que la tarea de buscar 
+un número telefónico se va a llevar a cabo frecuentemente. El esfuerzo 
+empleado en encontrar un algoritmo se ve compensado por el hecho de que 
+va a ser utilizado muchas veces.</p>
+<p>Tomemos otro ejemplo. Cuando deseamos calcular el cociente <em>q</em>
+ de un división entera, la forma más sencilla es hallarlo por restas 
+sucesivas. El método es sencillo pero lento. Si esta tarea va a ser 
+llevada a cabo muchas veces conviene encontrar un método más eficiente, 
+aunque menos simple. En cualquier caso saber dividir, conocer el método,
+ no implica <strong>entender</strong> el concepto.</p>
+<p>Notemos que la acción de <strong>dividir</strong>, por definición, produce dos valores, el cociente <em>q</em> y el resto <em>r</em>.
+ Aunque frecuentemente nos referimos indistintamente a hallar el 
+cociente o a dividir, no son acciones equivalentes. La división entera 
+de dos números <em>a</em> y <em>b</em> implica hallar otros dos números <em>q</em> y <em>r</em> tales que <em>a</em> = q*b + r.</p>
+<p>Dos métodos para resolver un mismo problema normalmente difieren en 
+el tipo de cosas que hay que saber hacer para llevarlos a cabo.</p>
+<p>Para que una computadora pueda ser utilizada para hallar la <strong>solución</strong> de un problema, es necesario que sepa <strong>resolver el problema</strong>. Es decir, es necesario que se le brinde un método para resolver dicho problema. ¿Cómo explicitaremos dicho método?</p>
+<p>La tarea de <strong>programar</strong> implica precisamente la 
+obtención de un modelo computacional para la resolución del problema. 
+Esto es, lograr un conjunto de instrucciones comprensibles para la 
+computadora que permitan alcanzar la solución deseada para un conjunto 
+de problemas.</p>
+<p>Podemos pensar que:</p>
+<ul>
+<li>No tiene sentido escribir programas puntuales que permitan hallar 
+soluciones para problemas específicos como por ejemplo, buscar el número
+ de teléfono de Pérez Juan o resolver la ecuación x<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 0.543em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.42em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.207em, 1000.42em, 2.401em, -1000em); top: -2.221em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 0.429em; height: 0px;"><span style="position: absolute; clip: rect(3.842em, 1000em, 4.202em, -1000em); top: -4.022em; left: 0em;"><span class="mi" id="MathJax-Span-4"></span><span style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span style="position: absolute; top: -4.385em; left: 0em;"><span class="texatom" id="MathJax-Span-5"><span class="mrow" id="MathJax-Span-6"><span class="mn" id="MathJax-Span-7" style="font-size: 70.7%; font-family: MathJax_Main;">2</span></span></span><span style="display: inline-block; width: 0px; height: 4.022em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.221em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.071em; border-left: 0px solid; width: 0px; height: 1.135em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi></mi><mrow class="MJX-TeXAtom-ORD"><mn>2</mn></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-1">^{2}</script></span> + 3x - 1 = 0.</li>
+<li>Estaríamos buscando un método para resolver una clase de problemas 
+con una única instancia. Recordemos que, de acuerdo a lo dicho en la 
+sección anterior, un algoritmo es un ente estático que describe una 
+serie de pasos a realizar para resolver una clase de problemas. Cuando 
+el algoritmo se ejecuta se resuelve una instancia particular de dicha 
+clase.</li>
+<li>Para que un algoritmo, destinado a resolver un problema, pueda ser 
+transformado en un programa, es necesario que seamos capaces de 
+definirlo en términos de operaciones que la computadora <strong>sepa</strong> hacer. Por ejemplo podemos encontrar un método para <strong>cambiar la cubierta de un auto</strong>, pero difícilmente podremos describir este método en términos de acciones que una computadora común pueda ejecutar.</li>
+</ul>
+<p>Existe otra diferencia fundamental entre los problemas cotidianos 
+planteados en la sección anterior y aquellos que pueden ser resueltos de
+ manera tal de poder ser interpretados y ejecutados por una computadora.</p>
+<p>Vimos que un algoritmo es una secuencia de pasos llevada a cabo sobre
+ ciertos datos y que luego de un número finito de pasos produce un 
+resultado. En los algoritmos vistos para <strong>lavar el cabello</strong> o <strong>preparar una tarta</strong> era un poco difícil distinguir <strong>datos</strong> y <strong>acciones</strong>.</p>
+<p>En estos ejemplos no podemos hablar de <strong>datos</strong>, sino únicamente de estado inicial y estado final. Para el primer ejemplo el estado inicial era <strong>cabello sucio</strong> y el estado final <strong>cabello limpio</strong>. Sin embargo, esta especificación es ambigüa y por lo tanto la <strong>ejecución</strong> del algoritmo provocará variaciones en el estado final, dependientes del estado inicial y de la interpretación de las acciones.</p>
+<p>Cuando pensamos en llevar un algoritmo a la computadora, estas 
+ambigüedades no son admisibles. Los datos de entrada y de salida, así 
+como las acciones, deben estar perfectamente definidos.</p>
+<p>Los datos de entrada pueden considerarse como la descripción del 
+estado inicial de un problema. Sin embargo en algunos problemas es 
+difícil identificar el estado inicial con un conjunto de datos de 
+entrada.</p>
+<p>Los datos de salida pueden considerarse como la descripción del 
+estado final de un problema. Sin embargo en algunos problemas es difícil
+ identificar el estado final con un conjunto de datos de salida.</p>
+<p>Un <strong>dato</strong> representa a un conjunto de valores. En la 
+ejecución del algoritmo cada dato de entrada tomará un valor dentro del 
+conjunto. Cada instancia diferirá de otra en función de los valores que 
+tomen los datos. Los algoritmos que trataremos producirán los mismos 
+resultados cuando se ejecuten para los mismos valores de los datos de 
+entrada. La ejecución de una misma receta no siempre provocará como 
+resultado la misma tarta, porque hay una serie de factores que 
+determinan el estado final y son difíciles de especificar.</p>
+<p>Aunque los puntos anteriores son muy importantes, la clave fundamental reside en ser capaces de <strong>hallar el método de resolución del problema</strong>.</p>
+<p>Resolver un problema, o mejor dicho una clase de problemas, consiste 
+precisamente en encontrar un método que permita hallar la solución de 
+cualquier problema de la clase.</p>
+<p>En ocasiones el mismo planteo del problema incluye la descripción del
+ método para resolverlo. En otros casos, el enunciado no indica cómo 
+resolver el problema, pero existen métodos para resolverlo. Sin embargo 
+con frecuencia, el problema no especifica el método y el diseño del 
+algoritmo es entonces nuestra responsabilidad.</p>
+<p>Cuando el algoritmo puede ser transformado en una secuencia de 
+instrucciones ejecutables por una computadora, se transforma en un <strong>programa</strong>.</p>
+<p>Un programa estará escrito en un <strong>lenguaje de programación</strong>, es decir, en una notación formal y estricta, que podrá ser interpretada por la computadora.</p>
+<p>Es posible establecer una analogía entre los pasos de Polya para resolver problemas y los pasos de la ingeniería de software:</p>
+<div style="display: grid; grid-template-columns: 0.5fr 0.5fr;.">
+<div>
+<div id="htmlwidget-de9fdc9aef61e54361ce" style="width:672px;height:480px;" class="DiagrammeR html-widget html-widget-static-bound mermaid" data-processed="true"><svg id="mermaidChart0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 346" style="max-width: 236px; width: 100%; height: 100%;"><style type="text/css" title="mermaid-svg-internal-css">/*  */
+#mermaidChart0 .node&gt;rect { ; }
+#mermaidChart0 .node text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart0 .edgeLabel text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart0 .cluster rect  { rx:4px; fill: rgb(255, 255, 222); rx: 4px; stroke: rgb(170, 170, 51); stroke-width: 1px; }
+* { box-sizing: border-box;}
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 75%; font-weight: 700; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25em;}
+.DiagrammeR g .label { font-family: Helvetica; font-size: 14px; color: rgb(51, 51, 51);}
+.mermaid .label { color: rgb(51, 51, 51); font-weight: 400;}
+.mermaid .node rect, .mermaid .node circle, .mermaid .node ellipse, .mermaid .node polygon { fill: rgb(236, 236, 255); stroke: rgb(204, 204, 255); stroke-width: 1px;}
+.mermaid .edgePath .path { stroke: rgb(51, 51, 51);}
+.mermaid .edgeLabel { background-color: rgb(232, 232, 232);}
+#mermaidChart0 .FixFont&gt;rect, .FixFont&gt;polygon, .FixFont&gt;circle, .FixFont&gt;ellipse { font-size:9px; }
+/*  */
+</style><style class="darkreader darkreader--sync" media="screen" title="mermaid-svg-internal-css"></style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M108,54L108,79L108,104" marker-end="url(#arrowhead17)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead17" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M108,138L108,163L108,188" marker-end="url(#arrowhead18)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead18" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M108,222L108,247L108,272" marker-end="url(#arrowhead19)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead19" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(108,37)"><rect rx="0" ry="0" x="-88" y="-17" width="176" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-78,-7)"><foreignObject width="156" height="14"><div style="display: inline-block; white-space: nowrap;">Comprender el Problema</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(108,121)"><rect rx="0" ry="0" x="-55" y="-17" width="110" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-45,-7)"><foreignObject width="90" height="14"><div style="display: inline-block; white-space: nowrap;">Trazar un Plan</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(108,205)"><rect rx="0" ry="0" x="-58.5" y="-17" width="117" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-48.5,-7)"><foreignObject width="97" height="14"><div style="display: inline-block; white-space: nowrap;">Ejecutar el Plan</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(108,289)"><rect rx="0" ry="0" x="-73.5" y="-17" width="147" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-63.5,-7)"><foreignObject width="127" height="14"><div style="display: inline-block; white-space: nowrap;">Visión Retrospectiva</div></foreignObject></g></g></g></g></g></g></svg></div>
+<script type="application/json" data-for="htmlwidget-de9fdc9aef61e54361ce">{"x":{"diagram":"\ngraph TD\nclassDef FixFont font-size:9px;\n  A[Comprender el Problema]---B[Trazar un Plan]\n  B[Trazar un Plan]---C[Ejecutar el Plan]\n  C---D[Visión Retrospectiva]\n"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div>
+<div id="htmlwidget-587e5b0f12fd30acde95" style="width:672px;height:480px;" class="DiagrammeR html-widget html-widget-static-bound mermaid" data-processed="true"><svg id="mermaidChart1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 346" style="max-width: 255px; width: 100%; height: 100%;"><style type="text/css" title="mermaid-svg-internal-css">/*  */
+#mermaidChart1 .node&gt;rect { ; }
+#mermaidChart1 .node text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart1 .edgeLabel text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart1 .cluster rect  { rx:4px; fill: rgb(255, 255, 222); rx: 4px; stroke: rgb(170, 170, 51); stroke-width: 1px; }
+* { box-sizing: border-box;}
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 75%; font-weight: 700; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25em;}
+.DiagrammeR g .label { font-family: Helvetica; font-size: 14px; color: rgb(51, 51, 51);}
+.mermaid .label { color: rgb(51, 51, 51); font-weight: 400;}
+.mermaid .node rect, .mermaid .node circle, .mermaid .node ellipse, .mermaid .node polygon { fill: rgb(236, 236, 255); stroke: rgb(204, 204, 255); stroke-width: 1px;}
+.mermaid .edgePath .path { stroke: rgb(51, 51, 51);}
+.mermaid .edgeLabel { background-color: rgb(232, 232, 232);}
+/*  */
+</style><style class="darkreader darkreader--sync" media="screen" title="mermaid-svg-internal-css"></style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,54L117.5,79L117.5,104" marker-end="url(#arrowhead36)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead36" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,138L117.5,163L117.5,188" marker-end="url(#arrowhead37)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead37" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,222L117.5,247L117.5,272" marker-end="url(#arrowhead38)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead38" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(117.5,37)"><rect rx="0" ry="0" x="-72.5" y="-17" width="145" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-62.5,-7)"><foreignObject width="125" height="14"><div style="display: inline-block; white-space: nowrap;">Análisis de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(117.5,121)"><rect rx="0" ry="0" x="-70" y="-17" width="140" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-60,-7)"><foreignObject width="120" height="14"><div style="display: inline-block; white-space: nowrap;">Diseño de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(117.5,205)"><rect rx="0" ry="0" x="-97.5" y="-17" width="195" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-87.5,-7)"><foreignObject width="175" height="14"><div style="display: inline-block; white-space: nowrap;">Implementación de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(117.5,289)"><rect rx="0" ry="0" x="-70.5" y="-17" width="141" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-60.5,-7)"><foreignObject width="121" height="14"><div style="display: inline-block; white-space: nowrap;">Testing de software</div></foreignObject></g></g></g></g></g></g></svg></div>
+<script type="application/json" data-for="htmlwidget-587e5b0f12fd30acde95">{"x":{"diagram":"\ngraph TD\n  A[ Análisis de software]---B[Diseño de software]\n  B---C[Implementación de software  ]\n  C---D[Testing de software ]\n"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Si intentamos obtener un algoritmo como una secuencia de acciones 
+primitivas, y nos interesa transformar el algoritmo en un programa, el 
+conjunto de acciones primitivas, para el programa queda definido en 
+función del lenguaje de programación.</p>
+<p>Un problema se puede resolver por métodos distintos, con distintos 
+grados de eficiencia, como mostrábamos en el ejemplo de la búsqueda de 
+un número en una guía telefónica.</p>
+<p>Importante Debemos distinguir siempre la etapa de DISEÑO de la etapa 
+de IMPLEMENTACIÓN. Si entendemos los conceptos de programación y como 
+estos se emplean en la etapa de ANÁLISIS y DISEÑO, luego los podremos 
+aplicar a cualquier lenguaje de programación (a cualquier 
+IMPLEMENTACIÓN)</p>
+<p>Cuando se usa una computadora es deseable minimizar el consumo de 
+recursos. Nos referimos principalmente al costo en tiempo y espacio. 
+Frecuentemente, en ciencias de la computación, la pregunta no es cómo 
+resolver un problema sino cómo resolverlo de modo <strong>eficiente</strong>.
+ Distintos algoritmos para resolver el mismo problema son evaluados en 
+función de su eficiencia relativa y se busca el más rápido, el que 
+consume menos espacio o soluciones de compromiso entre ambos costos.</p>
+<p>En nuestra materia utilizaremos pseudocódigo en la etapa de diseño de
+ un algoritmo, y una vez que el algoritmo est' e especficado en 
+pseudocódigo, lo implementaremos utilizando un lenguaje de programación 
+(en nuestro caso JAVA). Podemos utilizar cualquier lenguaje de 
+programación a partir de un algoritmo escrito en pseudocódigo ya que la 
+herramienta de diseño es independiente de cualquier lenguaje de 
+programación. Para realizar la verificación del programa utilizaremos 
+Trazas. En este apunte explicaremos como construir algoritmos con 
+pseudocódigo, como realizar trazas, y veremos algunos conceptos 
+asociados del lenguaje de programación que emplearemos.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr;.">
+<div>
+<style>
+    .mermaid {width:400% !important}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<div id="htmlwidget-e9683762316ee2dda690" style="width:672px;height:480px;" class="DiagrammeR html-widget html-widget-static-bound mermaid" data-processed="true"><div id="dmermaidChart2"><svg id="mermaidChart2" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 0;"><path class="path"></path></g><g class="edgePath" style="opacity: 0;"><path class="path"></path></g><g class="edgePath" style="opacity: 0;"><path class="path"></path></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(108,37)"><rect rx="0" ry="0" x="-88" y="-17" width="176" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-78,-7)"><foreignObject width="156" height="14"><div style="display: inline-block; white-space: nowrap;">Comprender el Problema</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(108,121)"><rect rx="0" ry="0" x="-55" y="-17" width="110" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-45,-7)"><foreignObject width="90" height="14"><div style="display: inline-block; white-space: nowrap;">Trazar un Plan</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(108,205)"><rect rx="0" ry="0" x="-58.5" y="-17" width="117" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-48.5,-7)"><foreignObject width="97" height="14"><div style="display: inline-block; white-space: nowrap;">Ejecutar el Plan</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(108,289)"><rect rx="0" ry="0" x="-75" y="-17" width="150" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-65,-7)"><foreignObject width="130" height="14"><div style="display: inline-block; white-space: nowrap;">VisiOn Retrospectiva</div></foreignObject></g></g></g></g></g></g></svg></div></div>
+<script type="application/json" data-for="htmlwidget-e9683762316ee2dda690">{"x":{"diagram":"\ngraph TD\n  A[Comprender el Problema &nbsp &nbsp]---B[Trazar un Plan]\n  B[Trazar un Plan]---C[Ejecutar el Plan &nbsp &nbsp &nbsp &nbsp]\n  C---D[VisiOn Retrospectiva &nbsp &nbsp]\n"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div>
+<style>
+    .mermaid {width:400% !important}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<div id="htmlwidget-b9b5efc59476e078c9c3" style="width:672px;height:480px;" class="DiagrammeR html-widget html-widget-static-bound mermaid" data-processed="true"><svg id="mermaidChart3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 346" style="max-width: 255px; width: 100%; height: 100%;"><style type="text/css" title="mermaid-svg-internal-css">/*  */
+#mermaidChart3 .node&gt;rect { ; }
+#mermaidChart3 .node text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart3 .edgeLabel text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart3 .cluster rect  { rx:4px; fill: rgb(255, 255, 222); rx: 4px; stroke: rgb(170, 170, 51); stroke-width: 1px; }
+* { box-sizing: border-box;}
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 75%; font-weight: 700; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25em;}
+.DiagrammeR g .label { font-family: Helvetica; font-size: 14px; color: rgb(51, 51, 51);}
+.mermaid .label { color: rgb(51, 51, 51); font-weight: 400;}
+.mermaid .node rect, .mermaid .node circle, .mermaid .node ellipse, .mermaid .node polygon { fill: rgb(236, 236, 255); stroke: rgb(204, 204, 255); stroke-width: 1px;}
+.mermaid .edgePath .path { stroke: rgb(51, 51, 51);}
+.mermaid .edgeLabel { background-color: rgb(232, 232, 232);}
+/*  */
+</style><style class="darkreader darkreader--sync" media="screen" title="mermaid-svg-internal-css"></style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,54L117.5,79L117.5,104" marker-end="url(#arrowhead71)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead71" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,138L117.5,163L117.5,188" marker-end="url(#arrowhead72)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead72" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M117.5,222L117.5,247L117.5,272" marker-end="url(#arrowhead73)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead73" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(117.5,37)"><rect rx="0" ry="0" x="-72.5" y="-17" width="145" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-62.5,-7)"><foreignObject width="125" height="14"><div style="display: inline-block; white-space: nowrap;">Análisis de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(117.5,121)"><rect rx="0" ry="0" x="-70" y="-17" width="140" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-60,-7)"><foreignObject width="120" height="14"><div style="display: inline-block; white-space: nowrap;">Diseño de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(117.5,205)"><rect rx="0" ry="0" x="-97.5" y="-17" width="195" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-87.5,-7)"><foreignObject width="175" height="14"><div style="display: inline-block; white-space: nowrap;">Implementación de software</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(117.5,289)"><rect rx="0" ry="0" x="-70.5" y="-17" width="141" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-60.5,-7)"><foreignObject width="121" height="14"><div style="display: inline-block; white-space: nowrap;">Testing de software</div></foreignObject></g></g></g></g></g></g></svg></div>
+<script type="application/json" data-for="htmlwidget-b9b5efc59476e078c9c3">{"x":{"diagram":"\ngraph TD\n  A[ Análisis de software]---B[Diseño de software]\n  B---C[Implementación de software  ]\n  C---D[Testing de software ]\n"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div>
+<style>
+    .mermaid {width:400% !important}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+<div id="htmlwidget-47bc692c70d267f1bf17" style="width:672px;height:480px;" class="DiagrammeR html-widget html-widget-static-bound mermaid" data-processed="true"><svg id="mermaidChart4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 343 346" style="max-width: 343px; width: 100%; height: 100%;"><style type="text/css" title="mermaid-svg-internal-css">/*  */
+#mermaidChart4 .node&gt;rect { ; }
+#mermaidChart4 .node text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart4 .edgeLabel text  { fill:#000; stroke:none; font-weight:300; font-family:"Helvetica Neue",Helvetica,Arial,sans-serf; font-size:14px; }
+#mermaidChart4 .cluster rect  { rx:4px; fill: rgb(255, 255, 222); rx: 4px; stroke: rgb(170, 170, 51); stroke-width: 1px; }
+* { box-sizing: border-box;}
+.label { display: inline; padding: 0.2em 0.6em 0.3em; font-size: 75%; font-weight: 700; line-height: 1; color: rgb(255, 255, 255); text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0.25em;}
+.DiagrammeR g .label { font-family: Helvetica; font-size: 14px; color: rgb(51, 51, 51);}
+.mermaid .label { color: rgb(51, 51, 51); font-weight: 400;}
+.mermaid .node rect, .mermaid .node circle, .mermaid .node ellipse, .mermaid .node polygon { fill: rgb(236, 236, 255); stroke: rgb(204, 204, 255); stroke-width: 1px;}
+.mermaid .edgePath .path { stroke: rgb(51, 51, 51);}
+.mermaid .edgeLabel { background-color: rgb(232, 232, 232);}
+/*  */
+</style><style class="darkreader darkreader--sync" media="screen" title="mermaid-svg-internal-css"></style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M161.5,54L161.5,79L161.5,104" marker-end="url(#arrowhead90)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead90" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M161.5,138L161.5,163L161.5,188" marker-end="url(#arrowhead91)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead91" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M161.5,222L161.5,247L161.5,272" marker-end="url(#arrowhead92)" style="fill: none; --darkreader-inline-fill: none;" data-darkreader-inline-fill=""></path><defs><marker id="arrowhead92" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z" style="fill: rgb(51, 51, 51); --darkreader-inline-fill: #c8c3bc;" data-darkreader-inline-fill=""></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(161.5,37)"><rect rx="0" ry="0" x="-115.5" y="-17" width="231" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-105.5,-7)"><foreignObject width="211" height="14"><div style="display: inline-block; white-space: nowrap;">Comprender la clase de problema</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(161.5,121)"><rect rx="0" ry="0" x="-141.5" y="-17" width="283" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-131.5,-7)"><foreignObject width="263" height="14"><div style="display: inline-block; white-space: nowrap;">Diseñar el algoritmo en PSEUDOCÓDIGO</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(161.5,205)"><rect rx="0" ry="0" x="-87.5" y="-17" width="175" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-77.5,-7)"><foreignObject width="155" height="14"><div style="display: inline-block; white-space: nowrap;">Implementación en JAVA</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(161.5,289)"><rect rx="0" ry="0" x="-114" y="-17" width="228" height="34"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-104,-7)"><foreignObject width="208" height="14"><div style="display: inline-block; white-space: nowrap;">Traza del Algoritmo y/o Programa</div></foreignObject></g></g></g></g></g></g></svg></div>
+<script type="application/json" data-for="htmlwidget-47bc692c70d267f1bf17">{"x":{"diagram":"\ngraph TD\n  A[ Comprender la clase de problema]---B[Diseñar el algoritmo en PSEUDOCÓDIGO]\n  B---C[Implementación en JAVA ]\n  C---D[Traza del Algoritmo y/o Programa]\n"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="diseño-de-algoritmos" class="section level1">
+<div name="6_Diseño_de_Algoritmos" data-unique="6_Diseño_de_Algoritmos"></div><h1>6. Diseño de Algoritmos</h1>
+<p>Los componentes mas significativos de un algoritmo son:</p>
+<blockquote>
+<p>📝 <strong><em>VARIABLE:</em></strong> Nombre o etiqueta usado para identificar una ubicación en donde puede almacenarse un dato.</p>
+</blockquote>
+<blockquote>
+<p>📝 <strong><em>TIPO DE DATO:</em></strong> Determina los valores que 
+puede tomar una variable y las operaciones que pueden realizarse con 
+ella. Ejemplos de tipo de datos son: entero, real, lógico, carácter </p>
+</blockquote>
+<p>Se agrega una definici' on adicional: Un Dato es un objeto sobre el 
+cual opera un algoritmo. Para resolver un problema mediante computadora,
+ es necesario identificar datos e incógnitas para luego dise ñar el 
+algoritmo, que implementado en un lenguaje de programación resolverá el 
+problema.</p>
+<p>Aca tenemos otra definición de variable: Una <strong>variable</strong> es un nombre que representa un contenedor de datos cuyo valor puede variar durante la ejecución del programa. En cambio una <strong>constante</strong>
+ es un valor que se asigna una vez y se mantiene fijo para todo el 
+algoritmo (o en el programa). Ambos son un espacio reservado en memoria 
+para almacenar un valor. Ambos tienen un tipo de dato y un 
+identificador.</p>
+<blockquote>
+<p>📝 <strong><em>CONSTANTE:</em></strong> Representa un valor que es asignado una vez, y se mantiene fijo para todo el algoritmo o programa.</p>
+</blockquote>
+<p>En un algoritmo, los <strong>datos de entrada</strong> son los que se van a procesar. Los <strong>datos de salida</strong> son datos derivados, es decir, obtenidos a partir de los datos de entrada.</p>
+<p>A partir del enunciado de un problema identificamos los datos de entrada y las incógnitas.</p>
+<pre class="js"><code class="hljs javascript">El perímetro de un jardín rectangular es de <span class="hljs-number">58</span> m. Si el lado mayor mide <span class="hljs-number">11</span> m más que el lado menor. ¿Cuánto miden los lados del jardín? </code></pre>
+<script type="text/javascript">
+El perímetro de un jardín rectangular es de 58 m. Si el lado mayor mide 11 m más que el lado menor. ¿Cuánto miden los lados del jardín? 
+</script>
+<table class="table table-condensed">
+<colgroup>
+<col width="25%">
+<col width="74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plantilla</th>
+<th>Desarrollo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Identificador</strong></td>
+<td>Obtener los valores de los ladoMenor y ladoMayor</td>
+</tr>
+<tr class="even">
+<td><strong>Objetivo</strong></td>
+<td>perimetro = perímetro del jardín = 58<br>
+ladoMayor = ladoMenor + 11</td>
+</tr>
+<tr class="odd">
+<td><strong>Representación</strong></td>
+<td>perimetro = 2 ladoMayor + 2 ladoMenor<br>
+ladoMayor = ladoMenor + 11</td>
+</tr>
+<tr class="even">
+<td><strong>Desarrollo</strong><br>
+<strong>de Pasos</strong></td>
+<td><p>2 ladoMayor + 2 ladoMenor= 58<br>
+2 (ladoMenor + 11) + 2 ladoMenor = 58<br>
+2 ladoMenor +22 +2 ladoMenor = 58<br>
+</p>
+<p>ladoMenor = <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;58&lt;/mn&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;22&lt;/mn&gt;&lt;/mrow&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-8" style="width: 2.824em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.341em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.089em, 1002.34em, 2.802em, -1000em); top: -2.221em; left: 0em;"><span class="mrow" id="MathJax-Span-9"><span class="mfrac" id="MathJax-Span-10"><span style="display: inline-block; position: relative; width: 2.084em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.371em, 1001.93em, 4.26em, -1000em); top: -4.502em; left: 50%; margin-left: -0.982em;"><span class="mrow" id="MathJax-Span-11"><span class="mn" id="MathJax-Span-12" style="font-size: 70.7%; font-family: MathJax_Main;">58</span><span class="mo" id="MathJax-Span-13" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-14" style="font-size: 70.7%; font-family: MathJax_Main;">22</span></span><span style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span style="position: absolute; clip: rect(3.363em, 1000.33em, 4.202em, -1000em); top: -3.62em; left: 50%; margin-left: -0.177em;"><span class="mn" id="MathJax-Span-15" style="font-size: 70.7%; font-family: MathJax_Main;">4</span><span style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span style="position: absolute; clip: rect(0.825em, 1002.08em, 1.261em, -1000em); top: -1.3em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.084em; height: 0px; --darkreader-inline-border-top: currentcolor;" data-darkreader-inline-border-top=""></span><span style="display: inline-block; width: 0px; height: 1.08em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.221em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.549em; border-left: 0px solid; width: 0px; height: 1.753em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mn>58</mn><mo>−</mo><mn>22</mn></mrow><mn>4</mn></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-2">\frac{58-22}{4}</script></span><br>
+ladoMenor = 9<br>
+ladoMayor = 9 +11 = 20<br>
+</p></td>
+</tr>
+<tr class="odd">
+<td><strong>Resultado</strong></td>
+<td><span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-16" style="width: 5.825em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.862em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.407em, 1004.84em, 2.666em, -1000em); top: -2.281em; left: 0em;"><span class="mrow" id="MathJax-Span-17"><span class="mi" id="MathJax-Span-18" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math; font-style: italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-21" style="font-family: MathJax_Math; font-style: italic;">o</span><span class="mi" id="MathJax-Span-22" style="font-family: MathJax_Math; font-style: italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.081em;"></span></span><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math; font-style: italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.006em;"></span></span><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math; font-style: italic;">o</span><span class="mi" id="MathJax-Span-26" style="font-family: MathJax_Math; font-style: italic;">r</span></span><span style="display: inline-block; width: 0px; height: 2.281em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.315em; border-left: 0px solid; width: 0px; height: 1.213em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi>M</mi><mi>a</mi><mi>y</mi><mi>o</mi><mi>r</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">ladoMayor</script></span> =20<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-27" style="width: 5.825em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.862em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.407em, 1004.84em, 2.472em, -1000em); top: -2.281em; left: 0em;"><span class="mrow" id="MathJax-Span-28"><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-30" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-31" style="font-family: MathJax_Math; font-style: italic;">d<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math; font-style: italic;">o</span><span class="mi" id="MathJax-Span-33" style="font-family: MathJax_Math; font-style: italic;">M<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.081em;"></span></span><span class="mi" id="MathJax-Span-34" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math; font-style: italic;">n</span><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math; font-style: italic;">o</span><span class="mi" id="MathJax-Span-37" style="font-family: MathJax_Math; font-style: italic;">r</span></span><span style="display: inline-block; width: 0px; height: 2.281em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.982em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>l</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi>M</mi><mi>e</mi><mi>n</mi><mi>o</mi><mi>r</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">ladoMenor</script></span> =9</td>
+</tr>
+<tr class="even">
+<td><strong>Verificacion</strong></td>
+<td>perimetro = 2 .ladoMayor + 2 .ladoMenor<br>
+58 = 2 . 20 + 2 . 9</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>De acuerdo a la plantilla que utilizamos ¿donde detectamos los datos 
+de entrada del algoritmo y los datos de salida? En la plantilla los 
+datos de entrada estaban presentes en Datos Relevantes, y los datos de 
+salida estan presentes en el objetivo y el resultado del problema.</p>
+<p>Para poder resolver el problema mediante un algoritmo necesitaremos 
+recurrir a instrucciones que luego serán implementadas en el lenguaje de
+ programación. Una <strong>instrucción</strong> es una orden o acción clara y precisa.</p>
+<div id="asignación" class="section level2">
+<div name="61_Asignación" data-unique="61_Asignación"></div><h2>6.1 Asignación</h2>
+<p>La asignación es la instrucción que nos permite asociar un valor a 
+una variable, es decir, nos permite almacenar un dato en una variable. 
+Es la instrucción fundamental, dado que todo algoritmo puede verse como 
+una composición de asignaciones. Su sintaxis es:</p>
+<p>X <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x2190;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-38" style="width: 1.264em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.02em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.65em, 1000.96em, 2.532em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-39"><span class="mo" id="MathJax-Span-40" style="font-family: MathJax_Main;">←</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.764em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">←</mo></math></span></span><script type="math/tex" id="MathJax-Element-5">\leftarrow</script></span> E donde X es una variable y E puede ser:.</p>
+<ul>
+<li>Un valor;</li>
+<li>Una expresión que luego de ser evaluada arroja un resultado;</li>
+<li>Otra variable a la cual le fue asignado un valor con anterioridad.</li>
+</ul>
+<blockquote>
+<p>📝 <strong><em>ASIGNACIÓN:</em></strong> En la evaluación de una 
+asignación primero se evalúa la expresión que esta en el lado derecho de
+ la asignación, el valor obtenido se asigna a la variable que está en el
+ lado izquierdo.</p>
+</blockquote>
+<p>Debe quedar claro que la asignación no es una igualdad. El planteo de
+ una igualdad, por ejemplo letra = ‘A’ (donde letra es una variable que 
+asumira un valor de tipo carácter) representa una expresión lógica, que a
+ la hora de ser evaluada, resultará verdadera, si el valor almacenado en
+ la variable letra es el carácter ‘A’; de lo contrario resultará falsa.</p>
+<p>En cambio una asignación implica almacenar información en una 
+variable, p.&nbsp;ej., si entero es una variable entera en la cual 
+deseamos almacenar el valor 8, podremos hacerlo con la instrucción:</p>
+<p>entero <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x2190;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-41" style="width: 1.264em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.02em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.65em, 1000.96em, 2.532em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-42"><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main;">←</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.764em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">←</mo></math></span></span><script type="math/tex" id="MathJax-Element-6">\leftarrow</script></span> 8</p>
+<p>Y si posteriormente necesitamos obtener el sucesor del valor que 
+actualmente contiene la variable entero, deberemos plantear la 
+asignación:</p>
+<p>entero <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x2190;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-44" style="width: 1.264em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.02em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.65em, 1000.96em, 2.532em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-45"><span class="mo" id="MathJax-Span-46" style="font-family: MathJax_Main;">←</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.764em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">←</mo></math></span></span><script type="math/tex" id="MathJax-Element-7">\leftarrow</script></span> entero + 1</p>
+<p>En primer lugar se evalúa la expresión <em>entero</em> + 1 (con el 
+valor actual de la variable entero, que es 8), y luego se produce la 
+asignación. Esta instrucción logrará que el valor de entero luego de su 
+ejecución sea 9.</p>
+<p>Observar que entero = entero + 1 es una expresión lógica cuyo valor 
+de verdad es falso, cualquiera sea el contenido de la variable entero, 
+razón por la cual no tiene sentido utilizarla. En cambio, entero <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x2190;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-47" style="width: 1.264em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.02em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.65em, 1000.96em, 2.532em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-48"><span class="mo" id="MathJax-Span-49" style="font-family: MathJax_Main;">←</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.764em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">←</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">\leftarrow</script></span> entero + 1 no sólo tiene sentido, sino que es imprescindible en algunas situaciones.</p>
+</div>
+<div id="instrucciones-de-entrada-y-salida" class="section level2">
+<div name="62_Instrucciones_de_Entrada_y_Salida" data-unique="62_Instrucciones_de_Entrada_y_Salida"></div><h2>6.2. Instrucciones de Entrada y Salida</h2>
+<p>Estas instrucciones permiten la comunicación con el mundo exterior; 
+permiten el ingreso de datos a un programa y la visualización de 
+resultados del mismo.</p>
+<p>Las instrucciones de <strong>entrada</strong>, al igual que la 
+asignación, permiten asociar un valor a una variable, pero en el caso de
+ la entrada, este valor es tomado desde el exterior. La sintaxis 
+correspondiente es:</p>
+<p>LEER(<em>edad</em>)</p>
+<p>donde:<em>edad</em> es el nombre de una variable a la que deseamos asignarle un valor.</p>
+<p>Por ejemplo, si <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-50" style="width: 2.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.041em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.659em, 1002.02em, 2.472em, -1000em); top: -2.281em; left: 0em;"><span class="mrow" id="MathJax-Span-51"><span class="mi" id="MathJax-Span-52" style="font-family: MathJax_Math; font-style: italic;">n</span><span class="mi" id="MathJax-Span-53" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-54" style="font-family: MathJax_Math; font-style: italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.281em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.682em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>u</mi><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-9">num</script></span> es una variable entera, podemos asignarle un valor de la siguiente forma: LEER(<em>num</em>)</p>
+<p>De esta forma, el valor que será asociado a la variable <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-55" style="width: 2.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.041em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.659em, 1002.02em, 2.472em, -1000em); top: -2.281em; left: 0em;"><span class="mrow" id="MathJax-Span-56"><span class="mi" id="MathJax-Span-57" style="font-family: MathJax_Math; font-style: italic;">n</span><span class="mi" id="MathJax-Span-58" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-59" style="font-family: MathJax_Math; font-style: italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.281em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.682em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>u</mi><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-10">num</script></span>
+ podrá ser distinto cada vez que se ejecute esta instrucción, mientras 
+que si usamos una asignación nuestro programa obliga a la variable <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-60" style="width: 2.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.041em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.659em, 1002.02em, 2.472em, -1000em); top: -2.281em; left: 0em;"><span class="mrow" id="MathJax-Span-61"><span class="mi" id="MathJax-Span-62" style="font-family: MathJax_Math; font-style: italic;">n</span><span class="mi" id="MathJax-Span-63" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math; font-style: italic;">m</span></span><span style="display: inline-block; width: 0px; height: 2.281em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.682em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>u</mi><mi>m</mi></math></span></span><script type="math/tex" id="MathJax-Element-11">num</script></span> a tener el mismo valor (el que aparece en dicha asignación) cada vez que se ejecute la instrucción.</p>
+<p>Las instrucciones de <strong>salida</strong> permiten mostrar los 
+resultados obtenidos por nuestro programa. De no existir este tipo de 
+instrucciones, la solución del problema quedaría almacenada en alguna 
+variable y no sería posible conocer su valor.</p>
+<p>La sintaxis es: ESCRIBIR(<em>edad</em>)</p>
+<p>donde: <em>edad</em> es el nombre de la variable que almacena la información que deseamos conocer.</p>
+<blockquote>
+<p>📝 <strong><em>INSTRUCCIONES DE ENTRADA Y SALIDA:</em></strong> La 
+instrucción de entrada es LEER(variable) y permite asociar un valor a 
+una variable. La instrucción de salida es ESCRIBIR(variable) y permite 
+mostrar el valor que la variable tiene en un momento determinado. 
+Siempre debemos escribir las instrucciones LEER y ESCRIBIR, con 
+mayúscula.</p>
+</blockquote>
+<pre class="js"><code class="hljs javascript">
+Diseñar un algoritmo para calcular el perímetro de un rectángulo dados los lados.  
+Para el algoritmo cálculoPerímetro es importante primer pensar cuales son los datos de Entrada, Salida y Relaciones entre Datos. Si bien estos pasos no se requeriran en la solucion que Ud. brinde habitualmente es importante tener claros estos componentes de la soluci\<span class="hljs-string">' on:
+</span></code></pre>
+<script type="text/javascript">
+
+Diseñar un algoritmo para calcular el perímetro de un rectángulo dados los lados.  
+Para el algoritmo cálculoPerímetro es importante primer pensar cuales son los datos de Entrada, Salida y Relaciones entre Datos. Si bien estos pasos no se requeriran en la solucion que Ud. brinde habitualmente es importante tener claros estos componentes de la soluci\' on:
+
+</script>
+<p>El ALGORITMO sería:</p>
+<pre class="js"><code class="hljs javascript">ALGORITMO calcularPerimetro() RETORNA ∅
+  (*alg. que lee datos de un rectangulo, 
+  valores enteros mayores a <span class="hljs-number">0</span>, calc. perimetro *)
+  REAL ladoMenor, ladoMayor, perimetro
+  ESCRIBIR(”Ingrese el valor del lado menor”)
+  LEER(ladoMenor)
+  ESCRIBIR(”Ingrese el valor del lado mayor”)
+  LEER(ladoMayor)
+  perimetro ← <span class="hljs-number">2</span>*ladoMenor + <span class="hljs-number">2</span>* ladoMayor
+  ESCRIBIR(”El perímetro del rectángulo de lados”+
+         ladoMenor+” y ”+ladoMayor+” es”+perimetro)
+FIN ALGORITMO calcularPerimetro </code></pre>
+<script type="text/javascript">
+ALGORITMO calcularPerimetro() RETORNA ∅
+  (*alg. que lee datos de un rectangulo, 
+  valores enteros mayores a 0, calc. perimetro *)
+  REAL ladoMenor, ladoMayor, perimetro
+  ESCRIBIR(”Ingrese el valor del lado menor”)
+  LEER(ladoMenor)
+  ESCRIBIR(”Ingrese el valor del lado mayor”)
+  LEER(ladoMayor)
+  perimetro ← 2*ladoMenor + 2* ladoMayor
+  ESCRIBIR(”El perímetro del rectángulo de lados”+
+         ladoMenor+” y ”+ladoMayor+” es”+perimetro)
+FIN ALGORITMO calcularPerimetro 
+</script>
+</div>
+<div id="traza" class="section level2">
+<div name="63_Traza" data-unique="63_Traza"></div><h2>6.3. Traza</h2>
+<p>La <strong>traza</strong> de un algoritmo se puede definir como la 
+ejecución manual de forma secuencial de los pasos que lo componen. Así, 
+la traza del algoritmo es el valor que van adoptando las ** variables** a
+ medida que se va ejecutando. En una tabla representamos los sucesivos 
+estados de todas las variables. Incluiremos en la última columna todo 
+aquellos que se muestre por pantalla.</p>
+<p>En nuestro ejemplo, si el usuario ingresa los datos 2 y 3 para ladoMenor y ladoMayor respectivamente, tendremos:</p>
+<table class="table table-condensed">
+<colgroup>
+<col width="23%">
+<col width="15%">
+<col width="15%">
+<col width="45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ladoMenor</th>
+<th>ladoMayor</th>
+<th>perimetro</th>
+<th>salida por pantalla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>3</td>
+<td></td>
+<td>Ingrese el valor del lado menor<br>
+Ingrese el valor del lado mayor</td>
+</tr>
+</tbody>
+</table>
+<p>Luego de la asignación perimetro <span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;&amp;#x2190;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-65" style="width: 1.264em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.02em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.65em, 1000.96em, 2.532em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-66"><span class="mo" id="MathJax-Span-67" style="font-family: MathJax_Main;">←</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.085em; border-left: 0px solid; width: 0px; height: 0.764em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">←</mo></math></span></span><script type="math/tex" id="MathJax-Element-12">\leftarrow</script></span> 2 * ladoMenor+ 2 * ladoMayor el valor de perimetro se habrá modificado:</p>
+<table class="table table-condensed">
+<colgroup>
+<col width="23%">
+<col width="15%">
+<col width="15%">
+<col width="45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ladoMenor</th>
+<th>ladoMayor</th>
+<th>perimetro</th>
+<th>salida por pantalla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>3</td>
+<td>10</td>
+<td>Ingrese el valor del lado menor<br>
+Ingrese el valor del lado mayor<br>
+El perimetro del rectangulo de lados 2 y 3 es 10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="implementación-java" class="section level1">
+<div name="7_Implementación_Java" data-unique="7_Implementación_Java"></div><h1>7. Implementación Java</h1>
+<p>En RPA utilizaremos el lenguaje de programación JAVA para realizar 
+las implementaciones de nuestros algoritmos. Utilizaremos Netbeans, un 
+entorno de desarrollo para JAVA, para programar. Es importante que 
+descargues Netbeans en tu computadora, y lo instales. Podés descargarlo 
+desde: [<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html" class="uri">https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html</a>] Deberan descargar aquella opción que corresponda con las caracteristicas de su equipo.</p>
+<p>Podrás crear una aplicacion JAVA inicial siguiendo los pasos de este video: <iframe src="Apunte%20Algoritmos_archivos/vlUdwZa1giI.html" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="956" height="538" frameborder="0"></iframe></p>
+<p>En el video se utiliza la librería TecladoIN [<a href="https://opendata.fi.uncoma.edu.ar/rpa/TecladoIn.java" class="uri">https://opendata.fi.uncoma.edu.ar/rpa/TecladoIn.java</a>],
+ que es necesario incorporar al proyecto JAVA para realizar la entrada y
+ salida de datos. Podés utilizar TecladoIn o podrás utilizar la clase 
+Scanner en su reemplazo.</p>
+<div id="introducción-1" class="section level2">
+<div name="71_Introducción" data-unique="71_Introducción"></div><h2>7.1. Introducción</h2>
+<p>Esta sección se incluye un resumen sobre algunos conceptos de Java 
+que son elementales para comenzar a programar con el lenguaje. Se 
+describe como especificar variables, constantes, tipos de dato, 
+operadores y operandos, expresiones, el concepto de <strong>asignación</strong>
+ en JAVA. Es una sección que muestra como los conceptos que fueron 
+desarrollados en la sección anterior se aplican a un lenguaje de 
+programación (en este caso JAVA).</p>
+<p>Adicionalmente se resume en el apunte la sintáxis asociada a estos 
+conceptos, características de entrada-salida, y la estructura básica de 
+un programa JAVA.</p>
+</div>
+<div id="variable-y-constantes" class="section level2">
+<div name="72_Variable_y_Constantes" data-unique="72_Variable_y_Constantes"></div><h2>7.2. Variable y Constantes</h2>
+<p>En JAVA las variables se definen especificando su tipo. Las variables
+ pueden almacenar datos de un tipo primitivo (o un tipo clase ), y su 
+valor puede cambiar durante la ejecución del programa tantas veces como 
+sea necesario, además pueden aplicarse ciertos operaciones dependiendo 
+del tipo de las variables.</p>
+<p>Convención: las variables comienzan con minúsculas y las constantes van todas en mayúsculas.</p>
+<p>Ejemplos de identificadores de variables: miNombre, jugadoresDeFutball, juan, notaFinal, promedio.</p>
+<p>Ejemplos de identificadores de constantes: VALOR_PI, TASA_ANUAL, INCREMENTO</p>
+<p>Convención: Para definir variables cuyos nombres son compuestos 
+utilizaremos la notación infixCaps, la cual permite yuxtaponer dos 
+palabras, comenzando la segunda palabra con su inicial en mayúscula.</p>
+<p>Java es un lenguaje <strong>Case Sensitive</strong>, es decir que es 
+sensible a las minúsculas y mayúsculas. En pocas palabras, para Java la 
+variable contador es distinta a la variable Contador.</p>
+<p>En Java las constantes son variables que a las que se les aplica el modificador <strong>final</strong>.
+ El valor de una variable declarada como final no puede cambiar durante 
+la ejecución de un programa. La diferencia que tiene Java con otros 
+lenguajes es que si no inicializamos la constante en la definición, se 
+podrá hacer más adelante, pero una vez establecido un valor éste no 
+podrá ser cambiado. Así una variable que declaramos como final, puede 
+tener valores distintos en dos ejecuciones de un mismo programa, pero 
+solo un valor en cada ejecución.</p>
+<p>Ejemplo:</p>
+<pre class="js"><code class="hljs javascript">final float PI = <span class="hljs-number">3.14159</span>;</code></pre>
+<script type="text/javascript">
+final float PI = 3.14159;
+</script>
+</div>
+<div id="tipos-de-dato" class="section level2">
+<div name="73_Tipos_de_Dato" data-unique="73_Tipos_de_Dato"></div><h2>7.3. Tipos de Dato</h2>
+<p>Un tipo de datos define el conjunto de valores que puede tomar una 
+variable. El tipo de dato de una variable define cuáles son los valores 
+que se pueden almacenar en la variable, por ejemplo en el caso de los 
+números: enteros, reales, etc. Si una variable es de tipo entero, sólo 
+podrá almacenar números enteros y no así reales, y tendrá definidas 
+ciertas operaciones para manipular dichos valores. En cambio una 
+variable de tipo real podrá almacenar un número entero, pues los enteros
+ también son reales, y tendrá definido un conjunto de operaciones que 
+podrán aplicarse.</p>
+<p>Los tipos de datos primitivos definidos por el lenguaje de 
+programación son atómicos, es decir que permiten almacenar un solo valor
+ en cada variable.</p>
+<p>En JAVA hay 8 tipos de datos primitivos:</p>
+<table class="table table-condensed">
+<colgroup>
+<col width="16%">
+<col width="21%">
+<col width="61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grupo</th>
+<th>Tipo de Datos</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reales<br>
+Enteros<br>
+Lógicos<br>
+Caracteres<br>
+Texto<br>
+</td>
+<td>double, float<br>
+byte, long, int, short<br>
+boolean<br>
+char<br>
+String<br>
+</td>
+<td>Son números que tienen punto flotante, es decir tienen decimales.<br>
+Son números que no tienen parte decimal.<br>
+Solo pueden tomar dos valores <strong>true</strong> o <strong>false</strong>.<br>
+Son letras, números, símbolos especiales que van entre comillas simples. | Son cadenas de caracteres.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-y-operandos" class="section level2">
+<div name="74_Operadores_y_Operandos" data-unique="74_Operadores_y_Operandos"></div><h2>7.4. Operadores y Operandos</h2>
+<p>Los operadores son símbolos que representan algún tipo de operación 
+sobre dos operandos (salvo los operadores unarios que actúan sobre un 
+solo operando) y arrojan un resultado. Se deben considerar los tipos de 
+los operandos para determinar cuales operadores son aplicables. Por 
+ejemplo que si los operandos son números el operador deberá ser un 
+operador aritmético.</p>
+<p>En Java existen varios tipos de operadores, los cuales representan 
+operaciones que se realizan sobre operandos, y son listados en la 
+siguiente Tabla:</p>
+<table class="table table-condensed">
+<colgroup>
+<col width="25%">
+<col width="23%">
+<col width="30%">
+<col width="21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de Operadores</th>
+<th>Aritméticos</th>
+<th>Relacionales</th>
+<th>Lógicos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Operadores</td>
+<td>* Multiplicación<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi class=&quot;MJX-variant&quot; mathvariant=&quot;normal&quot;&gt;&amp;#x2216;&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-68" style="width: 0.603em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.48em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.411em, 1000.42em, 2.771em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-69"><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Main;">∖</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.369em; border-left: 0px solid; width: 0px; height: 1.333em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi class="MJX-variant" mathvariant="normal">∖</mi></math></span></span><script type="math/tex" id="MathJax-Element-13">\backslash</script></span> División<br>
+% Módulo-Residuo<br>
++ Adición<br>
+- Diferencia</td>
+<td><span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;gt;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-71" style="width: 0.963em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.78em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.621em, 1000.7em, 2.561em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-72"><span class="mo" id="MathJax-Span-73" style="font-family: MathJax_Main;">&gt;</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.119em; border-left: 0px solid; width: 0px; height: 0.833em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math></span></span><script type="math/tex" id="MathJax-Element-14">></script></span> mayor que<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-74" style="width: 0.963em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.78em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.621em, 1000.7em, 2.561em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-75"><span class="mo" id="MathJax-Span-76" style="font-family: MathJax_Main;">&lt;</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.119em; border-left: 0px solid; width: 0px; height: 0.833em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math></span></span><script type="math/tex" id="MathJax-Element-15"><</script></span> menor que<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-16-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;gt;=&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-77" style="width: 1.864em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.561em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.621em, 1001.51em, 2.561em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-78"><span class="mo" id="MathJax-Span-79" style="font-family: MathJax_Main;">&gt;<span style="font-family: MathJax_Main; font-style: normal; font-weight: normal;">=</span></span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.119em; border-left: 0px solid; width: 0px; height: 0.833em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;=</mo></math></span></span><script type="math/tex" id="MathJax-Element-16">>=</script></span> mayor igual que<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-17-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;gt;=&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-80" style="width: 1.864em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.561em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.621em, 1001.51em, 2.561em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-81"><span class="mo" id="MathJax-Span-82" style="font-family: MathJax_Main;">&gt;<span style="font-family: MathJax_Main; font-style: normal; font-weight: normal;">=</span></span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.119em; border-left: 0px solid; width: 0px; height: 0.833em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;=</mo></math></span></span><script type="math/tex" id="MathJax-Element-17">>=</script></span> menor igual que<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-18-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;==&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-83" style="width: 1.864em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.561em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.794em, 1001.51em, 2.388em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-84"><span class="mo" id="MathJax-Span-85" style="font-family: MathJax_Main;">=<span style="font-family: MathJax_Main; font-style: normal; font-weight: normal;">=</span></span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: 0.087em; border-left: 0px solid; width: 0px; height: 0.421em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>==</mo></math></span></span><script type="math/tex" id="MathJax-Element-18">==</script></span> igual a (comparación)</td>
+<td>&amp;&amp; and<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-19-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;&amp;#x2016;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-86" style="width: 0.603em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.48em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.411em, 1000.35em, 2.771em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-87"><span class="mo" id="MathJax-Span-88" style="font-family: MathJax_Main;">∥</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.369em; border-left: 0px solid; width: 0px; height: 1.333em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo fence="false" stretchy="false">‖</mo></math></span></span><script type="math/tex" id="MathJax-Element-19">\|</script></span> or<br>
+<span class="math inline"><span class="MathJax_Preview" style="color: inherit; --darkreader-inline-color: inherit; display: none;" data-darkreader-inline-color=""></span><span class="MathJax" id="MathJax-Element-20-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;#x2227;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-89" style="width: 0.783em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.66em; height: 0px; font-size: 119%;"><span style="position: absolute; clip: rect(1.563em, 1000.6em, 2.543em, -1000em); top: -2.341em; left: 0em;"><span class="mrow" id="MathJax-Span-90"><span class="mo" id="MathJax-Span-91" style="font-family: MathJax_Main;">∧</span></span><span style="display: inline-block; width: 0px; height: 2.341em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.098em; border-left: 0px solid; width: 0px; height: 0.881em; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-left=""></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>∧</mo></math></span></span><script type="math/tex" id="MathJax-Element-20">\wedge</script></span> xor<br>
+! not<br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="expresiones" class="section level2">
+<div name="75_Expresiones" data-unique="75_Expresiones"></div><h2>7.5. Expresiones</h2>
+<p>Una <strong>expresión</strong> es todo aquello que se puede evaluar, es decir que lanza un resultado. Las siguientes son expresiones:</p>
+<ol style="list-style-type: decimal">
+<li>Variables</li>
+<li>Constantes</li>
+<li>Operando Operador Operando</li>
+<li>Expresión Operador Expresión</li>
+</ol>
+<p>Considerando los tipos de operadores, podemos decir que existen 
+expresiones de tipo aritméticas, relacionales y lógicas, es decir 
+expresiones que al ser evaluadas retornan un resultado de un cierto 
+tipo. En cada caso tanto los operadores como los operandos deben ser 
+compatibles, de lo contrario no se podría evaluar. Por ejemplo si 
+intentamos sumar dos valores que no son numéricos, esta sería una 
+expresión incorrecta que no se podría evaluar.</p>
+</div>
+<div id="asignación-1" class="section level2">
+<div name="76_Asignación" data-unique="76_Asignación"></div><h2>7.6. Asignación</h2>
+<p>El operador de asignación es aquel que permite que la evaluación de 
+una expresión se almacene en una variable. El tipo de la expresión debe 
+ser de tipo compatible con el tipo de la variable. Se representa con el 
+símbolo de igualdad ‘=’, pero no se debe confundir con el operador de 
+comparación (en Java ‘==’).</p>
+</div>
+<div id="sintaxis" class="section level2">
+<div name="77_Sintaxis" data-unique="77_Sintaxis"></div><h2>7.7. Sintaxis</h2>
+<div id="declaración-de-variables" class="section level3">
+<div name="Declaración_de_variables" data-unique="Declaración_de_variables"></div><h3>Declaración de variables</h3>
+<p>El formato es: tipoDeDato identificadorVariable;</p>
+<p>Ejemplos:</p>
+<pre class="js"><code class="hljs javascript">int edad;
+double sueldo;
+boolean sexo;
+char primeraVocal;</code></pre>
+<script type="text/javascript">
+int edad;
+double sueldo;
+boolean sexo;
+char primeraVocal;
+</script>
+</div>
+<div id="asignación-de-variables" class="section level3">
+<div name="Asignación_de_variables" data-unique="Asignación_de_variables"></div><h3>Asignación de variables</h3>
+<p>identificadorVariable = EXPRESION; Ejemplos:</p>
+<pre class="js"><code class="hljs javascript">edad = <span class="hljs-number">23</span>;
+sueldo = <span class="hljs-number">1500.50</span>;
+sexo = <span class="hljs-literal">true</span>;
+primeraVocal = <span class="hljs-string">'A'</span>;</code></pre>
+<script type="text/javascript">
+edad = 23;
+sueldo = 1500.50;
+sexo = true;
+primeraVocal = 'A';
+</script>
+</div>
+<div id="declaración-y-asignación-de-variables" class="section level3">
+<div name="Declaración_y_asignación_de_variables" data-unique="Declaración_y_asignación_de_variables"></div><h3>Declaración y asignación de variables</h3>
+<p>tipoDeDato identificadorVariable = EXPRESION;</p>
+<p>Ejemplos:</p>
+<pre class="js"><code class="hljs javascript">int anioNacimiento = <span class="hljs-number">1982</span>;
+int anioActual = <span class="hljs-number">2007</span>;
+int edad = anioActual - anioNacimiento;</code></pre>
+<script type="text/javascript">
+int anioNacimiento = 1982;
+int anioActual = 2007;
+int edad = anioActual - anioNacimiento;
+</script>
+</div>
+</div>
+<div id="entrada-salida" class="section level2">
+<div name="78_Entrada_Salida" data-unique="78_Entrada_Salida"></div><h2>7.8. Entrada Salida</h2>
+<p>Al hablar de entrada y salida nos referimos al ingreso de datos por 
+parte del usuario y salida de la computadora por ejemplo en la pantalla 
+al usuario.</p>
+<p>Utilizaremos la clase Scanner para hacer el ingreso de datos y la 
+salida de los mismos en pantalla. Para ello, todos nuestros algoritmos 
+declararán al comienzo del programa, un objeto sc:</p>
+<p>Scanner sc = new Scanner(System.in);</p>
+<p>La siguiente tabla describe ejemplos de entrada y salida de variables de distinto tipo:</p>
+<table class="table table-condensed">
+<colgroup>
+<col width="56%">
+<col width="43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Primitiva Pseudocódigo</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Entrada: Mostrar mensajes por pantalla<br>
+ESCRIBIR()<br>
+</td>
+<td>System.Out.print()<br>
+System.Out.println()<br>
+<br>
+</td>
+</tr>
+<tr class="even">
+<td>Salida: Leer datos del usuario<br>
+LEER()<br>
+</td>
+<td><br>
+Scanner sc = new Scanner(System.in);<br>
+Dependiendo del caso:<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<p>En general para leer datos desde teclado con Scanner podemos usar los métodos nextXxx() donde Xxx indica el tipo de dato a leer:</p>
+<ul>
+<li>sc.nextByte() para leer un dato de tipo byte.</li>
+<li>sc.nextShort() para leer un dato de tipo short.</li>
+<li>sc.nextInt() para leer un dato de tipo int.</li>
+<li>sc.nextLong() para leer un dato de tipo long.</li>
+<li>sc.nextFloat() para leer un dato de tipo float.</li>
+<li>sc.nextDouble() para leer un dato de tipo double.</li>
+<li>sc.nextBoolean() para leer un dato de tipo boolean.</li>
+<li>sc.next().charAt(0) para leer un character.</li>
+<li>sc.nextLine() para leer un String hasta encontrar un salto de línea.</li>
+<li>sc.next() para leer un String hasta el primer delimitador, generalmente hasta un espacio en blanco o hasta un salto de línea.</li>
+</ul>
+</div>
+<div id="estructura-básica-de-un-programa" class="section level2">
+<div name="79_Estructura_Básica_de_un_Programa" data-unique="79_Estructura_Básica_de_un_Programa"></div><h2>7.9. Estructura Básica de un Programa</h2>
+<p>Todo programa tiene una parte principal que dirige el funcionamiento 
+del mismo. Utilizaremos el siguiente esquema general para definir todos 
+nuestros programas.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;.">
+<div>
+<pre class="js"><code class="hljs javascript">ALGORITMO calcularPerimetro() RETORNA ∅
+  (*alg. que lee datos de un rectangulo, 
+  valores enteros mayores a <span class="hljs-number">0</span>, calc. perimetro *)
+  REAL ladoMenor, ladoMayor, perimetro
+  ESCRIBIR(”Ingrese el valor del lado menor”)
+  LEER(ladoMenor)
+  ESCRIBIR(”Ingrese el valor del lado mayor”)
+  LEER(ladoMayor)
+  perimetro ← <span class="hljs-number">2</span>*ladoMenor + <span class="hljs-number">2</span>* ladoMayor
+  ESCRIBIR(”El perímetro del rectángulo de lados”+
+         ladoMenor+” y ”+ladoMayor+” es”+perimetro)
+FIN ALGORITMO calcularPerimetro </code></pre>
+<script type="text/javascript">
+ALGORITMO calcularPerimetro() RETORNA ∅
+  (*alg. que lee datos de un rectangulo, 
+  valores enteros mayores a 0, calc. perimetro *)
+  REAL ladoMenor, ladoMayor, perimetro
+  ESCRIBIR(”Ingrese el valor del lado menor”)
+  LEER(ladoMenor)
+  ESCRIBIR(”Ingrese el valor del lado mayor”)
+  LEER(ladoMayor)
+  perimetro ← 2*ladoMenor + 2* ladoMayor
+  ESCRIBIR(”El perímetro del rectángulo de lados”+
+         ladoMenor+” y ”+ladoMayor+” es”+perimetro)
+FIN ALGORITMO calcularPerimetro 
+</script>
+</div>
+<div>
+<pre class="js"><code class="hljs javascript">
+<span class="hljs-keyword">import</span> java.util.Scanner;
+public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimerPrograma</span>
+</span>{
+<span class="hljs-comment">// Parte principal de programa</span>
+public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main( <span class="hljs-built_in">String</span>[] args )
+{
+  <span class="hljs-comment">// Declaración de variables</span>
+  double ladoMayor, ladoMenor, perimetro;
+  Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+  
+  System.out.println(<span class="hljs-string">"Calcula el perimetro de un rectángulo"</span>);
+        
+  <span class="hljs-comment">// Pedimos un dato al usuario</span>
+  System.out.print(<span class="hljs-string">"ingrese el lado mayor"</span>);
+  <span class="hljs-comment">// Leemos el dato del usuario</span>
+  ladoMayor = sc.nextDouble();
+        
+  System.out.print(<span class="hljs-string">"ingrese el lado menor"</span>);
+  ladoMenor = sc.nextDouble();
+        
+  <span class="hljs-comment">// Calculamos el perimetro</span>
+  perimetro = ladoMayor *<span class="hljs-number">2</span> + ladoMenor * <span class="hljs-number">2</span>;
+        
+  <span class="hljs-comment">// Mostramos por pantalla la edad del usuario</span>
+  System.out.println(<span class="hljs-string">"El perimetro es "</span>+perimetro);
+}
+}
+</code></pre>
+<script type="text/javascript">
+
+import java.util.Scanner;
+public class PrimerPrograma
+{
+// Parte principal de programa
+public static void main( String[] args )
+{
+  // Declaración de variables
+  double ladoMayor, ladoMenor, perimetro;
+  Scanner sc = new Scanner(System.in);
+  
+  System.out.println("Calcula el perimetro de un rectángulo");
+        
+  // Pedimos un dato al usuario
+  System.out.print("ingrese el lado mayor");
+  // Leemos el dato del usuario
+  ladoMayor = sc.nextDouble();
+        
+  System.out.print("ingrese el lado menor");
+  ladoMenor = sc.nextDouble();
+        
+  // Calculamos el perimetro
+  perimetro = ladoMayor *2 + ladoMenor * 2;
+        
+  // Mostramos por pantalla la edad del usuario
+  System.out.println("El perimetro es "+perimetro);
+}
+}
+
+</script>
+</div>
+</div>
+<p>Podes ver el siguiente video que explica como implementar el algoritmo de calcular perímetro en Netbeans:</p>
+<iframe src="Apunte%20Algoritmos_archivos/7K0gdSVWM-Q.html" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="956" height="538" frameborder="0">
+</iframe>
+<p>Cada programa que realicemos debe estar guardado en un archivo con el
+ nombre que le dimos en la línea de definición del mismo. En este caso 
+el archivo donde guardaremos nuestro programa se llamará 
+PrimerPrograma.java y al ser compilado se generará PrimerPrograma.class.</p>
+<p>Debe recordar que Java es sensible a mayúsculas y minúsculas, por lo 
+que el nombre del archivo debe coincidir incluso en las mayúsculas y 
+minúsculas usadas.</p>
+<p>Otro ejemplo:</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;.">
+<div>
+<pre class="js"><code class="hljs javascript">ALGORITMO calcularEdad() RETORNA ∅
+  (* Calculo impreciso de la edad *)
+  ENTERO anioNacimiento, anioActual, edad
+  anioActual &lt;- <span class="hljs-number">2021</span>
+  ESCRIBIR(”Ingrese el año de su nacimiento”)
+  LEER(anioNacimiento)
+  (* Calculamos la edad del usuario *)
+   edad &lt;- anioActual - anioNacimiento
+  (* Mostramos por pantalla la edad del usuario *)
+  ESCRIBIR(<span class="hljs-string">"Su edad es: "</span>+ edad)
+FIN ALGORITMO calcularEdad</code></pre>
+<script type="text/javascript">
+ALGORITMO calcularEdad() RETORNA ∅
+  (* Calculo impreciso de la edad *)
+  ENTERO anioNacimiento, anioActual, edad
+  anioActual <- 2021
+  ESCRIBIR(”Ingrese el año de su nacimiento”)
+  LEER(anioNacimiento)
+  (* Calculamos la edad del usuario *)
+   edad <- anioActual - anioNacimiento
+  (* Mostramos por pantalla la edad del usuario *)
+  ESCRIBIR("Su edad es: "+ edad)
+FIN ALGORITMO calcularEdad
+</script>
+</div>
+<div>
+<pre class="js"><code class="hljs javascript">
+<span class="hljs-keyword">import</span> java.util.Scanner;
+public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrimerPrograma</span>
+</span>{
+<span class="hljs-comment">// Parte principal de programa</span>
+public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main( <span class="hljs-built_in">String</span>[] args )
+{
+<span class="hljs-comment">// Declaración de variables</span>
+int anioNacimiento;
+int anioActual = <span class="hljs-number">2007</span>;
+int edad;
+<span class="hljs-comment">// Pedimos un dato al usuario</span>
+System.out.print(<span class="hljs-string">"Ingrese el año de su nacimiento"</span>);
+<span class="hljs-comment">// Leemos el dato del usuario</span>
+anioNacimiento = sc.sc.nextInt();
+<span class="hljs-comment">// Calculamos la edad del usuario</span>
+ edad = anioActual - anioNacimiento;
+<span class="hljs-comment">// Mostramos por pantalla la edad del usuario</span>
+System.out.println(<span class="hljs-string">"Su edad es: "</span>+ edad);
+}
+}</code></pre>
+<script type="text/javascript">
+
+import java.util.Scanner;
+public class PrimerPrograma
+{
+// Parte principal de programa
+public static void main( String[] args )
+{
+// Declaración de variables
+int anioNacimiento;
+int anioActual = 2007;
+int edad;
+// Pedimos un dato al usuario
+System.out.print("Ingrese el año de su nacimiento");
+// Leemos el dato del usuario
+anioNacimiento = sc.sc.nextInt();
+// Calculamos la edad del usuario
+ edad = anioActual - anioNacimiento;
+// Mostramos por pantalla la edad del usuario
+System.out.println("Su edad es: "+ edad);
+}
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+<div id="videos-de-clases" class="section level1">
+<div name="8_Videos_de_clases" data-unique="8_Videos_de_clases"></div><h1>8. Videos de clases</h1>
+<ul>
+<li>Clase del 7 de Abril, año 2022: [<a href="https://youtu.be/9C3rEPY48w4" class="uri">https://youtu.be/9C3rEPY48w4</a>]</li>
+</ul>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+<div class="mermaidTooltip" style="opacity: 0;"></div><div id="ghostery-tracker-tally" class="ghostery-bottom ghostery-right ghostery-collapsed"><div id="ghostery-box"><div id="ghostery-count" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); --darkreader-inline-bgcolor: rgba(0, 0, 0, 0); --darkreader-inline-color: #e8e6e3; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="" data-darkreader-inline-bgimage="">1</div><div id="ghostery-pb-icons-container"><span id="ghostery-breaking-tracker" class="ghostery-pb-tracker" title="Rastreadores de páginas rotas" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmJyZWFraW5ncGFnZTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxNi4wMDAwMDAsIC00NTMuMDAwMDAwKSIgaWQ9ImJhbSEtYnJlYWtpbmctdGhlLXBhZ2UtY29weS0yIiBmaWxsPSIjRkNCQTMzIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxNi4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjE5NTY1MjE3NCBDNC4xNDQzNjAyNSwwLjE5NTY1MjE3NCAwLjE5NTY1MjE3NCw0LjE0NDM2MDI1IDAuMTk1NjUyMTc0LDkgQzAuMTk1NjUyMTc0LDEzLjg1NTYzOTggNC4xNDQzNjAyNSwxNy44MDQzNDc4IDksMTcuODA0MzQ3OCBDMTMuODU1NjM5OCwxNy44MDQzNDc4IDE3LjgwNDM0NzgsMTMuODU1NjM5OCAxNy44MDQzNDc4LDkgQzE3LjgwNDM0NzgsNC4xNDQzNjAyNSAxMy44NTU2Mzk4LDAuMTk1NjUyMTc0IDksMC4xOTU2NTIxNzQgWiBNMTEuNDg1NTg5OSwxMy40MTA0NDQxIEwxMS4wNzcwNzk4LDEzLjAyMDY3NjggTDEyLjEwMDQ3MTEsMTIuMjE2OTU3OSBMMTEuMDQ2MjQ1MSwxMi4yMTY5NTc5IEwxMS4yMzQ0NzgxLDEwLjg3MDcwODcgTDkuODAzMTgxNDIsMTEuNzk1NzUxMiBMOS40MDMzMzczNCw5LjM0NTA5MzkyIEw4LjY5NDc0MjY5LDExLjA4NjU1MTkgTDcuMzI1NzIwMDksMTAuMTcwOTgxNSBMNy43NTI1Njk3NywxMS45Mjk1NyBMNi41NTQyNDY3MywxMi4zMTE0Nzc1IEw3Ljg4MjM1Nzg3LDEzLjQxMDQ0NDEgTDExLjQ4NTU4OTksMTMuNDEwNDQ0MSBaIE02LjcxNTY3NTcyLDEzLjQxMDQ0NDEgTDUuMDI4NjMxOTcsMTIuMDA2NzU3NiBMNi44Njg0Mzg3MywxMS40MzE5ODE4IEw2LjE2Mzg3NDc3LDguNDg4NTczMDkgTDguMzQ5MzEyODgsOS45NTk5NzUxMiBMOS43MDQwMjY1NCw2LjYxMjQ5MDE1IEwxMC4zNTAzNDcxLDEwLjU1NjcxODIgTDEyLjE5NDk5MDcsOS4zNzY1MzMyOCBMMTEuODk4OTM2OCwxMS40NzY5MjM5IEwxNC4yNjI5MzQzLDExLjQ3NjkyMzkgTDEyLjIxMjkyNzIsMTMuMDc4OTIwMiBMMTIuNTY3MjI0NSwxMy40MTA0NDQxIEwxNS4zMzEyNjc3LDEzLjQxMDQ0NDEgTDE0LjQ3Mzk0MDcsMTIuNTk4NjYzOSBMMTcuMjA3MzUwNiwxMC40NjY4MzM5IEwxMy4wNjA3ODIxLDEwLjQ2NjgzMzkgTDEzLjQ5NjI5NzcsNy4zNDg2OTUgTDExLjA5OTg1MzIsOC44Nzg5NDUwNSBMMTAuMTIxMjAyNiwyLjg5Mjc3MTMgTDcuODc3NzIyNTgsOC40MjU0OTI4NSBMNC41NzA1NDQ0Nyw2LjIwMzk4MDEgTDUuNjY1NDgwNDEsMTAuNzUwMzkyNyBMMi45NTEwMTQ3MiwxMS41OTgyNDc2IEw1LjEzNjQ1MjgzLDEzLjQxMDQ0NDEgTDYuNzE1Njc1NzIsMTMuNDEwNDQ0MSBaIiBpZD0iYnJlYWtpbmdwYWdlIj48L3BhdGg+DQogICAgICAgICAgICA8L2c+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span><span id="ghostery-slow-tracker" class="ghostery-pb-tracker" title="Rastreadores lentos" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxN3B4IiBoZWlnaHQ9IjE3cHgiIHZpZXdCb3g9IjAgMCAxNyAxNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPnNsb3d0cmFja2VyczwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM5NS4wMDAwMDAsIC00NTQuMDAwMDAwKSIgaWQ9InNsb3d0cmFja2VycyIgZmlsbD0iI0ZDQkEzMyI+DQogICAgICAgICAgICA8cGF0aCBkPSJNNDAzLjUsNDU0IEMzOTguODEyMjEsNDU0IDM5NSw0NTcuODEyMjEgMzk1LDQ2Mi41IEMzOTUsNDY3LjE4Nzc5IDM5OC44MTIyMSw0NzEgNDAzLjUsNDcxIEM0MDguMTg3NzksNDcxIDQxMiw0NjcuMTg3NzkgNDEyLDQ2Mi41IEM0MTIsNDU3LjgxMjIxIDQwOC4xODc3OSw0NTQgNDAzLjUsNDU0IFogTTQwOS42MDk1ODQsNDY1LjE3ODY1NCBDNDA5LjUzMDI1OSw0NjUuMTU0MDkgNDA4LjY3NzI4Myw0NjQuNzQ2NDIgNDA3LjU2MTA5MSw0NjQuMzYyNjM3IEM0MDguNDg0Mzc4LDQ2My43NDU2MSA0MDkuMDk0NDE4LDQ2Mi42OTM2NDUgNDA5LjA5NDQxOCw0NjEuNTAxNzMzIEM0MDkuMDk0NDE4LDQ1OS42MDU1ODEgNDA3LjU1MTQwMSw0NTguMDYyMzM4IDQwNS42NTUyNDksNDU4LjA2MjMzOCBDNDAzLjc1OTA5Nyw0NTguMDYyMzM4IDQwMi4yMTU4NTQsNDU5LjYwNTU4MSA0MDIuMjE1ODU0LDQ2MS41MDE3MzMgQzQwMi4yMTU4NTQsNDYyLjA0OTM1IDQwMi4zNDUyMDgsNDYyLjU2Njc2OSA0MDIuNTczMjY5LDQ2My4wMjY0OTcgQzQwMi43ODgwMzQsNDYzLjA2ODYzOCA0MDMuMzQ0NDQsNDYzLjE3NTIzMiA0MDQuMjIzNzgyLDQ2My4zMjM5NjggQzQwNS4yMDQ1MzUsNDYzLjQ5MDI4MSA0MDUuODUyNDM2LDQ2My4zNTY0MTkgNDA2LjM5MTAzOSw0NjIuODc2NjM0IEM0MDYuNzI4MTcyLDQ2Mi41NzY0NTkgNDA2LjkyODA2NCw0NjIuMTYzNjA2IDQwNi45NTM1MjksNDYxLjcxMzc5NCBDNDA2Ljk4MDEyMSw0NjEuMjYzOTgxIDQwNi44Mjk1ODMsNDYwLjgyOTk0NCA0MDYuNTI5NDA4LDQ2MC40OTM3MTIgQzQwNi4wNDY5MTksNDU5Ljk1MjQwNSA0MDUuMjE1MTI3LDQ1OS45MDM5NTMgNDA0LjY3MjY5Myw0NjAuMzg1NTQxIEM0MDQuMjM5NTU3LDQ2MC43NzExMjYgNDA0LjE4NTAyMSw0NjEuNDQ0NDkyIDQwNC41NTIxMjcsNDYxLjg1NzM0NiBDNDA0Ljg0MDEzMyw0NjIuMTgwNTA3IDQwNS4zNjk5NDcsNDYyLjIxNzQ2NiA0MDUuNjg2Nzk5LDQ2MS45MzU3NyBDNDA1LjgwMzk4NCw0NjEuODMxODggNDA1Ljg3MzM5NCw0NjEuNjkyODM1IDQwNS44ODA2MDYsNDYxLjU0NDc3NiBDNDA1Ljg4NjY5LDQ2MS40MjQyMSA0MDUuODUwNjMzLDQ2MS4zMTA2MyA0MDUuNzgwOTk4LDQ2MS4yMzQwMDkgQzQwNS43MTg1NzQsNDYxLjE2NTUgNDA1LjYxOTE5Miw0NjEuMTI3NjQxIDQwNS41MTY4OCw0NjEuMTI4NTQyIEM0MDUuNDI5ODkyLDQ2MS4xMzEwMjEgNDA1LjMxNzIxNCw0NjEuMTY1NSA0MDUuMjQ0MTk4LDQ2MS4yMzc2MTUgQzQwNS4yMjYzOTUsNDYxLjI1NDI5MSA0MDUuMjA0NTM1LDQ2MS4yNjQ4ODMgNDA1LjE3OTc0Niw0NjEuMjY0ODgzIEM0MDUuMTI2MTExLDQ2MS4yNjQ4ODMgNDA1LjA4MzA2OCw0NjEuMjE2NDMxIDQwNS4wODMwNjgsNDYxLjE1NzYxMyBDNDA1LjA4MzA2OCw0NjEuMTIxMzMxIDQwNS4wOTc5NDEsNDYxLjA5NDk2NCA0MDUuMTE2NDIxLDQ2MS4wNjk0OTggQzQwNS4yMjYzOTUsNDYwLjkxODk2IDQwNS4zODE0NCw0NjAuODMxNzQ3IDQwNS41MzUzNTksNDYwLjgxODY3NiBDNDA1Ljc0NDAzOSw0NjAuODAxMDk5IDQwNS45MTMwNTcsNDYwLjg2MDgxOCA0MDYuMDQ2OTE5LDQ2MS4wMDc3NTEgQzQwNi4xNzk4NzksNDYxLjE1NDAwNyA0MDYuMjQ5Mjg5LDQ2MS4zNDg0OSA0MDYuMjM3MTIsNDYxLjU2MzI1NSBDNDA2LjIyMzgyNCw0NjEuODA2MTkgNDA2LjExMjk0OCw0NjIuMDMyNDQ4IDQwNS45MjM2NDksNDYyLjIwMDU2NCBDNDA1LjQ1NzE2LDQ2Mi42MTYxMjIgNDA0LjcwNzE3Myw0NjIuNTY2MDkzIDQwNC4yODU1Myw0NjIuMDkzMjk0IEM0MDMuNzg5NzQ1LDQ2MS41MzU5ODcgNDAzLjg1ODQ3OSw0NjAuNjMyMDgxIDQwNC40MzUxNjcsNDYwLjExNzgxNyBDNDA1LjEyMzQwNyw0NTkuNTA1Mjk3IDQwNi4xODI1ODQsNDU5LjU2NjgyIDQwNi43OTQyMDIsNDYwLjI1NTI4NCBDNDA3LjE1NzAyNiw0NjAuNjYyNzMgNDA3LjM0MDAxNiw0NjEuMTg4MjYyIDQwNy4zMDg0NjYsNDYxLjczMzE3NCBDNDA3LjI3NjY5MSw0NjIuMjc4OTg4IDQwNy4wMzQ2NTgsNDYyLjc3OTA1NSA0MDYuNjI2OTg3LDQ2My4xNDE2NTQgQzQwNi4xNjgzODYsNDYzLjU1MDIyNiA0MDUuNjMyMjYyLDQ2My43NDY1MTIgNDA0Ljk0NjUwMiw0NjMuNzQ2NTEyIEM0MDQuNzA1MzcsNDYzLjc0NjUxMiA0MDQuNDQ0ODU3LDQ2My43MjE3MjIgNDA0LjE2MzE2Miw0NjMuNjc0Mzk3IEM0MDMuMTkyMDk5LDQ2My41MDk2NjIgNDAyLjE1NTAwNyw0NjMuMzI0ODY5IDQwMi4wMTU5NjIsNDYzLjMwNTQ4OCBDNDAxLjMxNzEzMSw0NjMuMjEyMTkxIDQwMC43MzYxNjEsNDYyLjczNzU4OSA0MDAuNzE3NjgyLDQ2Mi4wMzk2NTkgTDQwMC44OTQ1ODcsNDU4Ljk4NzY1MyBDNDAwLjg5NDU4Nyw0NTguNzkxMzY3IDQwMC43MzUyNiw0NTguNjMxMTM4IDQwMC41MzgwNzIsNDU4LjYzMTEzOCBDNDAwLjM0MDg4NSw0NTguNjMxMTM4IDQwMC4xODE1NTgsNDU4Ljc5MDQ2NSA0MDAuMTgxNTU4LDQ1OC45ODc2NTMgQzQwMC4xODE1NTgsNDU4Ljk4NzY1MyA0MDAuMjg1NDQ3LDQ2MC44NDE0MzcgNDAwLjI5NzYxNyw0NjEuMDc1NTgzIEM0MDAuMzIwNjAzLDQ2MS41MjAyMTIgMzk5LjkxMTEzLDQ2MS44NzY3MjYgMzk5LjQ2MDQxNiw0NjEuODc2NzI2IEMzOTguOTk4NDM1LDQ2MS44NzY3MjYgMzk4LjU4NzE1OSw0NjEuNTAwODMxIDM5OC42MjM0NDEsNDYxLjAzOTUyNiBDMzk4LjY0MzQ5OCw0NjAuNzg0MTk3IDM5OC42NjQ2ODIsNDYwLjUyMDA3OSAzOTguNjg1ODY1LDQ2MC4yNzI4NjIgTDM5OC43NTk3ODIsNDU5LjAwOTUxMiBDMzk4Ljc1OTc4Miw0NTguODEzMjI2IDM5OC42MDA0NTUsNDU4LjY1Mjk5OCAzOTguNDAzMjY4LDQ1OC42NTI5OTggQzM5OC4yMDYwOCw0NTguNjUyOTk4IDM5OC4wNDY3NTMsNDU4LjgxMjMyNSAzOTguMDQ2NzUzLDQ1OS4wMDk1MTIgTDM5OC4yMjAyNzgsNDYxLjk5OTk5NyBMMzk4LjIyMDI3OCw0NjIuMDA1MTggQzM5OC4yMjAyNzgsNDY0LjA5NzYxNyAzOTkuNDE3MzczLDQ2NS44MDI4OTIgNDAxLjUxMDcxMiw0NjUuODAxMDg5IEM0MDMuNjIyNTMxLDQ2NS43OTgzODUgNDA5LjYwODY4Myw0NjUuODAxMDg5IDQwOS42MDg2ODMsNDY1LjgwMTA4OSBDNDA5Ljc4MTA4MSw0NjUuODAxMDg5IDQwOS45MjAzNTEsNDY1LjY2MTE0MyA0MDkuOTIwMzUxLDQ2NS40ODk0MjEgQzQwOS45MjAzNTEsNDY1LjMxNzAyMyA0MDkuNzczMTkzLDQ2NS4yMzA3MTEgNDA5LjYwOTU4NCw0NjUuMTc4NjU0IFoiPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span><span id="ghostery-non-secure-tracker" class="ghostery-pb-tracker" title="Rastreadores no seguros" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPndhcm5pbmc8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxkZWZzPjwvZGVmcz4NCiAgICA8ZyBpZD0iUHVycGxlLUJveCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzMuMDAwMDAwLCAtNDUzLjAwMDAwMCkiIGlkPSJ3YXJuaW5nIiBmaWxsPSIjRkVCMDMyIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3My4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjYzMDQzNDc4MyBDNC4zODQxNDQ5MywwLjYzMDQzNDc4MyAwLjYzMDQzNDc4Myw0LjM4NDE0NDkzIDAuNjMwNDM0NzgzLDkgQzAuNjMwNDM0NzgzLDEzLjYxNTg1NTEgNC4zODQxNDQ5MywxNy4zNjk1NjUyIDksMTcuMzY5NTY1MiBDMTMuNjE1ODU1MSwxNy4zNjk1NjUyIDE3LjM2OTU2NTIsMTMuNjE1ODU1MSAxNy4zNjk1NjUyLDkgQzE3LjM2OTU2NTIsNC4zODQxNDQ5MyAxMy42MTU4NTUxLDAuNjMwNDM0NzgzIDksMC42MzA0MzQ3ODMgWiBNNC42NDI5MjgxMSwxMS43ODk4NTUxIEM1LjI1MDQxMTY1LDExLjc4OTg1NTEgNS43NTY5NTIzNCwxMS4zNjA3NTY3IDUuODc4NzE2OTMsMTAuODgxMzY5NSBDNi4wMDA0ODE1MiwxMS4zNjEyNDM3IDYuNTA3MDIyMjIsMTEuNzIzNzM2OSA3LjExNDM4NCwxMS43MjM3MzY5IEM3LjcyNDE4MTA2LDExLjcyMzczNjkgOC4yMzI2Njk5OSwxMS4zNjUwMTg0IDguMzUxNTEyMjMsMTAuODgyNzA4OSBDOC40NzA5NjMzLDExLjM2NTAxODQgOC45Nzk0NTIyMywxMS43MzY1MjIyIDkuNTg4NzYyMjQsMTEuNzM2NTIyMiBDMTAuMTk0NjYyOCwxMS43MzY1MjIyIDEwLjcwMTIwMzUsMTEuMzk0OTcyNSAxMC44MjM0NTUyLDEwLjkxNjU1OTQgQzEwLjk0NTcwNjgsMTEuMzk0OTcyNSAxMS40NTIyNDc1LDExLjc4OTM2OCAxMi4wNTgyNjk5LDExLjc4OTM2OCBDMTIuMzUzNjcwOCwxMS43ODkzNjggMTIuNjI0NzE4OCwxMS42OTkzODQgMTIuODM5NzU1LDExLjU1OTU5ODIgQzExLjAwOTUxMTUsOC43MTgwOTk3NSAxMi4xNDUzMzE2LDQuMTM3NjgxMTYgMTIuMTQ1MzMxNiw0LjEzNzY4MTE2IEM2Ljk0NjQ3MDYzLDUuMjMxNjE0MjQgNC42NjU4MTk4NSwxMC4xMDAzNzE0IDQuMDU3OTcxMDEsMTEuNjY2MTQyMiBDNC4yMzI5NDY3MywxMS43NDMyMTkyIDQuNDMxNzg4MzEsMTEuNzg5ODU1MSA0LjY0MjkyODExLDExLjc4OTg1NTEgWiIgaWQ9Indhcm5pbmd0cmFja2VycyI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+&quot;) repeat scroll 0% 0%; opacity: 0.5; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span></div><div id="ghostery-title">Rastreador</div><div id="ghostery-minimize"><span id="ghostery-minimize-icon"></span></div><span id="ghostery-close" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxNXB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxNSAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNy4yICgyODI3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmNvbGxhcHNlIGNvcHkgMjwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgaWQ9ImNvbGxhcHNlLWNvcHktMiI+DQogICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsLTMxNSIgZmlsbC1vcGFjaXR5PSIwLjI3MDE1Mzk4NiIgZmlsbD0iI0Q4RDhEOCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNy41Ij48L2NpcmNsZT4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjM2LDQuMzYgTDEwLjU3NDU2MzQsMTAuNTc0NTYzNCIgaWQ9IkxpbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9wYXRoPg0KICAgICAgICAgICAgPHBhdGggZD0iTTQuMzYsNC4zNiBMMTAuNTc0NTYzNCwxMC41NzQ1NjM0IiBpZD0iTGluZS1Db3B5IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuNjAwMDAwLCA3LjYwMDAwMCkgc2NhbGUoLTEsIDEpIHRyYW5zbGF0ZSgtNy42MDAwMDAsIC03LjYwMDAwMCkgIj48L3BhdGg+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; --darkreader-inline-bgcolor: rgba(0, 0, 0, 0);" data-darkreader-inline-bgcolor=""></span></div><div id="ghostery-pb-background"><div id="ghostery-trackerList"><div class="ghostery-trackerContainer ghostery-tracker-disabled" category="advertising"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">DoubleClick</span></div></div></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: italic; font-size-adjust: none; font-family: MathJax_Math, sans-serif; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""></div></div></body></html>
