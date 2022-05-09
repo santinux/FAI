@@ -1,2 +1,2 @@
 # FAI
-Facultad de Informática -
+Facultad de Informática - UNCo.
