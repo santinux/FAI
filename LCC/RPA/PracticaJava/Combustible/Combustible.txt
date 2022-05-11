@@ -1,0 +1,43 @@
+(*
+* RPA, TP # 3.2.
+*
+* Ejercicio # 4 <Combustible>.
+*
+* Notación UpperCammelCase, Indentación 2, Pseudocódigo.
+*
+* Santino Fuentes, 2022.
+******************************************************************************)
+
+// Programa principal
+
+ALGORITMO Combustible
+
+	(*
+	* El programa define el descuento que se le hará a un cliente,
+	* según su condición de asociado, si no lo es, no habrá descuento.
+	*)
+
+	( ENTERO NaftaSuper NaftaPremium Diesel500, TEXTO )
+
+	NaftaSuper <-- 110.49
+	NaftaPremium <-- 120.99
+	Diesel500 <-- 125.12 
+	Socio <-- "Si"
+
+	ESCRIBIR("Ingrese el combustible a cargar: ")
+	LEER(TipoCombustible)
+	ESCRIBIR("Ingrese la cantidad de litros a cargar: ")
+	LEER(Litros)	
+	ESCRIBIR("¿Es socio de ACA?")
+	LEER(EsSocio)
+
+		SEGUN(TipoNafta)HACER
+			NaftaSuper: ConDescuento <-- NaftaSuper
+			NaftaPremium: ConDescuento <-- NaftaPremium
+			Diesel500: ConDescuento <-- Diesel500
+		FIN SEGUN
+
+	SI(EsSocio = "Si")ENTONCES
+		ConDescuento <-- (Litros * ConDescuento * 0.5)
+	SINO
+		a <-- (Litros * Precio)
