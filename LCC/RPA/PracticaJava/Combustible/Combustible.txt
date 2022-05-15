@@ -1,4 +1,4 @@
-(*
+(******************************************************************************
 * RPA, TP # 3.2.
 *
 * Ejercicio # 4 <Combustible>.
@@ -10,34 +10,33 @@
 
 // Programa principal
 
-ALGORITMO Combustible
-
-	(*
-	* El programa define el descuento que se le hará a un cliente,
-	* según su condición de asociado, si no lo es, no habrá descuento.
-	*)
-
-	( ENTERO NaftaSuper NaftaPremium Diesel500, TEXTO )
-
-	NaftaSuper <-- 110.49
-	NaftaPremium <-- 120.99
-	Diesel500 <-- 125.12 
-	Socio <-- "Si"
-
-	ESCRIBIR("Ingrese el combustible a cargar: ")
-	LEER(TipoCombustible)
+ALGORITMO Combustible (REAL LitrosCarg PrecioFinal PBruto, TEXTO TipoComb 
+EsSocio) RETORNO Ø
+	ESCRIBIR("Ingrese el tipo de combustible a cargar: ")
+	LEER(TipoComb)
 	ESCRIBIR("Ingrese la cantidad de litros a cargar: ")
-	LEER(Litros)	
-	ESCRIBIR("¿Es socio de ACA?")
+	LEER(LitrosCarg)
+	ESCRIBIR("¿Es socio del Automóvil Club Argentino? Responda "Si" o "No"")
 	LEER(EsSocio)
-
-		SEGUN(TipoNafta)HACER
-			NaftaSuper: ConDescuento <-- NaftaSuper
-			NaftaPremium: ConDescuento <-- NaftaPremium
-			Diesel500: ConDescuento <-- Diesel500
-		FIN SEGUN
-
+	PBruto <-- CalculoPrecio(TipoComb, LitrosCarg)
 	SI(EsSocio = "Si")ENTONCES
-		ConDescuento <-- (Litros * ConDescuento * 0.5)
+		PrecioFinal <-- (PBruto * 0,95)
 	SINO
-		a <-- (Litros * Precio)
+		PrecioFinal <-- PBruto
+	FIN SI
+	ESCRIBIR("El precio a abonar es: $", PrecioFinal, ".")
+FIN ALGORITMO Combustible
+
+// Módulo
+
+MODULO CalculoPrecio (TEXTO Tipo, REAL Litros) RETORNA REAL
+	REAL AsigPrecio
+	SEGUN(Tipo)HACER
+		NaftaSuper: (AsigPrecio <-- 110,49)
+		NaftaPremium: (AsigPrecio <-- 120,99)
+		Diesel500: (AsigPrecio <-- 125,12)
+	FIN SEGUN
+	PrecioBruto <-- (AsigPrecio * Litros)
+	RETORNO PrecioBruto
+FIN MODULO CalculoPrecio
+

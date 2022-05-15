@@ -7,12 +7,11 @@
 *
 * Santino Fuentes, 2022.
 ******************************************************************************/
-
+// Programa principal
 
 import java.util.Scanner;
 
 public class Combustible
-
 {
 	public static void main (String[] args)
  
