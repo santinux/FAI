@@ -13,6 +13,8 @@ clasificar según la longitud de sus lados: Equilatero si tiene los 3 lados igua
 distinto y Escaleno si tiene 3 lados distintos. Además, para que se pueda formar un triángulo, se debe cumplir que la suma
 de dos lados debe ser mayor que el tercer lado.
 
+// Programa principal
+
 ALGORITMO Triangulos (REAL Lado0 Lado1 Lado2, TEXTO TipoTriangulo) RETORNO Ø
 	ESCRIBIR("Ingrese el lado 0: ")
 	LEER(Lado0)
@@ -20,4 +22,19 @@ ALGORITMO Triangulos (REAL Lado0 Lado1 Lado2, TEXTO TipoTriangulo) RETORNO Ø
 	LEER(Lado1)
 	ESCRIBIR("Ingrese el lado 2: ")
 	LEER(Lado2)
-	
+	TipoTriangulo <-- Clasificador (Lado0, Lado1, Lado2)
+	ESCRIBIR("El triángulo es de tipo: ", TipoTriangulo, ".")
+FIN ALGORITMO Triangulos
+
+// Modulo
+
+MODULO Clasificador (REAL L0 L1 L2, TEXTO Tipo) RETORNO TEXTO
+	SI(L0 = L1 = L2)ENTONCES
+		Tipo <-- ("Equilátero")
+	OTRO SI(L0 = L1 || L0 = L2 || L1 = L2)ENTONCES
+		Tipo <-- ("Isósceles")
+	OTRO SI(!(L0 = L1 = L2))ENTONCES
+		Tipo <-- ("Escaleno")
+	FIN SI
+	RETORNO Tipo
+FIN MODULO
