@@ -8,3 +8,16 @@
 * Santino Fuentes, 2022.
 ******************************************************************************)
 
+Diseñar un algoritmo que permita conocer el tipo de un triángulo según la longitud de sus lados. Un triángulo se puede
+clasificar según la longitud de sus lados: Equilatero si tiene los 3 lados iguales, Isósceles si tiene 2 lados iguales y un lado
+distinto y Escaleno si tiene 3 lados distintos. Además, para que se pueda formar un triángulo, se debe cumplir que la suma
+de dos lados debe ser mayor que el tercer lado.
+
+ALGORITMO Triangulos (REAL Lado0 Lado1 Lado2, TEXTO TipoTriangulo) RETORNO Ø
+	ESCRIBIR("Ingrese el lado 0: ")
+	LEER(Lado0)
+	ESCRIBIR("Ingrese el lado 1: ")
+	LEER(Lado1)
+	ESCRIBIR("Ingrese el lado 2: ")
+	LEER(Lado2)
+	
