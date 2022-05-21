@@ -7,11 +7,12 @@
 *
 * Santino Fuentes, 2022.
 ******************************************************************************)
-
-Diseñar un algoritmo que permita conocer el tipo de un triángulo según la longitud de sus lados. Un triángulo se puede
-clasificar según la longitud de sus lados: Equilatero si tiene los 3 lados iguales, Isósceles si tiene 2 lados iguales y un lado
-distinto y Escaleno si tiene 3 lados distintos. Además, para que se pueda formar un triángulo, se debe cumplir que la suma
-de dos lados debe ser mayor que el tercer lado.
+(*
+* El algoritmo utiliza un módulo que determina si las medidas ingresadas
+* corresponden o no a un triángulo, de ser un triángulo, utiliza un módulo 
+* que clasifica el triángulo según las medidas de sus lados. Finalmente,
+* se muestran por pantalla los resultados obtenidos por la clasificación.
+*)
 
 // Programa principal
 
@@ -22,13 +23,18 @@ ALGORITMO Triangulos (REAL Lado0 Lado1 Lado2, TEXTO TipoTriangulo) RETORNO Ø
 	LEER(Lado1)
 	ESCRIBIR("Ingrese el lado 2: ")
 	LEER(Lado2)
-	TipoTriangulo <-- Clasificador (Lado0, Lado1, Lado2)
-	ESCRIBIR("El triángulo es de tipo: ", TipoTriangulo, ".")
+	BOOLEANO EsTriangulo <-- Verificador(Lado0, Lado1, Lado2)
+	SI(EsTriangulo = TRUE)ENTONCES
+		TipoTriangulo <-- Clasificador(Lado0, Lado1, Lado2)
+		ESCRIBIR("El triángulo es de tipo: ", TipoTriangulo, ".")
+	SINO
+		ESCRIBIR("Las medidas ingresadas no corresponden a un triángulo.")
 FIN ALGORITMO Triangulos
 
-// Modulo
+// Módulo
 
-MODULO Clasificador (REAL L0 L1 L2, TEXTO Tipo) RETORNO TEXTO
+MODULO Clasificador (REAL L0, L1, L2) RETORNO TEXTO
+	TEXTO Tipo
 	SI(L0 = L1 = L2)ENTONCES
 		Tipo <-- ("Equilátero")
 	OTRO SI(L0 = L1 || L0 = L2 || L1 = L2)ENTONCES
@@ -38,3 +44,15 @@ MODULO Clasificador (REAL L0 L1 L2, TEXTO Tipo) RETORNO TEXTO
 	FIN SI
 	RETORNO Tipo
 FIN MODULO
+
+// Módulo
+
+MODULO Verificador (REAL L0, L1, L2) RETORNO BOOLEANO
+	BOOLEANO Triangulo
+	SI(L0 + L1 > L2 || L0 + L2 > L1 || L2 + L1 > L0)ENTONCES
+	Triangulo <-- TRUE
+	SINO
+	Triangulo <-- FALSE
+	FIN SI
+	RETORNO Triangulo
+FIN MODULO Verificador
