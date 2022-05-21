@@ -10,8 +10,9 @@
 
 // Programa principal
 
-ALGORITMO Combustible (REAL LitrosCarg PrecioFinal PBruto, TEXTO TipoComb 
-EsSocio) RETORNO Ø
+ALGORITMO Combustible() RETORNO Ø
+	REAL LitrosCarg, PrecioFinal, PBruto
+	TEXTO TipoComb, EsSocio
 	ESCRIBIR("Ingrese el tipo de combustible a cargar: ")
 	LEER(TipoComb)
 	ESCRIBIR("Ingrese la cantidad de litros a cargar: ")

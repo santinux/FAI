@@ -14,7 +14,10 @@
 
 // Programa principal
 
-ALGORITMO Meritocracia(ENTERO Inasistencias, REAL Bono, TEXTO Nombre) RETORNO Ø
+ALGORITMO Meritocracia() RETORNO Ø
+	ENTERO Inasistencias 
+	REAL Bono
+	TEXTO Nombre
 	ESCRIBIR("Ingrese el nombre: ")
 	LEER(Nombre)
 	ESCRIBIR("Ingrese la cantidad de inasistencias: ")

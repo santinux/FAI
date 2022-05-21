@@ -16,7 +16,9 @@
 
 // Programa principal
 
-ALGORITMO Triangulos (REAL Lado0 Lado1 Lado2, TEXTO TipoTriangulo) RETORNO Ø
+ALGORITMO Triangulos() RETORNO Ø
+	REAL Lado0, Lado1, Lado2
+	TEXTO TipoTriangulo
 	ESCRIBIR("Ingrese el lado 0: ")
 	LEER(Lado0)
 	ESCRIBIR("Ingrese el lado 1: ")

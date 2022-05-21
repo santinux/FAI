@@ -7,28 +7,25 @@
 *
 * Santino Fuentes, 2022.
 ******************************************************************************)
+(*
+* El programa define el porcentaje prestado al cliente en función de su
+* condición familiar
+*)
 
 // Programa principal
 
-ALGORITMO Prestamo ( ENTERO Prestar Sueldo, TEXTO Tiene TieneFamilia )
-
-	(**
-	* El programa define el porcentaje prestado al cliente en función de su
-	* condición familiar
-	*)
-
+ALGORITMO Prestamo() RETORNO Ø
+	ENTERO Prestar Sueldo
+	TEXTO Tiene TieneFamilia
 	ESCRIBIR("¿Tiene usted familia?")
 	LEER(TieneFamilia)
 	ESCRIBIR("Ingrese el valor de su sueldo:")
 	LEER(Sueldo)
-
 	Tiene <-- Si
 	SI(TieneFamilia == Tiene)ENTONCES	// Si el valor ingresado fue un "Si"
 		Prestar <-- (Sueldo * 0.25)
 	SINO	// Si el valor ingresado fue "No" u otro valor distinto de "Si"
 		Prestar <-- (Sueldo * 0.25)
-
 	ESCRIBIR("Asígnese al cliente un préstamo de: " + Prestar)
-
 FIN ALGORITMO Prestamo
 
