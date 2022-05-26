@@ -1,0 +1,34 @@
+(******************************************************************************
+* RPA, TP # 3.2.
+*
+* Ejercicio # 3 <Meritocracia>.
+*
+* Notación UpperCammelCase, Indentación 2, Pseudocódigo.
+*
+* Santino Fuentes, 2022.
+******************************************************************************)
+(*
+* El programa define el valor de un bono a cobrar por la persona ingresada,
+* y si esta está habilitada para recibirlo.
+*)
+
+// Programa principal
+
+ALGORITMO Meritocracia() RETORNO Ø
+	ENTERO Inasistencias 
+	REAL Bono
+	TEXTO Nombre
+	ESCRIBIR("Ingrese el nombre: ")
+	LEER(Nombre)
+	ESCRIBIR("Ingrese la cantidad de inasistencias: ")
+	LEER(Inasistencias)
+	SI(Inasistencias <= 2)ENTONCES
+		Bono <-- 15000 - (Inasistencias * 500)
+		ESCRIBIR("A " , Nombre ,
+		" le corresponde cobrar el bono por buena asistencia.") , 
+		Bono , ".")
+	SINO
+		ESCRIBIR("A" , Nombre , 
+		" no le corresponde cobrar el bono por buena asistencia.")
+	FIN SI
+FIN ALGORITMO Meritocracia

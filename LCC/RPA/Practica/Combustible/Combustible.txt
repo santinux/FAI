@@ -1,0 +1,43 @@
+(******************************************************************************
+* RPA, TP # 3.2.
+*
+* Ejercicio # 4 <Combustible>.
+*
+* Notación UpperCammelCase, Indentación 2, Pseudocódigo.
+*
+* Santino Fuentes, 2022.
+******************************************************************************)
+
+// Programa principal
+
+ALGORITMO Combustible() RETORNO Ø
+	REAL LitrosCarg, PrecioFinal, PBruto
+	TEXTO TipoComb, EsSocio
+	ESCRIBIR("Ingrese el tipo de combustible a cargar: ")
+	LEER(TipoComb)
+	ESCRIBIR("Ingrese la cantidad de litros a cargar: ")
+	LEER(LitrosCarg)
+	ESCRIBIR("¿Es socio del Automóvil Club Argentino? Responda "Si" o "No"")
+	LEER(EsSocio)
+	PBruto <-- CalculoPrecio(TipoComb, LitrosCarg)
+	SI(EsSocio = "Si")ENTONCES
+		PrecioFinal <-- (PBruto * 0,95)
+	SINO
+		PrecioFinal <-- PBruto
+	FIN SI
+	ESCRIBIR("El precio a abonar es: $", PrecioFinal, ".")
+FIN ALGORITMO Combustible
+
+// Módulo
+
+MODULO CalculoPrecio (TEXTO Tipo, REAL Litros) RETORNA REAL
+	REAL AsigPrecio
+	SEGUN(Tipo)HACER
+		NaftaSuper: (AsigPrecio <-- 110,49)
+		NaftaPremium: (AsigPrecio <-- 120,99)
+		Diesel500: (AsigPrecio <-- 125,12)
+	FIN SEGUN
+	PrecioBruto <-- (AsigPrecio * Litros)
+	RETORNO PrecioBruto
+FIN MODULO CalculoPrecio
+
