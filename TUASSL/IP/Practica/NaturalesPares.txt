@@ -1,0 +1,23 @@
+(******************************************************************************
+* Estructuras de control repetitivas, TP #2.1.
+*
+* Notación UpperCammelCase. Indentación 2. Pseudocódigo.
+*
+* Santino Fuentes, 2022.
+******************************************************************************)
+(*
+* Escribir en pantalla los números Naturales Pares menores o iguales a N,
+* donde N es un número solicitado al usuario.
+* Un número par es aquel que al dividirlo por 2, da por resto 0.
+*)
+// Programa principal
+ALGORITMO NaturalesPares() RETORNO Ø
+	ENTERO N, NatPar
+	ESCRIBIR("Ingrese un número natural: ")
+	LEER(N)
+	ESCRIBIR("Los números naturales pares menores o iguales que ",N," son: ")
+	PARA(i=0, i<=N, i++)
+		NatPar <- i*2
+		ESCRIBIR(NatPar," , ")
+	FIN PARA
+FIN ALGORITMO NaturalesPares
