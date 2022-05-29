@@ -1,5 +1,8 @@
 # FAI
-![Fai-uncoma](https://user-images.githubusercontent.com/89480875/167512644-04e6d9f7-9fb2-483a-bd7c-74823c68855f.jpg)
+
+![Fai-uncoma](Utilidades/Fai-uncoma.jpg)
+
+[comment]: ![Fai-uncoma](https://user-images.githubusercontent.com/89480875/167512644-04e6d9f7-9fb2-483a-bd7c-74823c68855f.jpg)
 
 ## Facultad de Informática - UNCo.
 
