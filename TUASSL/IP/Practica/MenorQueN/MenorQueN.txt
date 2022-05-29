@@ -1,0 +1,27 @@
+(*
+* Estructuras repetitivas con ciclo definido. TP# 6.3.
+* Indentación 2, Pseudocódigo.
+* Santino Fuentes, 2022.
+*)
+(*
+* Escribir los números positivos menores que N, siendo N un número ingresado
+* por el usuario.
+*)
+MODULO PositivosMenoresQueN(ENTERO N) RETORNO Ø
+	PARA (i<-1, HASTA i<N, PASO 1)
+		ESCRIBIR(i)
+	FIN PARA
+FIN MODULO PositivosMenoresQueN
+
+ALGORITMO Principal () RETORNO Ø
+	ENTERO Numero
+	ESCRIBIR ("Ingrese un número positivo:")
+	LEER (Numero)
+	SI (Numero > 0) HACER
+		ESCRIBIR ("Los números positivos menores que ",Numero," son:")
+		PositivosMenoresQueN(Numero)
+	SINO
+		ESCRIBIR ("Por favor, entienda que no hay números positivos menores a
+		un número negativo. Reinicie e ingrese un número positivo.")
+	FIN SI
+FIN ALGORITMO Principal

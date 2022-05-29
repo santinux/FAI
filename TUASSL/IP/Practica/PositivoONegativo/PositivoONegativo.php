@@ -3,7 +3,7 @@
 * Estructuras de control repetitivas, ciclo definido.                           
 * Notación UpperCammelCase. Indentación 2. Pseudocódigo.                        
 * Santino Fuentes, 2022.
- */
+*/
 
 /*
 * @param
@@ -15,7 +15,7 @@
 */
 function AnalizarSecuencia($J)
 {
-	for ($I=1; $I<=$J; $I++)
+	for ($I = 1; $I <= $J; $I++)
 	{
 		echo("Ingrese un número:\n");
 		$Numero=trim(fgets(STDIN)); 
