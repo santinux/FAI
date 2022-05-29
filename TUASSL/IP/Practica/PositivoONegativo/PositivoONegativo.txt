@@ -1,0 +1,33 @@
+(*
+* Estructuras de control repetitivas, ciclo definido.
+* Notación UpperCammelCase. Indentación 2. Pseudocódigo.
+* Santino Fuentes, 2022.
+*)
+(*
+* El usuario debe poder ingresar muchos números, por cada número ingresado, se
+* hará lo siguiente:
+* Si el número es positivo, escribir "Número positivo", si
+* es igual a 0, escribir "Igual a 0", si es negativo, escribir 
+* "Número negativo".
+*)
+
+MODULO AnalizarSecuencia(ENTERO I) RETORNO Ø
+	ENTERO J, K
+	PARA J<-1 HASTA I+1 PASO 1
+		LEER (X)
+		SI (X>0) ENTONCES
+			ESCRIBIR(X," Es positivo.")
+		OTRO-SI (X=0) ENTONCES
+			ESCRIBIR(X," Es igual a cero.")
+		SINO
+			ESCRIBIR(X," Es negativo.")
+		FIN SI
+	FIN PARA
+FIN MODULO
+
+ALGORITMO Principal
+	ENTERO Cantidad
+	ESCRIBIR("¿Cuántos números desea procesar?")
+	LEER(Cantidad)
+	AnalizandoSecuencia(Cantidad)
+FIN ALGORITMO Principal
