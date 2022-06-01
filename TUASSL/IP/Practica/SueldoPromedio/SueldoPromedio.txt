@@ -1,0 +1,28 @@
+Diseñe un algoritmo que lea una secuencia de números que representan 
+el sueldo ($) del personal de una empresa y calcule el sueldo promedio
+de los empleados
+(*
+* Estructuras de control repetitivas. TP# 6.6.
+* Notación UpperCammelCase. Indentación 2. Pseudocódigo.
+*)
+MODULO CalculoPromedio(TEXTO D) RETORNO REAL
+	REAL Sueldo <- 0
+	REAL Cantidad <- 0
+	REAL Promedio <- 0
+	MIENTRAS D != n HACER
+		ESCRIBIR ("Ingrese un sueldo: $)
+		LEER (S)
+		Sueldo + S
+		Cantidad + 1
+	FIN MIENTRAS
+	Promedio <- Sueldo / Cantidad
+	ESCRIBIR ("El promedio de los sueldos es: $",Promedio,".")
+FIN MODULO CalculaPromedio
+
+ALGORITMO Principal () RETORNO Ø
+	ESCRIBIR ("Desea ingresar un sueldo? (s/n): ")
+	LEER (Desicion)
+	CalculoPromedio(Desicion)
+FIN ALGORITMO Principal
+
+/* s = sc.next().toLowerCase(); */

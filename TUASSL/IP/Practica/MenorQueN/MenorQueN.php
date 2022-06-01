@@ -33,7 +33,7 @@ if ($Numero>0)
 else
 {
 	echo("\nPor favor, entienda que no hay números positivos menores\r
-a un número negativo, o cero. Reinicie e ingrese un número positivo.\n");
+a un número negativo, o a cero. Reinicie e ingrese un número positivo.\n");
  
 }
 ?>

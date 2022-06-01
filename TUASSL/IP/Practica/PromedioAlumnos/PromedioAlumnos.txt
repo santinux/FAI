@@ -1,0 +1,12 @@
+(*
+* Notación UpperCammelCase. Indentación 2. Pseudocódigo.
+* Santino Fuentes, 2022.
+*)
+
+MODULO CalculaPromedio(REAL L, Nota) RETORNO Ø
+	REAL Suma, Promedio
+	Suma <- 0
+	PARA (i <- 1, HASTA i <= L, PASO 1)
+		LEER (Nota)
+		Suma <- (Suma + Nota)
+
