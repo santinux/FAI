@@ -1,0 +1,211 @@
+---------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO II : Editor de Textos VI/VIM
+---------------------------------------------
+
+Los siguientes ejercicios se realizan en su totalidad desde una terminal en un sistema GNU/Linux.
+
+IMPORTANTE: VIM posee un poderoso manual, cuando se le solicite investigar algo no lo haga en internet. Use vim help. 
+Ejemplo: Ingresar a vim y en modo normal :help<ENTER> o bien :h<ENTER> , si necesita recordar algo especifico puede hacerlo así: :h w  (en este caso necesito saber como funciona el motion w)
+
+VIM
+---
+
+1 - Crear y editar un nuevo archivo con VIM.
+
+Objetivo:
+
+	El objetivo de este ejercicio es practicar la creación y edición de archivos usando VIM. También practicaremos como cambiar entre los distintos modos (normal, inserción y comando).
+En esta práctica Ud. creará un nuevo archivo con VIM, insertará algo de texto dentro del archivo y lo guardará.
+
+Instrucciones:
+
+Crear un archivo
+
+1.a - Primero, debe abrir un shell en su equipo con linux instalado (puede ser su VM remota o la distribución que tenga instalada). Luego, use VIM para crear un archivo llamado "miPrimerArchivoVim.txt".
+1.b - Ahora deberá cambiarse a modo "insert". TIP: presionar "i" o "a".
+1.c - Agregue algo de texto al archivo. Intente escribir algunas sentencias y si se equivoca trate de hacer las correcciones pertinentes sin salir del modo insert.
+1.d - Continue escribiendo, por ejemplo 3 cualidades que Ud. tenga y que lo haga sentir orgulloso. Luego vaya al modo "normal". (TIP: Usar la tecla Escape)
+1.e - Por último, deberá guardar los cambios realizados. Investigue cómo hacer esto. (TIP: Deberá hacerlo en modo normal). ¿Qué otras formas de hacer esto existen en VIM?
+
+2 - Verificar el trabajo realizado
+
+2.a - Verifique que los cambios realizados aún persistan en el archivo. Muestre al menos 2 formas de hacer esto. (TIP: usando VIM y usando el SHELL)
+2.b - Ingresen nuevamente al archivo creado en (1), cambie a modo insert. Luego escriba algo más y salga del archivo sin guardar los cambios.
+2.c - Verifique que realmente los cambios no se hayan realizado.
+
+
+3 - Navegación esencial en VIM
+
+Objetivo:
+
+El objetivo principal es poder moverse por todo el archivo de texto.
+
+Instrucciones:
+
+3.1 - Abrir el archivo linux.txt que esta en PEDCO (Es un pequeño resumen de la Historia de Linux)
+3.2 - Practique moverse usando solo las teclas: hjkl.  ---> Es muy importante que sólo utilice estas teclas y se vaya familiarizando con ellas.
+3.3 - Vamos a movernos por el archivo:
+
+	- Presionar j 18 veces ¿qué sucede?
+	- Presionar k 4 veces ¿qué sucede?
+	- Presionar l 8 veces ¿Qué sucede?
+	- Presionar h 8 veces ¿Qué sucede?
+
+Copie y pegue toda la línea en la que esta parado: 
+
+3.4 - Practique como moverse en modo normal por página (hacia arriba y hacia abajo, TIP: Ctrl f y Ctrl b)
+3.5 - Practique como mover el cursor palabra por palabra (es decir, el cursor debe ir "saltando" de palabra en palabra). Investigue cómo hacerlo hacia adelante y hacia atrás.
+3.6 - Resuelva el siguiente problema: En el archivo linux.txt deberá buscar la primer línea del mail que escribió Linus Torvalds a la comunidad, una vez que lo encuentre deberá:
+	- Posicionarse en la primer letra (en este caso es la H "Hola a todos los que ...."  
+	- Deberá de un solo salto quedar parado en la palabra minix (en la primer letra (m)). OBS: Solo deberá ejecutar una sola instrucción de VIM.
+	- Si puedo hacer lo anterior, ahora haga el reverso y deberá quedar posicionado como cuando empezó el ejercicio anterior.
+3.7 - Practique como movernos a una línea específica (TIP: A jugar con g)
+	- ¿Cómo podemos hacer para ir a la primer línea del inicio de nuestro archivo en un solo paso?
+	- Ahora que ha logrado el punto anterior ¿Podría en un paso ir a la última línea de nuestro archivo?
+	- Bien, ahora que ha logrado lo anterior ¿qué puedo hacer para ir a la línea x? Ejemplo: Ir en un solo paso al inicio de la línea 16 ¿y a las 42?.
+	- ¿Y ahora si hacemos al revés? Intente ir de la línea 42 a la 5 en un solo paso.
+3.8 - Modo de comandos
+	- Explique con sus palabras que sucede cuando hago lo siguiente. Ir a modo normal, pasar a modo de comando y escriba lo siguiente :44<ENTER> (TIP: modo de comandos es cuando nos permite ejecutar instrucciones dentro de VIM)
+	- ¿Se le ocurre alguna idea para ir al inicio? 
+	- Explique con sus palabras que sucede cuando hacemos :$<ENTER>.
+	- Para confirmar que el punto anterior esta correcto ejecute Ctrl-G ¿Qué nota?
+
+4 - Borrando texto
+
+Objetivo:
+El objetivo principal de este ejercicio es borrar texto de un archivo. Además, practicaremos también el uso del patrón [count][operator]{motion} (No se preocupe si no entiende esto, ya lo veremos más adelante en este TP)
+
+Instrucciones:
+Practique borrar caracteres individuales. 
+Ejemplo: Imagine que queremos borrar una letra extra que se encuentra en una frase que está en la 3er línea de un archivo cualquiera:
+	- Para moverse a la 3er línea, recuerde que puede hacerlo de varias maneras 3gg, 3G o :3<ENTER>.
+	- Borre la letra "m" extra de la palabra mammá, posicionándose donde corresponda y en modo normal presionar "x".
+	- Borre las primeras 3 palabras completas de la frase: "cuantos pares son tres botas". Para ello puede hacer 3dw y deberá quedar "tres botas". (Aquí estamos usando al patrón 3(count) d(operator) en este caso delete (borrar) y w(motion)
+	en este caso word.
+	- Borre una palabra completa a la izquierda del cursor: Puede usar db y en el caso que quiera borrar hacia la derecha dw o dW.
+
+4.1 - Elimine todas las palabras que no correspondan al TEXTO(*). NOTA: Puede borrar a izquierda o a derecha.
+4.2 - Elimine las letras que estén demás en el TEXTO(*)
+4.3 - Elimine las primeras 4 palabras en forma consecutiva del TEXTO(**).
+4.4 - Elimine todas las palabras a partir de la última ","
+
+
+
+(*)TEXTO:
+
+Vim es un MADARIAGA editoor de texxto de ENRIQUETA gran utilidad paraAAAAAAAAAAAAAAAAAAAAAA 
+los FELINI administraadores DUDAS de sistemaas lo utilizan muchhho ya MISTERIOSO 
+que MONT está disponible LINIERS en cualquier DECUR plataformaBBBBBBBBBBBBBBBBBBBBBBBBB
+UNIX. Esto significa ASIMOV que podrá usaar Vim en BODOC cualquier 
+VENADO sistema de tipo NINE UNIX. Además, resulta ORSAI recomendable
+su utilizacción, YO ROBOT  porque ARRIETA requiere SELKNAM de muy pocosCCCCCCCCCCCCCCCCCCCC
+recurrsos SABATO para su SOBRE HEROES Y TUMBAS funcionamiento
+lo que permite utilizar Vim EL OTRO en maquinas remotas o BORGES DDDDDDDDDDDD
+cuando no LAS LARVAS pueda ejecutar ABELARDO CASTILLO otros programas 
+debido a problemas MUCHA con el SUERTE harddware CON o el EL  sisteema EXAMEN.
+
+(**)TEXT:
+
+Pedro Pinedo Pérez Pintado Pablo Pereira, pobre pintor portugués, pinta preciosos paisajes por poca plata, para poder pasar por París.
+
+
+
+5 - Cortar, copiar y pegar (Delete, Yank, and Put)
+Objetivo:
+El objetivo de este ejercicio es practicar las operaciones de cortar, copiar y pegar.
+
+Instrucciones:
+Abra una copia original del archivo linux.txt (Si lo ha modificado en ejercicios anteriores, por favor cree una nueva copia original)
+
+5.1 - Intercambie las lineas 4 y 5 del archivo. Para ello deberá borrar la línea 5 con "dd" y luego ubicarse en el lugar correspondiente y pegar con el comando "p".
+
+Observe este ejemplo para comprender como debería quedar resuelto el problema:
+
+Linux comienza en 1991 como un proyecto personal del estudiante finlandés Linus Torvalds: crear un nuevo núcleo de sistema operativo libre.
+El núcleo Linux resultante ha estado marcado por un crecimiento constante a lo largo de su historia.
+
+Resultado esperado:
+
+El núcleo Linux resultante ha estado marcado por un crecimiento constante a lo largo de su historia.
+Linux comienza en 1991 como un proyecto personal del estudiante finlandés Linus Torvalds: crear un nuevo núcleo de sistema operativo libre.
+
+Deberá investigar cómo funciona esto: ¿Dónde se guarda la información cuando hago "dd"? ¿Puedo volver a pegar "p" muchas veces? ¿Por qué sucede esto?
+
+5.2 - Copie 3 veces la linea que fue borrada con "dd" justo debajo de la que acaba de hacer.
+
+5.3 - Dada la siguiente sentencia: "Toods los pájraos pueden ovlar", Investigue como puede resolver este problema "cortando y pegando" pero de a 1 carácter a la vez. Explique brevemente como lo hizo.
+
+5.4 - Vuelva al archivo de linux y busque la sentencia: "Linus Torvalds, creador del núcleo Linux" y modifique el nombre del creador borrando cada palabra y agregando Richard Stallman en su lugar. Guarde los cambios
+      Pero inmediatamente debe deshacer este error, investigue de que forma puede hacer "undo" o deshacer y vuelva a guardar los cambios.
+
+5.5 - Borrado de líneas. Elimine las líneas completas que no corresponden al texto. 
+	
+Ayuda: 
+	* yy copia una linea completa (Nyy copia N lineas consecutivas)
+	* dd borra una línea completa (Ndd borra N líneas consecutivas)
+	* :N1,N2y copia el bloque de lineas consecutivas entre la línea N1 y N2
+	* :N1,N2d borra el bloque de lineas consecutivas entre la línea N1 y N2
+	* Si elimina alguna linea que era correcta recuerde como hizo para deshacer la operación en el ejercicio anterior.
+
+Aprender Vim es muy pero muy difícil al principio. Tomará tiempo. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+LOS DIAS DEL VENADO, LILIANA BODOC, EPICA FANTÁSTICA, ARGENTINA. 
+Será como intentar aprender a tocar un instrumento de música. Por lo 
+LA ULTIMA TIERRA DE LA GENTE, SOLEDAD ARRIETA, NOVELA, NEUQUINA. 
+LA ULTIMA TIERRA DE LA GENTE, SOLEDAD ARRIETA, NOVELA, NEUQUINA. 
+tanto, no sueñe con ser más eficiente con Vim, en menos de tres días, 
+que con cualquier otro editor que ya conozca. Es más, conocer Vim de 
+SOBRE HEROES Y TUMBAS, NOVELA, ERNESTO SABATO, ARGENTINA.
+SOBRE HEROES Y TUMBAS, NOVELA, ERNESTO SABATO, ARGENTINA.
+manera eficiente puede tomar dos o más semanas en vez de sólo tres días.
+EL OTRO, CUENTO, JORGE LUIS BORGES, ARGENTINO
+EL OTRO, CUENTO, JORGE LUIS BORGES, ARGENTINO
+
+5.6 Ahora que tiene algunas herramientas para el manejo eficiente de líneas, resuelva el siguiente problema:
+
+Suponga que tiene un archivo con el siguiente contenido:
+
+		algo
+		algunos
+		prue
+		prueba
+		bebé
+		tiempo
+		suerte
+		mujer
+		auto
+		camión
+		prueba
+		clase
+		facultad
+		mujer 
+		tiempo
+		auto
+		camión
+		mujer
+		auto
+		camión
+		suerte
+		suerte
+
+5.6.1 - Usando vim de qué manera puedo efectuar un ordenamiento alfabético invertido (Z - A) de dicho contenido, 
+        evitando colocar la información duplicada? Muestre cómo lo haría y el archivo resultante del ordenamiento.
+
+5.6.2 - Repita el ejercicio anterior 3 veces, pero esta vez tómese el tiempo con un cronómetro. En cada iteración Ud. debería tardar menos tiempo. ¿Se anima?
+
+6 - Ejecute la siguiente secuencia
+
+	- vimtutor
+	- Guarde el contenido de vimtutor en un archivo en su home, ejecutando en modo normal:
+	  :saveas tutor.<hostname> (reemplazando <hostname> por el nombre de la máquina que
+	  Ud. está utilizando)
+	- Agregue su nombre y apellido al comienzo del archivo
+	- Complete las lecciones ofrecidas por el tutor
+	- Guarde sus cambios a medida que avanza:
+         :w (verifique el archivo donde esta guardando sus cambios con el comando cat)
+
+------------------------------------------------------------
+(*) http://www.vim.org/scripts/script.php?script_id=3409

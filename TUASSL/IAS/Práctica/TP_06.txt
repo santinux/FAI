@@ -1,0 +1,62 @@
+-------------------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO VII : Inicio y Apagado 
+-------------------------------------------------------
+
+Ejercicio 1
+-----------
+
+  1- El gestor de arranque utilizado por las máquinas virtuales (vms) se llama 
+  GRUB. Investigue dónde se encuentran los archivos de configuración del mismo 
+  dentro del sistema.
+
+  2- Explique con sus palabras cuál es la función de dicho software.
+
+
+Ejercicio 2
+-----------
+
+	1- Obtenga el nivel de ejecución actual. ¿Se encuentra el sistema en el
+nivel de ejecución predeterminado?. ¿Qué comando utilizó? ¿Conoce algún otro 
+comando para obtener el nivel de ejecución actual?
+
+	2- Utilizando el comando telinit cambie el nivel de ejecución al de 
+usuario individual. (CUIDADO: Se recomienda hacer esto en su vm en virtualbox)
+
+		- ¿Con qué argumentos ejecutó el comando telinit?
+		- ¿Qué sucedió y por qué cree que sucedió?
+		- ¿Se encuentra la máquina apagada? (intente un ping)
+		- ¿Qué pasos deben llevarse a cabo para volver al estado de 
+		multiusuario? (solicite asistencia a la cátedra para resolver 
+		este punto si es que use las VMs de la catedra)
+
+	3- Utilizando el comando shutdown cambie a nivel de ejecución seis, 
+	pero con un tiempo de postergación de diez segundos, y tal como se 
+	envíe el mensaje "Estaremos de vuelta en unos instantes" en todas las 
+	terminales del sistema. ¿Qué comando ejecutó? ¿Qué sucedió?
+
+	4- Inicie su computadora o la vm que tiene instalada en virtualbox y explique:
+ 
+		- ¿En qué momento está en ejecución el gestor de arranque? 
+		- ¿Cuál es el gestor de arranque? ¿Qué versión?
+		- ¿Dónde se encuentra almacenado el gestor de arranque? 
+		- ¿En qué momento comienza la carga del kernel de Linux?
+		- ¿En qué momento comienza la ejecución del proceso init? 
+		- ¿En qué directorio se encuentra guardado el programa init? ¿
+		  ¿Qué permisos tiene? 
+		- Enumere algunos de los servicios iniciados por init.
+
+Ejercicio 3:
+------------
+
+	1- Explique con sus palabras qué sucede durante el apagado de un sistema 
+	operativo. 
+	2- ¿Tiene alguna importancia el apagado correcto del sistema o es equivalente
+	a desconectar el suministro eléctrico? 
+	3- Qué comando utilizaría para apagar el sistema ahora.  
+	4- ¿En qué directorio se encuentra el comando shutdown? ¿Cuáles son sus 
+	permisos? ¿Qué sucede si un usuario normal (no root) ejecuta el comando? 
+	5- Asumiendo que se indico al sistema apagarse en 10 minutos, ¿qué opción 
+	del comando shutdown le permite suspender esa orden de apagado? 
+

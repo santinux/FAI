@@ -1,0 +1,97 @@
+
+Historia de Linux
+
+Linux comienza en 1991 como un proyecto personal del estudiante finlandés Linus Torvalds: crear un nuevo núcleo de sistema operativo libre.
+El núcleo Linux resultante ha estado marcado por un crecimiento constante a lo largo de su historia. 
+Desde el lanzamiento inicial de su código fuente en 1991, ha crecido de una pequeña cantidad de archivos C bajo una licencia que prohíbe 
+la distribución comercial, a la versión 5.6 en 2020 con más de 33,14 millones de líneas de código fuente, sin contar comentarios, bajo 
+la GNU General Public License v2.
+
+Antecedentes
+
+Mascota oficial de GNU.
+
+Richard Matthew Stallman, fundador de la Fundación del Software Libre y del Proyecto GNU.
+En 1983 Richard Stallman inició el ambicioso Proyecto GNU, con el propósito de crear un sistema operativo similar y compatible con 
+UNIX y los estándares POSIX. Dos años más tarde, 1985, creó la Fundación del Software Libre (FSF) y desarrolló la Licencia pública 
+general de GNU (GNU GPL), para tener un marco legal que permitiera difundir libremente el software. De este modo el software de GNU 
+fue desarrollado muy rápidamente, y por muchas personas. A corto plazo, se desarrolló una multiplicidad de programas, de modo que a 
+principios de los años 1990 había casi bastante software disponible como para crear un sistema operativo completo. Sin embargo, todavía 
+le faltaba un núcleo.
+
+Esto debía ser desarrollado en el proyecto GNU Hurd, pero Hurd demostró desarrollarse muy inactivamente, porque encontrar y reparar 
+errores (eliminación de fallos, debugging en inglés) era muy difícil, debido a las características técnicas del diseño del micronúcleo.
+
+Otro proyecto de sistema operativo software libre, en los años 1980 fue BSD. Este fue desarrollado en la Universidad de Berkeley 
+desde la 6.ª edición de Unix de AT&T. Puesto que el código de AT&T Unix estaba contenido en BSD, AT&T presentó una demanda a 
+principios de los años 1990 contra la Universidad de Berkeley, la cual limitó el desarrollo de BSD y redujo el desarrollo. 
+Así a principios de los años 1990 no produjo ningún sistema completo libre.
+
+El futuro de BSD era incierto debido al pleito y detuvo el desarrollo. Además, el Proyecto GNU gradualmente se desarrollaba pero, 
+este carecía de un bien formado núcleo UNIX. Esto dejó un nicho crítico abierto, que Linux llenaría muy pronto.
+
+Desarrollo del núcleo Linux
+
+Linus Torvalds, creador del núcleo Linux
+
+En 1991, en Helsinki, Linus Torvalds comenzó un proyecto que más tarde llegó a ser el núcleo Linux. Esto fue al principio un 
+emulador terminal, al cual Torvalds solía tener acceso en los grandes servidores UNIX de la universidad. Él escribió el programa 
+expresamente para el hardware que usaba, e independiente de un sistema operativo, porque quiso usar las funciones de su nueva 
+computadora personal con un procesador 80386. Este es aún el estándar de hoy. El sistema operativo que él usó durante el 
+desarrollo fue Minix, y el compilador inicial fue el compilador GNU C, que aún es la opción principal para compilar Linux 
+hoy (aunque Linux puede ser compilado bajo otros compiladores, tal como el Intel C Compiler).
+
+Como Torvalds escribió en su libro "Solamente por diversión", él tarde o temprano comprendió que había escrito un núcleo 
+de sistema operativo. Ante la posibilidad de quedar con el proyecto inacabado decidió lanzarlo porque "quería ayuda". 
+El 25 de agosto de 1991, 20:57:08 GMT, anunció este sistema en un envío a la red Usenet, en el newsgroup (grupo de noticias): 
+comp.os.minix.:
+
+Hola a todos los que estáis ahí fuera usando minix -
+ 
+Estoy haciendo un sistema operativo (libre), (solamente por afición, no será grande ni profesional como el gnu) para clones 386(486) AT. 
+Este ha estado gestándose desde abril, y está comenzando a estar listo. Me gustaría recibir cualquier comentario sobre las cosas que 
+gustan/disgustan en minix, ya que mi SO (Sistema Operativo) se le parece un poco (la misma disposición física del sistema de ficheros, 
+debido a motivos prácticos, entre otras cosas).
+ 
+Actualmente he portado bash(1.08) y gcc(1.40), y las cosas parecen funcionar. Esto implica que conseguiré algo práctico dentro de unos 
+meses, y me gustaría saber qué características quiere la mayoría de la gente. Cualquier sugerencia es bienvenida, pero 
+no prometeré que las implementaré :-)
+ 
+Linus Benedict Torvalds (torvalds@kruuna.helsinki.fi)
+ 
+PD. Sí – está libre de cualquier código de minix, y tiene un sistema de ficheros multi-hilo. NO es portable (usa el cambio de tareas 
+del 386 etc), y probablemente nunca soporte otra cosa que no sean los discos duros AT, porque es todo lo que tengo :-(.
+
+Linus Torvalds
+
+El nombre
+Linus Torvalds había querido llamar su invención Freax, un portmanteau de freak (anormal o raro), free (libre), y "X", una alusión a Unix. 
+Durante el inicio de su trabajo sobre el sistema, él almacenó los archivos bajo el nombre "Freax" por aproximadamente medio año. 
+Torvalds ya había considerado el nombre "Linux", pero al principio lo había descartado por ser demasiado egocéntrico o egoísta.
+
+Para dar a otra gente la capacidad de cooperar en el sistema o sugerir mejoras, los archivos fueron colocados en el servidor ftp 
+(ftp.funet.fi) de la Universidad de Tecnología de Helsinki (Helsinki University of Technology) (HUT), en septiembre de 1991. 
+Ari Lemmke, colega de Torvalds en la HUT, que en ese entonces era responsable de los servidores, no estuvo de acuerdo con el 
+nombre Freax, prefiriendo el nombre Linux. Él simplemente llamó a los archivos colocados sobre el servidor "Linux" sin consultar 
+a Torvalds. Más tarde, sin embargo, Torvalds accedió a usar el nombre "Linux"
+
+Linux bajo la Licencia pública general de GNU GPL
+Torvalds primero publicó el núcleo Linux bajo su propia licencia, la cual fue casi una licencia de código fuente compartida (en 
+inglés, share source) y que tenía una restricción contra la actividad comercial. En 1992, él sugirió cambiar a la GNU GPL. 
+Primero anunció este cambio en las notas de lanzamiento de la versión 0.12. A mediados de diciembre de 1992 él publicó la versión 
+0.99 usando la GNU GPL.10
+
+Más tarde, Torvalds dijo en una entrevista, "registrar a Linux bajo la GPL fue definitivamente la mejor cosa que alguna vez hice".
+
+GNU/Linux
+La designación "Linux" al principio fue usada por Torvalds sólo para el núcleo. El núcleo fue, sin embargo, con frecuencia usado junto 
+con otro software, especialmente con el del proyecto de GNU. Esta variante de GNU rápidamente se hizo la más popular, ya que no había 
+ningún otro núcleo libre que funcionara en ese tiempo. Cuando la gente comenzó a referirse hacia esta recopilación como "Linux", 
+Richard Stallman, el fundador del proyecto de GNU, solicitó que se usara el nombre GNU/Linux, para reconocer el rol del software de GNU. 
+En junio de 1994, en el boletín de GNU, Linux fue mencionado como un "clon libre de UNIX", y el Proyecto Debian comenzó a llamar a su 
+producto GNU/Linux. En mayo de 1996, Richard Stallman publicó al editor Emacs 19.31, en el cual el tipo de sistema fue renombrado de 
+Linux a Lignux. Esta "escritura" fue pretendida para referirse expresamente a la combinación de GNU y Linux, pero esto pronto fue 
+abandonado en favor de "GNU/Linux".
+
+El producto terminado es más a menudo denominado simplemente como "Linux", como el más simple, el nombre original. 
+Stallman anunció su demanda por un cambio de nombre sólo después de que el sistema ya se había hecho popular.

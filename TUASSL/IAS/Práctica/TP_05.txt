@@ -1,0 +1,179 @@
+-------------------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO VI : Administrando Cuentas de Usuario
+-------------------------------------------------------
+
+Ejercicio 1
+-----------
+El comando adduser se utiliza para crear nuevas cuentas de usuario de manera 
+interactiva (también permite hacerlo de manera no interactiva a través de 
+opciones). Su utilización es sencilla. Sólo es necesario, como mínimo, 
+especificar el nombre de usuario.
+
+Ej: adduser jgonzalez
+
+El sistema luego, le pedirá, de manera interactiva, información extra de la 
+nueva cuenta a crear (el nombre completo real, la clave inicial, etc).
+
+Utilizando el comando adduser agregue al sistema estos cinco usuarios nuevos:
+
+	Nombre de usuario: director
+	Nombre real: Juan Jose Gonzalez
+	clave inicial: director01
+
+	Nombre de usuario: secretaria
+	Nombre real: Susana Gimenez
+	clave inicial: secretaria02
+
+	Nombre de usuario: contaduria
+	Nombre real: Contador Esteban Gonzalez
+	clave inicial: contador03
+
+Observe las últimas tres lineas de los archivos passwd y shadow, utilice el 
+comando 'tail -3' para ello. 
+Responda:  
+	1.a ¿A qué grupo primario pertenece cada usuario? 
+	1.b ¿Cuál es el uid de cada usuario?
+	1.c ¿Qué número de campo contiene el nombre real?
+	1.d Ejecute un comando que le permita filtrar, del archivo passwd, todos los nombres de usuario
+	(username) en una columna (tip: user cut y filtrar el separador ":")
+
+Ejercicio 2
+-----------
+El comando useradd se utiliza para crear nuevas cuentas de usuario de manera
+no interactiva. Cree los siguientes usuarios usando useradd: 
+
+	Nombre de usuario: legales
+	Nombre real: Abogado Mirko Garcia
+	clave inicial: legales04
+	grupo primario: users
+
+	Nombre de usuario: buffet
+	Nombre real: Mirta Legrant de Gonzalez
+	clave inicial: buffet01
+	grupo primario: users
+
+2.a Verifique las entradas creadas observando el contenido de los archivos
+    passwd, shadow y group. 
+2.c ¿Qué permisos tiene cada uno de los siguientes archivos: passwd, shadow y 
+    group ubicados en el directorio /etc? ¿A quién pertenecen (propietario y 
+    grupo)? 
+2.b ¿En qué archivo y campo se encuentran guardadas las contraseñas? ¿Son 
+    legibles al ser humano? ¿Por qué se almacenan en ese formato, si sólo 
+    root puede verlas? 
+
+
+Ejercicio 3
+-----------
+	- Utilice cat para visualizar el contenido de /etc/passwd, en la 
+	pantalla
+	- Utilice cat y redirija la salida al archivo en donde coloca los 
+	resultados del práctico
+	- ¿Cuántos usuarios hay definidos en el sistema? Ayuda: Utilice
+	redirección y el comando wc (word count) para contar cuantas líneas 
+	existen en el archivo y también puede usar lo que hizo en 1.d
+
+
+Ejercicio 4
+-----------
+Verificar usuarios a través de sesiones de login al sistema: Verifique los 
+cinco usuarios creados realizando conexiones secure shell (ssh) al equipo 
+asignado al grupo. Utilice el nombre de usuario y su clave inicial para 
+corroborar que puede ingresar al sistema.
+
+4.a ¿Cuál es el directorio HOME de cada usuario? ¿Qué comando utiliza para ver
+    el directorio de trabajo actual? 
+4.b Verifique los grupos al que pertenece el usuario con los comandos groups y 
+    id. 
+4.c Utilice el comando passwd para obligar al usuario a cambiar la contraseña
+    inicial. ¿Qué cambio haría manualmente para lograr este mismo efecto? 
+    Verifique el correcto funcionamiento ingresando nuevamente. 
+
+
+Ejercicio 5
+-----------	
+
+Realice una conexión al sistema con el usuario director. Y responda:
+
+	- ¿Cuál es el directorio HOME del usuario director? ¿Que variable de 
+	ambiente del usuario reporta esa información?
+	- Con qué comando verifica todas las variables de ambiente del usuario 
+	director?
+	- Intente crear un nuevo usuario utilizando el usuario director. ¿Es 
+	posible crear un nuevo usuario director? Justifique por qué.
+
+Ejercicio 6
+-----------
+El comando addgroup funciona de manera similar a adduser pero se utiliza para 
+crear nuevos grupos de usuario. Ejemplo de uso: addgroup empleados (crea en el 
+sistema un grupo llamado empleados).
+
+Utilice addgroup para crear tres nuevos grupos en el sistema:
+
+	- directorio
+	- empleados
+	- todos 
+
+6.a Verifique los datos de los nuevos grupos en el archivo correspondiente. 
+6.b ¿Cuál es el gid asignado a cada grupo? 
+
+
+Ejercicio 7
+------------
+
+El comando usermod puede ser útil para agregar usuarios a grupos, o modificar 
+algunas propiedades del usuario. Por ejemplo, para agregar el usuario 
+"director" al grupo "todos", puede ejecutar usermod -G todos -a director.
+Verifique con el manual que hacen las opciones -G -a para el comando usermod.
+Modifique los grupos utilizando usermod para agregar usuarios a los grupos. De 
+la siguiente manera:
+
+	- El grupo directorio debería estar compuesto por los usuarios director,
+	  legales y contaduría.
+
+	- El grupo empleados debería estar compuesto por secretaria, contaduría, 
+	legales y buffet.
+
+	- El grupo todos debería estar compuesto por los usuarios director,
+	  legales y contaduría (sí sólo esos).
+
+
+7.a Verifique los datos de los nuevos grupos en el archivo correspondiente. 
+7.b ¿Cuál es el caracter separador de usuarios dentro de un mismo grupo?
+
+Ejercicio 8
+-----------
+
+Los comandos vipw y vigr permiten editar la base de datos de usuarios y grupos
+manualmente con vi (u otro editor si se define la variable de entorno EDITOR).
+
+8.1 Utilice el comando vigr para editar los grupos con vi. Agregue manualmente los 
+usuarios buffet y secretaria al grupo "todos".
+
+8.2 Verifique los grupos de pertenencia de cada usuario a través del comando groups.
+
+
+Ejercicio 9
+-----------
+
+	9.1 Utilice el comando deluser para quitar del sistema a los usuarios 
+	buffet y legales.
+
+	9.2 Observe el archivo passwd y shadow para verificar que los usuarios 
+	han sido eliminados.
+
+	9.3 Utilice el comando wc (solamente) para obtener la cantidad de usuarios
+	del sistema. ¿Cuál es la diferencia con usar cat+pipe+wc? 
+
+	9.4 Utilice los comandos cat y sort para generar el listado de usuarios en
+	passwd, pero en orden alfabético.
+
+Ejercicio 10
+------------
+
+	10.1 Explique con sus palabras para que sirve /etc/skel
+	
+	10.2 Describa (sin realmente hacerlo en el sistema) como serian los pasos
+	para crear un usuario manualmente detallando por qué se realiza cada paso.
+

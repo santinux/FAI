@@ -1,0 +1,79 @@
+------------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO V : Permisos y Archivos
+------------------------------------------------
+
+EJERCICIO 1
+-----------
+
+	- ¿ Qué tipo de permisos tiene sobre el /home de su usuario?
+	- ¿ Se pueden cambiar los permisos del directorio /home? 
+	- Ejecute lo siguiente:
+
+			 # echo archivo1 > archivo1.txt 
+			 # ln archivo1.txt archivo2.txt
+
+	- ¿ Archivo2.txt está vacio? ¿ Qué contiene dicho archivo ?
+	- ¿ Que sucedería con archivo2.txt si ejecuto la siguiente secuencia: 
+
+			# echo otra linea >> archivo1.txt
+
+	- ¿ Cómo se le conoce a este tipo de referencia ?
+	- ¿ Qué sucedería si en vez de ejecutar ln, hubiera ejecutado ln -s ?
+	- ¿ Sucedería lo mismo si en vez de ejecutar ln hubiera ejecutado el comando cp ?
+	- ¿ Que tipo de información arroja el comando stat ?
+	- ¿ Es posible ejecutar el siguiente comando ? ¿ Por qué ?
+		
+			#ln /tmp tmp
+
+EJERCICIO 2
+-----------
+
+	- Ejecute el comando ls -l .
+	- ¿ Qué diferencia existe si yo ejecuto el comando ls -l .. ?
+	- ¿ Cuántos archivos y directorios hay en la siguiente salida ?
+
+		52692066 -rwxrwxr--  1 root  testing    0 abr 25 17:14 archivo
+		52823060 drwxr-xr-x  2 root  testing 4096 abr 25 17:14 archivo1
+		52823061 drwxrwxr--  2 root  develop 4096 abr 25 17:14 archivo2
+		52693273 -r--r--r--  1 root  develop    0 abr 25 17:14 archivo3
+
+	- ¿ Quién es el dueño de archivo1 ? ¿ Quién puede escribir sobre él ?
+	- ¿ Quién puede escribir sobre archivo2 ? 
+	- ¿ Puede el usuario root escribir el texto Hola Mundo! sobre archivo3 ? ¿ Por qué ? 
+	- ¿ Qué permisos debería tener archivo3, para que cualquier usuario del grupo develop y 
+		del grupo testing puedan escribir sobre él ?  Exprese dichos permisos en base octal.
+
+EJERCICIO 3
+-----------
+
+	- Posiciónese en el /home de su usuario. Cree un soft link al directorio root. ¿ Puede acceder normalmente ? 
+	  ¿ Por qué ?
+	- ¿ Qué permisos posee el directorio root ? 
+	- ¿ De que forma puede revocar los permisos de escritura del grupo sin cambiar los restantes ?
+	- ¿ Qué significa cada una de las siguientes salidas de permisos en octal ?
+
+	(a)666 
+	(b)770
+        (c)640
+        (d)444 
+
+	- ¿ Qué significa el permiso de ejecución (x) sobre los directorios ? 
+	- Un usuario desea establecer los permisos de un árbol de directorios con raíz en el directorio "dir" para que 
+	  el usuario y el grupo puedan listar, leer y escribir (pero no ejecutar) los archivos, pero nadie más tiene acceso. 
+	  ¿Cuál de los siguientes comandos es el más apropiado? ¿ Por qué ?
+
+		(a)chmod –R 660 dir
+		(b)chmod –R 770 dir
+		(c)chmod –R u+rw,g+rw,o-rwx dir
+
+	- ¿Cómo se puede cambiar el propietario y el grupo de un árbol de directorio completo (un directorio, sus subdirectorios 
+	  y todos los archivos que contienen) con un solo comando? De un ejemplo.
+
+	
+
+
+
+	
+

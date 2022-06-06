@@ -1,0 +1,40 @@
+---------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO I : Editor de Textos VI/VIM
+---------------------------------------------
+
+Los siguientes ejercicios se realizan en su totalidad desde una terminal en un sistema GNU/Linux.
+
+Repaso
+------
+1- ¿Qué comando utiliza para saber en cuál directorio se encuentra usted trabajando? 
+
+2- Obteniendo ayuda:
+	a) ¿Cómo saber cuáles son las opciones soportadas por un comando sin recurrir a Internet?
+	b) Obtenga ayuda acerca del comando de ayuda.
+
+3- Lea de principio a fin la hoja de ayuda (cheat sheet) provista por la cátedra y utilice 
+   cada uno de los comandos listados en la misma. Tenga en cuenta que esta hoja de ayuda será
+   de utilidad durante todo el cursado de la materia, comience a familiarizarse con ella. 
+
+3a- Investigue el uso del término "cheat sheet" en el mundo de los admnistradores de sistema.  
+
+4- Obtenga ayuda del sistema sobre cada uno de los comandos de la hoja de ayuda. Verifique 
+   que efectivamente la ayuda que obtiene se refiere al comando en cuestión. 
+
+5- Mencione al menos cuatro métodos que le permitan iniciar una sesión en el sistema. Para
+   cada uno de ellos indique si requiere estar físicamente frente a la computadora, y si 
+   además requiere entorno gráfico. 
+
+6- Si usted se encuentra sentado frente a una computadora, trabajando con un teclado y 
+   un monitor conectado a la misma. ¿Puede usted estar completamente seguro de que es el 
+   único usuario utilizando dicha computadora? Investigue algún comando que le permita 
+   responder esta pregunta. 
+
+7- ¿Tiene sentido que una computadora moderna no tenga entorno gráfico? 
+
+8- Averigue cuántos procesos (eso es, programas en ejecución) hay 
+   en la máquina en la que está trabajando. ¿Reconoce algún programa? 
+
+
