@@ -1,0 +1,54 @@
+/*
+* Instrucciones de uso del Perl MCBE
+*/
+
+/* Siempre se podrá acceder a un menu de opciones al ejecutar: $./mcbe */
+
+/*Descargamos de internet y descomprimimos el directorio*/
+wget https://github.com/egrosclaude/mcbe/archive/master.zip
+unzip master.zip
+
+/*Entramos al directorio y listamos para ver lo que hay*/
+cd mcbe-master
+ls -l
+ls -l ejemplos
+cat ejemplos/neg.asm
+
+/*Se genera un archivo Binario ejecutable*/
+./mcbeas
+./mcbeas -a ejemplos/neg.asm
+./mcbeas -g ejemplos/neg.asm > neg.exe
+ls -l neg.exe
+
+/*Se ejecuta el archivo Binario generado*/
+./mcbe neg.exe 
+
+/*Se convierte un archivo C a Ensamblador*/
+cat ejemplos/test1.c
+./mcbecc ejemplos/test1.c > test1.asm
+cat test1.asm
+
+/*Se genera un archivo Binario ejecutable*/
+./mcbeas -g test1.asm > test1.exe
+
+/*Se ejecuta el Binario generado*/
+./mcbe test1.exe
+./mcbe -A test1.exe
+./mcbe -H test1.exe
+
+/*
+* RESUMEN
+* 
+* Para correr un programa en la máquina MCBE se debe tener un programa
+* ejecutable Binario.
+* Si se tiene un programa Ensamblador, se debe generaar un Binario
+* a partir de el, y luego correrlo.
+* Si se tiene un programa C, se debe convertir a Ensamblador, y luego
+* generar un Binario, como en el paso anterior.
+*/
+/*
+* Original por Eduardo Grossclaude, profesor del departamento de 
+* ingeniería de computadoras, FAI, UNCo.
+* Reedición por Santino Fuentes, estudiante en FAI, UNCo.
+* Año 2022.
+*/
