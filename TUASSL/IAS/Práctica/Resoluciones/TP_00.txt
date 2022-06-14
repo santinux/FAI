@@ -1,0 +1,51 @@
+---------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO I : Editor de Textos VI/VIM
+---------------------------------------------
+1-
+	pwd
+
+2-
+	a)
+		man + NombreComando
+		o bien,
+		NombreComando --help
+	b)
+		man man
+		o bien,
+		man --help
+
+3-
+	Hecho.
+
+	a)
+		Un "Cheat Sheet" es un apunte usado por los informáticos para tener a mano
+		comandos de lenguajes de programación, y su respectiva utilización.
+		Resulta muy útil para un administrador de sistema para no tener que
+		memorizar tantos comandos.
+
+4-
+	Hecho.
+
+5-
+	- ssh
+	- telnet
+	- 
+	-
+
+6-
+	No, no se puede estar seguro, pero se puede verificcar con varios comandos,
+	por ejemplo:
+	- w
+	- who
+	- last
+
+7-
+	Si, resulta muy útil en varias circunstancias, en el caso de la
+	administración de sistemas, es tal vez la mejor opción.
+
+8-
+	Utilizando el comando
+	- ps
+	podemos listar los procesos en ejecución, y sus respectivos usuarios.
