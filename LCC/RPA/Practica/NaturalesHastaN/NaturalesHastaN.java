@@ -7,8 +7,7 @@ public class NaturalesHastaN
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Hasta qué numero desea ver?: ");
 		N = sc.nextInt();
-		for (int i=1; i<N; i++)
-		{
+		for (int i=1; i<=N; i++){
 			System.out.print(i + ",");
 		}
 	}

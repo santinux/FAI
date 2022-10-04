@@ -7,7 +7,9 @@
 *
 * Santino Fuentes, 2022.
 ******************************************************************************)
-
+!!!!
+ARREGLAR PSEUDOCÓDIGO
+¡¡¡¡
 // Programa principal
 
 ALGORITMO Combustible() RETORNO Ø

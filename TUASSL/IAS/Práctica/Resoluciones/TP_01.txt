@@ -1,0 +1,158 @@
+---------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO II : Editor de Textos VI/VIM
+---------------------------------------------
+1.
+	a)
+		- Hecho.
+	b)
+		- Hecho.
+	c)
+		- Hecho.
+	d)
+		- Hecho.
+	e)
+		- Hecho.
+
+2.
+	a) 
+		- Usando VIM:
+			Entrando al archivo para su edición.
+		- Usando el shell:
+			~$ cat NombreArchivo
+	b)
+		- Hecho.
+	c)
+		- Hecho.
+3.
+	1.
+		- Hecho.
+	2.
+		- Hecho.
+	3.
+		- Presionando 'j' 18 veces, el cursor salta 18 líneas abajo.
+		- Presionando 'k' 4 veces, el cursor salta 4 líneas arriba.
+		- Presionando 'l' 8 veces, el cursor salta 8 caracteres hacia la derecha.
+		- Presionando 'h' 8 veces, el cursor salta 8 caracteres hacia la izquierda.
+	4.
+		- Subir una página:
+			Ctrl b
+		- Bajar una Página:
+			Ctrl f
+	5.
+		- En modo normal
+		- Saltar hacia el comienzo de una palabra:
+			w
+		- Saltar hacia el final de una palabra:
+			e
+		- Volver hacia el comienzo de una palabra:
+			b
+		- Volver hacia el final de una palabra:
+			no me acuerdo xd.
+		- Salto hacia el inicio de línea:
+			0
+		- Salto hacia el fin de línea:
+			$
+		- Salto hacia el comienzo de página:
+			gg
+		- Salto hacia el fin de página:
+			G
+	6.
+		- Posicionado en la primer letra de "Hola a todos los que..."
+		- Contando las palabras hasta "minix", ejecuto:
+			xxw
+		- El cursor queda en la primer letra de "minix".
+		- Para volver a la posición anterior del cursor, al ser la misma
+		 cantidad de palabras las que hay que volver, ejecuto:
+			xxb
+	7.
+		- Salto hacia el comienzo de página:
+			gg
+		- Salto hacia el fin de página:
+			G
+		- Salto hacia la línea X:
+			Xgg
+		- Subir X cantidad de líneas:
+			Xk
+		- Bajar X cantidad de líneas:
+			Xj
+	8.
+		- Al ejecutar el comando:
+			:44<ENTER>
+		 El cursor se posiciona en la línea 44 del archivo.
+		- Posicionar el cursor en el inicio del archivo:
+			:00<ENTER>
+		- Al ejecutar el comando:
+			:$<ENTER>
+		 El cursor se posiciona en el final del archivo.
+		- Al ejecutar:
+			Ctrl g
+		 Se muestra en qué porcentaje del archivo se encuentra posicionado
+		 el cursor.
+4.
+	- Para eliminar un caracter individual, se debe posicionar el cursor sobre
+	 el caracter y luego:
+		x
+	- Para eliminar una palabra completa, se debe posicionar el cursor en la
+	 primer letra de la palabra y luego:
+		dw
+	- Para eliminar varias palabras, se combina el comando anterior con un
+	 contador, siendo X la cantidad de palabras a eliminar, luego:
+	  Xdw
+	- Para eliminar una palabra a la izquierda del cursor, se debe posicionar
+	 el mismo en la última letra de la palabra y luego:
+		db
+	- Para eliminar todo hasta el final de línea, se debe posicionar el cursor
+	 en cualquier caracter en la línea y luego:
+	  D
+	- Para eliminar varios caracteres hacia la derecha, se debe posicionar el
+	 cursor en el primer caracter a eliminar y luego:
+	  Xdl
+	- Para eliminar varios caracteres hacia la izquierda, se debe posicionar el
+	 cursor en el primer caracter a eliminar y luego:
+	  Xdh
+5.
+	1.
+		- Eliminar una línea completa hacia abajo:
+			dd
+		- Eliminar X líneas completas hacia abajo:
+			Xdd
+		- Pegar lo yankeado o lo eliminado después del cursor:
+			p
+		- Pegar lo yankeado o lo eliminado antes del cursor:
+			P
+		- Cuando se ejecuta la operación de eliminado, la información se almacena en
+		 (colocar aquí donde se almacena esa información, portapapeles o swap).
+		- Es posible pegar infinitas veces porque (Foo...).
+	2.
+		- Pegar lo yankeado o lo eliminado después del cursor:
+			p
+	3.
+		- Eliminar un caracter:
+			x
+		- Pegar el caracter eliminado después del cursor:
+			p
+		- Pegar el caracter eliminado antes del cursor:
+			P
+	4.
+		- Deshacer una operación:
+			u
+	5.
+		- Copiar una línea completa:
+			yy
+		- Copiar N líneas consecutivas hacia abajo:
+			Nyy
+		- Borrar una línea completa:
+			dd
+		- Borrar N líneas consecutivas hacia abajo:
+			Ndd
+		- Copiar el bloque de líneas consecutivas entre N1 y N2:
+			:N1,N2y
+		- Eliminar el bloque de líneas consecutivas entre N1 y N2:
+			:N1,N2d
+	6.
+		1.
+			- Ordenamiento alfabético invertido:
+6.
+	- Vimtutor.

@@ -1,0 +1,333 @@
+------------------------------------------------
+Introducción a la administración de sistemas
+FAI - UNCOMA
+TRABAJO PRÁCTICO III : El Shell
+------------------------------------------------
+TIP3: en modo normal, el comando !! permite ejecutar un comando e insertar su
+resultado directamente en el texto. 
+
+TIP4: en modo normal, el comando :! permite ejecutar un comando en el shell y 
+volver a la edición de texto sin insertar ningún resultado.
+
+Procesos.
+----------------
+1.
+	Etiquetas:
+		- UID: Dueño del proceso.
+		- PID: Identificador del proceso.
+		- PPID: Identificador del proceso padre.
+		- CMD: Comando que generó al proceso.
+		- TTY: Identificador de terminal.
+		- SZ: Tamaño del proceso.
+
+	- Salida del comando 'ps', opción [-la]:
+
+		F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
+		0 S  1000    1622    1618  0  80   0 - 57967 do_pol tty2     00:00:00 gnome-session-b
+		0 S  1000    5389    5341  0  80   0 -  8484 hrtime pts/1    00:00:00 vim
+		0 R  1000    5490    5389  0  80   0 -  5350 -      pts/1    00:00:00 ps
+	
+	- Salida del comando 'ps', opción [-Aly]:
+		
+		S   UID     PID    PPID  C PRI  NI   RSS    SZ WCHAN  TTY          TIME CMD
+		S     0       1       0  0  80   0 13156 41974 -      ?        00:00:03 systemd
+		S     0       2       0  0  80   0     0     0 -      ?        00:00:00 kthreadd
+		I     0       3       2  0  60 -20     0     0 -      ?        00:00:00 rcu_gp
+		I     0       4       2  0  60 -20     0     0 -      ?        00:00:00 rcu_par_gp
+		I     0       5       2  0  60 -20     0     0 -      ?        00:00:00 netns
+		I     0       7       2  0  60 -20     0     0 -      ?        00:00:00 kworker/0:0H-events_highpri
+		I     0      10       2  0  60 -20     0     0 -      ?        00:00:00 mm_percpu_wq
+		S     0      11       2  0  80   0     0     0 -      ?        00:00:00 rcu_tasks_rude_
+		S     0      12       2  0  80   0     0     0 -      ?        00:00:00 rcu_tasks_trace
+		S     0      13       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/0
+		I     0      14       2  0  80   0     0     0 -      ?        00:00:12 rcu_sched
+		S     0      15       2  0 -40   -     0     0 -      ?        00:00:00 migration/0
+		S     0      16       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/0
+		S     0      17       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/0
+		S     0      18       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/1
+		S     0      19       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/1
+		S     0      20       2  0 -40   -     0     0 -      ?        00:00:00 migration/1
+		S     0      21       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/1
+		I     0      23       2  0  60 -20     0     0 -      ?        00:00:00 kworker/1:0H-events_highpri
+		S     0      24       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/2
+		S     0      25       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/2
+		S     0      26       2  0 -40   -     0     0 -      ?        00:00:00 migration/2
+		S     0      27       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/2
+		I     0      29       2  0  60 -20     0     0 -      ?        00:00:00 kworker/2:0H-events_highpri
+		S     0      30       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/3
+		S     0      31       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/3
+		S     0      32       2  0 -40   -     0     0 -      ?        00:00:00 migration/3
+		S     0      33       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/3
+		I     0      35       2  0  60 -20     0     0 -      ?        00:00:00 kworker/3:0H-events_highpri
+		S     0      36       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/4
+		S     0      37       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/4
+		S     0      38       2  0 -40   -     0     0 -      ?        00:00:00 migration/4
+		S     0      39       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/4
+		I     0      41       2  0  60 -20     0     0 -      ?        00:00:00 kworker/4:0H-events_highpri
+		S     0      42       2  0  80   0     0     0 -      ?        00:00:00 cpuhp/5
+		S     0      43       2  0   9   -     0     0 -      ?        00:00:00 idle_inject/5
+		S     0      44       2  0 -40   -     0     0 -      ?        00:00:00 migration/5
+		S     0      45       2  0  80   0     0     0 -      ?        00:00:00 ksoftirqd/5
+		I     0      46       2  0  80   0     0     0 -      ?        00:00:02 kworker/5:0-events
+		I     0      47       2  0  60 -20     0     0 -      ?        00:00:00 kworker/5:0H-events_highpri
+		S     0      48       2  0  80   0     0     0 -      ?        00:00:00 kdevtmpfs
+		I     0      49       2  0  60 -20     0     0 -      ?        00:00:00 inet_frag_wq
+		S     0      50       2  0  80   0     0     0 -      ?        00:00:00 kauditd
+		S     0      51       2  0  80   0     0     0 -      ?        00:00:00 khungtaskd
+		S     0      52       2  0  80   0     0     0 -      ?        00:00:00 oom_reaper
+		I     0      53       2  0  60 -20     0     0 -      ?        00:00:00 writeback
+		S     0      54       2  0  80   0     0     0 -      ?        00:00:02 kcompactd0
+		S     0      55       2  0  85   5     0     0 -      ?        00:00:00 ksmd
+		S     0      56       2  0  99  19     0     0 -      ?        00:00:00 khugepaged
+		I     0     104       2  0  60 -20     0     0 -      ?        00:00:00 kintegrityd
+		I     0     105       2  0  60 -20     0     0 -      ?        00:00:00 kblockd
+		I     0     106       2  0  60 -20     0     0 -      ?        00:00:00 blkcg_punt_bio
+		I     0     107       2  0  60 -20     0     0 -      ?        00:00:00 tpm_dev_wq
+		I     0     108       2  0  60 -20     0     0 -      ?        00:00:00 ata_sff
+		I     0     109       2  0  60 -20     0     0 -      ?        00:00:00 md
+		I     0     110       2  0  60 -20     0     0 -      ?        00:00:00 edac-poller
+		I     0     111       2  0  60 -20     0     0 -      ?        00:00:00 devfreq_wq
+		S     0     112       2  0   9   -     0     0 -      ?        00:00:00 watchdogd
+		I     0     114       2  0  60 -20     0     0 -      ?        00:00:00 kworker/0:1H-kblockd
+		S     0     116       2  0  80   0     0     0 -      ?        00:00:00 kswapd0
+		S     0     117       2  0  80   0     0     0 -      ?        00:00:00 ecryptfs-kthrea
+		I     0     119       2  0  60 -20     0     0 -      ?        00:00:00 kthrotld
+		S     0     120       2  0   9   -     0     0 -      ?        00:00:00 irq/24-aerdrv
+		S     0     121       2  0   9   -     0     0 -      ?        00:00:00 irq/25-aerdrv
+		S     0     122       2  0   9   -     0     0 -      ?        00:00:00 irq/26-aerdrv
+		S     0     123       2  0   9   -     0     0 -      ?        00:00:00 irq/27-aerdrv
+		S     0     124       2  0   9   -     0     0 -      ?        00:00:00 irq/28-aerdrv
+		S     0     125       2  0   9   -     0     0 -      ?        00:00:00 irq/29-aerdrv
+		S     0     126       2  0   9   -     0     0 -      ?        00:00:00 irq/30-aerdrv
+		S     0     127       2  0   9   -     0     0 -      ?        00:00:00 irq/31-aerdrv
+		S     0     128       2  0   9   -     0     0 -      ?        00:00:00 irq/32-aerdrv
+		S     0     129       2  0   9   -     0     0 -      ?        00:00:00 irq/33-aerdrv
+		S     0     130       2  0   9   -     0     0 -      ?        00:00:00 irq/34-aerdrv
+		S     0     131       2  0   9   -     0     0 -      ?        00:00:00 irq/35-aerdrv
+		S     0     132       2  0   9   -     0     0 -      ?        00:00:00 irq/36-aerdrv
+		S     0     133       2  0   9   -     0     0 -      ?        00:00:00 irq/37-aerdrv
+		I     0     135       2  0  60 -20     0     0 -      ?        00:00:00 acpi_thermal_pm
+		I     0     138       2  0  60 -20     0     0 -      ?        00:00:00 vfio-irqfd-clea
+		I     0     139       2  0  60 -20     0     0 -      ?        00:00:00 mld
+		I     0     140       2  0  60 -20     0     0 -      ?        00:00:00 kworker/3:1H-kblockd
+		I     0     141       2  0  60 -20     0     0 -      ?        00:00:00 ipv6_addrconf
+		I     0     150       2  0  60 -20     0     0 -      ?        00:00:00 kstrp
+		I     0     154       2  0  60 -20     0     0 -      ?        00:00:00 zswap-shrink
+		I     0     155       2  0  60 -20     0     0 -      ?        00:00:00 kworker/u13:0
+		I     0     160       2  0  60 -20     0     0 -      ?        00:00:00 charger_manager
+		I     0     212       2  0  60 -20     0     0 -      ?        00:00:00 kworker/1:1H-kblockd
+		S     0     216       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_0
+		I     0     217       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_0
+		S     0     218       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_1
+		I     0     219       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_1
+		S     0     220       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_2
+		I     0     221       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_2
+		S     0     222       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_3
+		I     0     223       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_3
+		S     0     224       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_4
+		I     0     225       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_4
+		S     0     226       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_5
+		I     0     227       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_5
+		I     0     234       2  0  60 -20     0     0 -      ?        00:00:00 kworker/5:1H-kblockd
+		I     0     236       2  0  60 -20     0     0 -      ?        00:00:00 kworker/2:1H-kblockd
+		I     0     240       2  0  60 -20     0     0 -      ?        00:00:00 kworker/4:1H-kblockd
+		S     0     262       2  0  80   0     0     0 -      ?        00:00:01 jbd2/vda4-8
+		I     0     263       2  0  60 -20     0     0 -      ?        00:00:00 ext4-rsv-conver
+		S     0     276       2  0  80   0     0     0 -      ?        00:00:00 hwrng
+		S     0     304       1  0  79  -1 21596 16170 -      ?        00:00:00 systemd-journal
+		I     0     330       2  0  60 -20     0     0 -      ?        00:00:00 ipmi-msghandler
+		S     0     346       1  0  80   0  6816  6619 -      ?        00:00:00 systemd-udevd
+		S     0     413       2  0  80   0     0     0 -      ?        00:00:00 jbd2/vda3-8
+		I     0     414       2  0  60 -20     0     0 -      ?        00:00:00 ext4-rsv-conver
+		S     0     415       2  0  80   0     0     0 -      ?        00:00:00 jbd2/vda5-8
+		I     0     416       2  0  60 -20     0     0 -      ?        00:00:00 ext4-rsv-conver
+		S   108     451       1  0  80   0  6104  3694 -      ?        00:01:03 systemd-oomd
+		S   101     452       1  0  80   0 13596  6337 -      ?        00:00:00 systemd-resolve
+		S   103     455       1  0  80   0  6476 22331 -      ?        00:00:00 systemd-timesyn
+		I     0     509       2  0  60 -20     0     0 -      ?        00:00:00 cryptd
+		S     0     570       1  0  80   0  7752 62214 -      ?        00:00:01 accounts-daemon
+		S     0     573       1  0  80   0  1140   703 -      ?        00:00:00 acpid
+		S   114     578       1  0  80   0  3632  1906 -      ?        00:00:00 avahi-daemon
+		S     0     579       1  0  80   0  2816  4537 -      ?        00:00:00 cron
+		S   102     582       1  0  80   0  6796  2781 -      ?        00:00:02 dbus-daemon
+		S     0     587       1  0  80   0 19644 104460 -     ?        00:00:03 NetworkManager
+		S     0     596       1  0  80   0  3904 20701 -      ?        00:00:02 irqbalance
+		S     0     599       1  0  80   0 21544 12417 -      ?        00:00:00 networkd-dispat
+		S     0     601       1  0  80   0 12012 63045 -      ?        00:00:00 polkitd
+		S     0     604       1  0  80   0  7696 62247 -      ?        00:00:00 power-profiles-
+		S   104     605       1  0  80   0  5536 55600 -      ?        00:00:00 rsyslogd
+		S     0     609       1  0  80   0 49684 384777 -     ?        00:01:09 snapd
+		S     0     611       1  0  80   0  6568 61291 -      ?        00:00:00 switcheroo-cont
+		S     0     623       1  0  80   0  7796  3844 -      ?        00:00:00 systemd-logind
+		S     0     629       1  0  80   0 13552 98236 -      ?        00:00:00 udisksd
+		S     0     632       1  0  80   0  5792  4123 -      ?        00:00:00 wpa_supplicant
+		S   114     638     578  0  80   0   336  1860 -      ?        00:00:00 avahi-daemon
+		S     0     718       1  0  80   0 11908 79253 -      ?        00:00:00 ModemManager
+		S     0     738       1  0  80   0 23360 31672 -      ?        00:00:00 unattended-upgr
+		S     0     759       1  0  80   0  9272 62506 -      ?        00:00:00 gdm3
+		S   113     801       1  0  80   0   452  3270 -      ?        00:00:00 kerneloops
+		S   113     812       1  0  80   0   452  3270 -      ?        00:00:00 kerneloops
+		S   116     841       1  0  81   1  1520 38500 -      ?        00:00:00 rtkit-daemon
+		S     0     926       1  0  80   0  8888 62748 -      ?        00:00:00 upowerd
+		S   122     971       1  0  80   0 13596 63556 -      ?        00:00:00 colord
+		S     0     991       1  0  80   0 41656 95440 -      ?        00:00:04 packagekitd
+		S     0    1190       1  0  80   0  5192 21713 -      ?        00:00:13 spice-vdagentd
+		S     0    1535     759  0  80   0 10928 44886 -      ?        00:00:00 gdm-session-wor
+		S  1000    1544       1  0  80   0 10512  4491 ep_pol ?        00:00:00 systemd
+		S  1000    1545    1544  0  80   0  5340 42787 -      ?        00:00:00 (sd-pam)
+		S  1000    1551    1544  0  80   0  6576 12055 ep_pol ?        00:00:00 pipewire
+		S  1000    1552    1544  0  80   0  6404  8027 ep_pol ?        00:00:00 pipewire-media-
+		S  1000    1553    1544  0  80   0 27164 357886 do_pol ?       00:00:05 pulseaudio
+		S  1000    1554    1544  0  80   0 27616 77203 do_pol ?        00:00:01 snapd-desktop-i
+		S  1000    1565    1544  0  80   0  5888  2469 ep_pol ?        00:00:01 dbus-daemon
+		S  1000    1570       1  0  80   0  7600 62444 do_pol ?        00:00:00 gnome-keyring-d
+		S  1000    1572    1544  0  80   0  8544 62375 do_pol ?        00:00:00 gvfsd
+		S  1000    1583    1544  0  80   0  6460 95221 futex_ ?        00:00:00 gvfsd-fuse
+		S  1000    1601    1544  0  80   0  7432 136464 do_pol ?       00:00:00 xdg-document-po
+		S  1000    1605    1544  0  99   - 26840 160546 do_pol ?       00:00:01 tracker-miner-f
+		S  1000    1606    1544  0  80   0  5580 61275 do_pol ?        00:00:00 xdg-permission-
+		S     0    1613    1601  0  80   0  1056   698 -      ?        00:00:00 fusermount3
+		S  1000    1618    1535  0  80   0  6352 42805 do_pol tty2     00:00:00 gdm-wayland-ses
+		S  1000    1622    1618  0  80   0 15608 57967 do_pol tty2     00:00:00 gnome-session-b
+		S  1000    1654    1544  0  80   0  5116 25139 do_pol ?        00:00:00 gnome-session-c
+		S  1000    1671    1544  0  80   0 18556 132154 do_pol ?       00:00:00 gnome-session-b
+		S  1000    1673    1544  0  80   0 10584 99684 do_pol ?        00:00:00 gvfs-udisks2-vo
+		S  1000    1682    1544  0  80   0  7012 61560 do_pol ?        00:00:00 gvfs-gphoto2-vo
+		S  1000    1690    1544  0  80   0  6728 61372 do_pol ?        00:00:00 gvfs-goa-volume
+		S  1000    1694    1544  0  80   0 39652 142542 do_pol ?       00:00:00 goa-daemon
+		S  1000    1710    1671  0  80   0  7516 77394 do_pol ?        00:00:00 at-spi-bus-laun
+		S  1000    1712    1544  2  80   0 371380 1445162 do_pol ?     00:21:06 gnome-shell
+		S  1000    1721    1710  0  80   0  4352  2142 ep_pol ?        00:00:00 dbus-daemon
+		S  1000    1732    1544  0  80   0 15192 86841 do_pol ?        00:00:00 goa-identity-se
+		S  1000    1754    1544  0  80   0  6720 61321 do_pol ?        00:00:00 gvfs-mtp-volume
+		S  1000    1759    1544  0  80   0  8372 81014 do_pol ?        00:00:02 gvfs-afc-volume
+		S  1000    1809    1544  0  80   0 18312 145690 do_pol ?       00:00:00 gnome-shell-cal
+		S  1000    1824    1544  0  80   0 26728 270300 do_pol ?       00:00:00 evolution-sourc
+		S  1000    1832    1544  0  80   0 30732 212378 do_pol ?       00:00:00 evolution-calen
+		S  1000    1840    1544  0  80   0  6524 39345 do_pol ?        00:00:00 dconf-service
+		S  1000    1846    1544  0  80   0 29456 188755 do_pol ?       00:00:00 evolution-addre
+		S  1000    1860    1544  0  80   0 27520 684860 do_pol ?       00:00:00 gjs
+		S  1000    1862    1544  0  80   0  7360 40669 do_pol ?        00:00:00 at-spi2-registr
+		S  1000    1868    1544  0  80   0   956   722 do_wai ?        00:00:00 sh
+		S  1000    1869    1544  0  80   0  7180 79852 do_pol ?        00:00:00 gsd-a11y-settin
+		S  1000    1871    1544  0  80   0 29392 115942 do_pol ?       00:00:00 gsd-color
+		S  1000    1873    1868  0  80   0 12240 81023 do_pol ?        00:00:22 ibus-daemon
+		S  1000    1875    1544  0  80   0 16684 96111 do_pol ?        00:00:00 gsd-datetime
+		S  1000    1877    1544  0  80   0  7764 80226 do_pol ?        00:00:03 gsd-housekeepin
+		S  1000    1878    1544  0  80   0 25892 88309 do_pol ?        00:00:00 gsd-keyboard
+		S  1000    1880    1544  0  80   0 31600 219235 do_pol ?       00:00:00 gsd-media-keys
+		S  1000    1883    1544  0  80   0 29372 115798 do_pol ?       00:00:00 gsd-power
+		S  1000    1885    1544  0  80   0 11840 64723 do_pol ?        00:00:00 gsd-print-notif
+		S  1000    1886    1544  0  80   0  6792 116684 do_pol ?       00:00:00 gsd-rfkill
+		S  1000    1887    1544  0  80   0  6700 61292 do_pol ?        00:00:00 gsd-screensaver
+		S  1000    1888    1544  0  80   0 10276 118699 do_pol ?       00:00:00 gsd-sharing
+		S  1000    1889    1544  0  80   0  8404 80321 do_pol ?        00:00:00 gsd-smartcard
+		S  1000    1890    1544  0  80   0  9680 82080 do_pol ?        00:00:00 gsd-sound
+		S  1000    1892    1544  0  80   0 26760 88486 do_pol ?        00:00:00 gsd-wacom
+		S  1000    1919    1544  0  80   0 26248 70436 do_pol ?        00:00:00 spice-vdagent
+		S  1000    1953    1873  0  80   0  7392 43108 do_pol ?        00:00:00 ibus-memconf
+		S  1000    1954    1873  0  80   0 31340 89554 do_pol ?        00:00:02 ibus-extension-
+		S  1000    1959    1544  0  80   0  7784 61546 do_pol ?        00:00:00 ibus-portal
+		S  1000    1973    1712  0  80   0 55848 46335 ep_pol ?        00:00:00 Xwayland
+		S  1000    1983    1544  0  80   0 13692 87809 do_pol ?        00:00:00 gsd-printer
+		S  1000    1988    1873  0  80   0  7472 43108 do_pol ?        00:00:08 ibus-engine-sim
+		S  1000    2009    1544  0  80   0 14640 158169 do_pol ?       00:00:01 xdg-desktop-por
+		S  1000    2013    1544  0  80   0 30220 151751 do_pol ?       00:00:00 xdg-desktop-por
+		S  1000    2021    1544  0  80   0 71136 129252 do_pol ?       00:00:00 gsd-xsettings
+		S  1000    2031    1544  0  80   0 27672 701280 do_pol ?       00:00:00 gjs
+		S  1000    2032    1712  0  80   0 66168 750800 do_pol ?       00:00:09 gjs
+		S  1000    2075    1544  0  80   0 25640 50887 do_pol ?        00:00:00 ibus-x11
+		S  1000    2077    1544  0  80   0 26868 88571 do_pol ?        00:00:00 xdg-desktop-por
+		S  1000    2094    1671  0  80   0 68072 186792 do_pol ?       00:00:00 evolution-alarm
+		S  1000    2099    1671  0  80   0  6396 58065 do_pol ?        00:00:00 gsd-disk-utilit
+		S  1000    2136    1572  0  80   0  8524 80960 do_pol ?        00:00:00 gvfsd-trash
+		S  1000    2149    1544  0  80   0 186928 380358 do_pol ?      00:00:07 snap-store
+		S  1000    2271    1544  0  80   0  6676 42978 do_pol ?        00:00:00 gvfsd-metadata
+		S  1000    2613    1544  0  80   0 86564 154558 do_pol ?       00:01:56 gnome-terminal-
+		S  1000    2667    1671  0  80   0 31156 125896 do_pol ?       00:00:01 update-notifier
+		S  1000    3963    1544  0  80   0  7056 11739 do_pol ?        00:00:00 obexd
+		I     0    4083       2  0  80   0     0     0 -      ?        00:00:01 kworker/1:0-events
+		I     0    4743       2  0  80   0     0     0 -      ?        00:00:02 kworker/2:1-events
+		S     0    5203       2  0  80   0     0     0 -      ?        00:00:00 scsi_eh_6
+		I     0    5204       2  0  60 -20     0     0 -      ?        00:00:00 scsi_tmf_6
+		S     0    5205       2  0  80   0     0     0 -      ?        00:00:10 usb-storage
+		I     0    5212       2  0  60 -20     0     0 -      ?        00:00:00 uas
+		S  1000    5341    2613  0  80   0  6400  5418 sigsus pts/1    00:00:00 zsh
+		S  1000    5389    5341  0  80   0 12700  8603 hrtime pts/1    00:00:08 vim
+		I     0   16006       2  0  80   0     0     0 -      ?        00:00:02 kworker/4:0-events
+		I     0   16132       2  0  80   0     0     0 -      ?        00:00:01 kworker/0:1-events
+		I     0   17532       2  0  80   0     0     0 -      ?        00:00:00 kworker/3:2-events
+		S     0   18214       1  0  80   0 14444 20463 -      ?        00:00:00 cupsd
+		S     0   18216       1  0  80   0 14112 43311 -      ?        00:00:00 cups-browsed
+		S     7   18221   18214  0  80   0  5376  4071 -      ?        00:00:00 dbus
+		I     0   18238       2  0  80   0     0     0 -      ?        00:00:02 kworker/u12:1-events_power_efficient
+		S  1000   18243    1544  0  80   0 19472 11138 do_wai ?        00:00:00 gnome-terminal
+		S  1000   18246   18243  0  80   0 28632 98143 do_pol ?        00:00:00 gnome-terminal.
+		S  1000   18251    2613  0  80   0  6504  5418 sigsus pts/0    00:00:00 zsh
+		S  1000   18273   18251  0  80   0  4068  4926 do_wai pts/0    00:00:00 man
+		S  1000   18281   18273  0  80   0  2808  4352 wait_w pts/0    00:00:00 less
+		I     0   18309       2  0  80   0     0     0 -      ?        00:00:00 kworker/3:0
+		I     0   18325       2  0  80   0     0     0 -      ?        00:00:02 kworker/u12:3-events_unbound
+		I     0   18334       2  0  80   0     0     0 -      ?        00:00:00 kworker/5:2-events
+		I     0   18341       2  0  80   0     0     0 -      ?        00:00:00 kworker/u12:2-flush-252:0
+		I     0   18349       2  0  80   0     0     0 -      ?        00:00:00 kworker/2:2-cgroup_destroy
+		I     0   18356       2  0  80   0     0     0 -      ?        00:00:00 kworker/0:2-events
+		I     0   18358       2  0  80   0     0     0 -      ?        00:00:00 kworker/4:2-mm_percpu_wq
+		I     0   18363       2  0  80   0     0     0 -      ?        00:00:00 kworker/1:2-events
+		I     0   18372       2  0  80   0     0     0 -      ?        00:00:00 kworker/u12:0-events_unbound
+		I     0   18374       2  0  80   0     0     0 -      ?        00:00:00 kworker/4:1-events
+		I     0   18383       2  0  80   0     0     0 -      ?        00:00:00 kworker/2:0-events
+		R  1000   18390    5389  0  80   0  1596  5350 -      pts/1    00:00:00 ps
+
+2.
+	- El primer proceso del sistema es:
+		- Salida del comando 'ps', opción [--pid 1]:
+			
+			PID TTY          TIME CMD
+    	  1 ?        00:00:03 systemd
+
+3.
+	- Los procesos hijos directos del primer proceso son:
+		- Salida del comando 'ps', opción [--ppid 1]:
+
+			  PID TTY          TIME CMD
+  		  304 ?        00:00:00 systemd-journal
+  		  346 ?        00:00:00 systemd-udevd
+  		  451 ?        00:01:05 systemd-oomd
+  		  452 ?        00:00:00 systemd-resolve
+  		  455 ?        00:00:00 systemd-timesyn
+  		  570 ?        00:00:01 accounts-daemon
+  		  573 ?        00:00:00 acpid
+  		  578 ?        00:00:00 avahi-daemon
+  		  579 ?        00:00:00 cron
+  		  582 ?        00:00:02 dbus-daemon
+  		  587 ?        00:00:03 NetworkManager
+  		  596 ?        00:00:02 irqbalance
+  		  599 ?        00:00:00 networkd-dispat
+  		  601 ?        00:00:00 polkitd
+  		  604 ?        00:00:00 power-profiles-
+  		  605 ?        00:00:00 rsyslogd
+  		  609 ?        00:01:09 snapd
+  		  611 ?        00:00:00 switcheroo-cont
+  		  623 ?        00:00:00 systemd-logind
+  		  629 ?        00:00:00 udisksd
+  		  632 ?        00:00:00 wpa_supplicant
+  		  718 ?        00:00:00 ModemManager
+  		  738 ?        00:00:00 unattended-upgr
+  		  759 ?        00:00:00 gdm3
+  		  801 ?        00:00:00 kerneloops
+  		  812 ?        00:00:00 kerneloops
+  		  841 ?        00:00:00 rtkit-daemon
+  		  926 ?        00:00:00 upowerd
+  		  971 ?        00:00:00 colord
+  		  991 ?        00:00:04 packagekitd
+  		 1190 ?        00:00:14 spice-vdagentd
+  		 1544 ?        00:00:00 systemd
+  		 1570 ?        00:00:00 gnome-keyring-d
+  		18214 ?        00:00:00 cupsd
+  		18216 ?        00:00:00 cups-browsed
+
+Entorno del Shell.
+------------------------
+1.
+	- Foo...
